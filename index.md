@@ -26,8 +26,10 @@ std::printf("Hello Wurld!");
 
 #### Goals
 
-[x] Deploy Site.
-[ ] Custom Theme.
-[ ] SEO.
+[x]  Deploy Site.
+
+[ ]  Custom Theme.
+
+[ ]  SEO.
 
 * * *
