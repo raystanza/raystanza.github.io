@@ -11,10 +11,10 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15.1"
   gem "jekyll-avatar", "~> 0.7.0"
   gem "jekyll-github-metadata", "~> 2.13.0"
-  gem "jekyll-theme-midnight", "~> 0.2.0"
+  #gem "jekyll-theme-midnight", "~> 0.2.0"
   gem "jemoji", "~> 0.12.0"
-  gem "kramdown", "~> 2.3.2"
-  gem "jekyll-remote-theme", "~> 0.4.3"
+  #gem "kramdown", "~> 2.3.2"
+  #gem "jekyll-remote-theme", "~> 0.4.3"
   gem "webrick", "~> 1.7.0"
   # gem "minima", "~> 2.5.1"
 end
