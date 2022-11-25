@@ -60,6 +60,35 @@ p {
   padding: 20px;
 }
 
+.downloads {
+  font-family: "MiriamLibre-Regular";
+  vertical-align: middle;
+  font-weight: bolder;
+  font-size: 12px;
+  color: rgba(255,255,255, 82%);
+  background-color: rgb(22, 22, 22);
+  padding: 6px 6px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: solid rgb(148, 196, 76);
+  border-radius: 6px;
+}
+
+.downloads:hover {
+  background-color: rgb(38, 73, 35);
+  transition: 0.4s;
+  color: lightgreen;
+}
+
+.downloads:active {
+  background-color: #3e8e41;
+  box-shadow: -6px 10px rgb(22, 22, 22);
+  transform: translateY(4px);
+  transition: 0.05s;
+}
+
 button {
   font-family: "MiriamLibre-Regular";
   vertical-align: middle;

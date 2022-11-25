@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-
-
-
 # Ray's Space Overview
 
 This is being done for fun and trying to find holes in the dam.
