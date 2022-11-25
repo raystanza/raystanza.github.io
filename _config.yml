@@ -22,7 +22,7 @@ twitter_username: chundersnatch
 github_username:  raystanza
 
 # Build settings
-theme: midnight
+remote_theme: midnight
 plugins:
   - jekyll-feed
   - jekyll-avatar
@@ -30,6 +30,7 @@ plugins:
   - jekyll-theme-midnight
   - jemoji
   - kramdown
+  - jekyll-remote-theme
 
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.

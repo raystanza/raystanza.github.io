@@ -14,6 +14,7 @@ group :jekyll_plugins do
   gem "jekyll-theme-midnight", "~> 0.2.0"
   gem "jemoji", "~> 0.12.0"
   gem "kramdown", "~> 2.3.2"
+  gem "jekyll-remote-theme", "~> 0.4.3"
   # gem "minima", "~> 2.5.1"
 end
 
