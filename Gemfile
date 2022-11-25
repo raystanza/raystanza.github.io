@@ -15,6 +15,7 @@ group :jekyll_plugins do
   gem "jemoji", "~> 0.12.0"
   gem "kramdown", "~> 2.3.2"
   gem "jekyll-remote-theme", "~> 0.4.3"
+  gem "webrick", "~> 1.7.0"
   # gem "minima", "~> 2.5.1"
 end
 
