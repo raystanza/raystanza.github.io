@@ -16,6 +16,7 @@ baseurl: "" # e.g. /docs
 url: "https://raystanza.github.io" 
 twitter_username: chundersnatch
 github_username:  raystanza
+show_downloads: true
 
 # Build settings
 #remote_theme: pages-themes/midnight@v0.2.0
