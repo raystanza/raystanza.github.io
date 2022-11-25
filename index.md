@@ -5,6 +5,9 @@ layout: default
 
 This is being done for fun and trying to find holes in the dam.
 
+## Blog
+[Posts](posts.html)
+
 ## Inspirational Quote
 
 > "Keep it simple stupid."
@@ -23,10 +26,10 @@ std::printf("Hello Wurld!");
 
 #### Goals
 
-[x]  Deploy Site.
+[x] Deploy Site.
 
-[ ]  Custom Theme.
+[ ] Custom Theme.
 
-[ ]  SEO.
+[ ] SEO.
 
 * * *

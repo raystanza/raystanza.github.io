@@ -67,7 +67,7 @@ ul {
   flex-direction: column;
 }
 
-.title {
+.titleText {
   vertical-align: middle;
   font-size: 300%;
   font-weight: bolder;
