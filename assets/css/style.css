@@ -37,18 +37,10 @@ div {
 
 .downloads {
   font-family: "MiriamLibre-Regular";
-  vertical-align: middle;
-  font-weight: bolder;
-  font-size: 14px;
-  color: rgba(255,255,255, 82%);
-  background-color: rgb(22, 22, 22);
-  padding: 3px 3px;
   cursor: pointer;
-  text-align: center;
   text-decoration: none;
   outline: none;
   border: solid rgb(148, 196, 76);
-  border-radius: 6px;
 }
 
 .downloads:hover {
@@ -70,43 +62,28 @@ ul {
 
 .container {
   font-family: "MiriamLibre-Regular";
-  font-style: normal;
   color: white;
   display: flex;
   flex-direction: column;
-  border-radius: 6px;
-  border: 6px solid rgb(148, 196, 76);
-  background-color: rgb(22, 22, 22);
-  max-width: 82%;
 }
 
 .title {
   vertical-align: middle;
   font-size: 300%;
   font-weight: bolder;
-  padding-top: 20px;
 }
 
 .mainText {
   vertical-align: middle;
   font-size: 1.25rem;
   font-weight: bolder;
-  padding-top: 20px;
 }
 
 .heroContainer {
   color: white;
   display: flex;
   flex-direction: column;
-  vertical-align: middle;
-  text-align: center;
-  align-items: center;
-  border-radius:6px;
-  border: 6px solid rgb(148, 196, 76);
   background-color: rgb(22, 22, 22);
-  min-height: 60px;
-  padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .codeText {
