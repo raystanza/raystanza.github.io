@@ -6,8 +6,7 @@ title: An exercise in futility
 markdown: kramdown
 email: raystanza@js3tech.com
 description: >- # ignore newlines until "baseurl:"
-  This is a test of fun things that one can do with Jekyll 
-  and GitHub Pages...Nothing more, nothing less.
+  My goal is to merge web3 and web1, trimming the fat.
 baseurl: "" # e.g. /docs
 url: "https://raystanza.github.io"
 twitter_username: chundersnatch
