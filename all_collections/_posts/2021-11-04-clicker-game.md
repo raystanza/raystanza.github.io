@@ -22,7 +22,7 @@ My kids wanted to randomly generate emoji's and have those descriptions read alo
 
 Clicking the "Say This" button will speak the emoji 'paragraph'.
 
-FAQ:
+#### FAQ:
  - Q: Can I change the speed/pitch/tone?
  - A: No, not yet...it's in the code, but that's where I left off.
 
