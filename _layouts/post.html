@@ -1,19 +1,23 @@
-<!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {% include head-custom.html %}
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
   <body>
-    <div class="heroContainer">
-      <section>
-
-        {{ content }}
-
+    <main>
+      {% include header.html %}
+      <section class="article">
+        <div class="article-header">
+          <h2 class="article-title">{{page.title}}</h2>
+          <small class="date">{{page.date | date_to_string}}</small>
+          <div class="categories">
+            {% for c in page.categories %}
+            <a href="#!" class="category">{{c}}</a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="content">{{content}}</div>
       </section>
-    </div>
+      {% include footer.html %}
+    </main>
+    {% include category-modal.html%}
   </body>
 </html>
