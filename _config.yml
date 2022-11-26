@@ -1,27 +1,24 @@
-# If you change this file, please restart the server process.
-# YAML references:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-
+# If this file changes, restart server process.
 # Site settings
 # access via {{ site.title }}, {{ site.email }}, {{ site.myvariable }}, etc.
 
-title: Ray's Jekyll Site
+title: An exercise in futility
 markdown: kramdown
 email: raystanza@js3tech.com
 description: >- # ignore newlines until "baseurl:"
   This is a test of fun things that one can do with Jekyll 
   and GitHub Pages...Nothing more, nothing less.
 baseurl: "" # e.g. /docs
-url: "https://raystanza.github.io" 
+url: "https://raystanza.github.io"
 twitter_username: chundersnatch
 github_username:  raystanza
 
 author:
   name: Jim Sines
-  email: jimsines@js3tech.com
+  email: raystanza@js3tech.com
 
 # Build settings
+
 plugins:
   - jekyll-feed
   - jekyll-avatar
