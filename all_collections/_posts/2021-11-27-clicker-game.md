@@ -1,16 +1,12 @@
 ---
 layout: post
 title: ClickeR 'Game'
-date: 2021-11-26
+date: 2021-11-27
 categories: ["projects"]
 ---
 My kids wanted to randomly generate emoji's and have those descriptions read aloud.
 
-<a href="https://chundersnatch.com/html/clicker.html" rel="noopener">ClickeR @ Chundersnatch.com</a>
-(no tracking/telemetry)
-
-<a href="http://raystanz.uk/chundersnatch_jekyll/" rel="noopener">ClickeR @ GitHub Pages</a>
-(...it's hosted on GitHub Pages...so yeah, tracking & telemetry)
+<a href="https://chundersnatch.com/" rel="noopener">ClickeR 'Game'</a>
 
 #### Game Legend:
 
