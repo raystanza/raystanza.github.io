@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ClickeR 'Game'
-date: 2021-11-27
+date: 2022-11-27
 categories: ["projects"]
 ---
 My kids wanted to randomly generate emoji's and have those descriptions read aloud.
@@ -14,7 +14,7 @@ My kids wanted to randomly generate emoji's and have those descriptions read alo
 | :--- | :--- |
 | 🔊 | Choose voice |
 | 😃 | Show Emoji 'paragraph' |
-| ✏️ | Show text 'paragraph' |
+| ✏️ | Show controls & text 'paragraph' |
 
 Clicking the "Say This" button will speak the emoji 'paragraph'.
 
