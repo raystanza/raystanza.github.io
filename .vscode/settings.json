@@ -11,5 +11,6 @@
             "other": "off"
         },
         "editor.minimap.enabled": false
-    }
+    },
+    "vscode-edge-devtools.browserFlavor": "Default"
 }
