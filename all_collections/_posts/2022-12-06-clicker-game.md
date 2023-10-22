@@ -44,7 +44,9 @@ This is fairly useless and is intented as an annoyance machine written in MD/HTM
 #### Roadmap
 
 [ ] New UI (Node-less React/Vue/Angular)
+
 [ ] Type in-> Emoji, output->PlainText
+
 [ ] Output Emoji List as image
 
 ##### @raystanza
