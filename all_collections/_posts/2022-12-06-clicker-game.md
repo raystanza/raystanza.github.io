@@ -16,7 +16,9 @@ A 'Game' wherein you click a button, generating a series of random emjoi's (and 
 
 The 'Player' can choose to have the browser speak the paragraph aloud, using a selected voice.
 
-This is fairly useless and is intented as an annoyance machine written in MD/HTML/CSS/JS.
+The player accumulates a "Score" and a 'High-Score'. (Saved in browser storage)
+
+This is fairly useless and is intented as an annoyance machine for my kids to play with. (Written in MD/HTML/CSS/JS.)
 
 ## Game Legend
 
@@ -43,11 +45,11 @@ This is fairly useless and is intented as an annoyance machine written in MD/HTM
 
 #### Roadmap
 
-[ ] New UI (Node-less React/Vue/Angular)
+[ ] New UI (React/Vue/Angular)
 
-[ ] Type in-> Emoji, output->PlainText
+[ ] Type in-> Emoji, output-> PlainText
 
-[ ] Output Emoji List as image
+[ ] Output Emoji List as SVG image
 
 ##### @raystanza
 
