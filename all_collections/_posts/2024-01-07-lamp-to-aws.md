@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from LAMP to AWS.
-date: 2024-01-07
+date: 2024-01-08
 categories: ["info", "tutorials"]
 ---
 
