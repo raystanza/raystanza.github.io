@@ -2,9 +2,8 @@
 layout: post
 title: Migrating from LAMP to AWS.
 date: 2024-01-08
-categories: ["info", "tutorials"]
+categories: ["tutorials", "LAMP", "AWS"]
 ---
-
 ## Migrating from the LAMP Stack to AWS Services
 
 When replacing a traditional LAMP (Linux, Apache, MySQL, PHP) stack with AWS services, each component of the stack has a corresponding AWS service or feature. Below is a breakdown of each part of the stack and AWS's corresponding service.

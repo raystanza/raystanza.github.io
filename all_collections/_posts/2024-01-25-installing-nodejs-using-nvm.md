@@ -2,9 +2,9 @@
 layout: post
 title: Installing NodeJS on Linux using NVM
 date: 2024-01-25
-categories: ["tutorials"]
+categories: ["tutorials", "nodejs", "nvm"]
 ---
-# Installing Node.js on Linux Using Node Version Manager (NVM)
+## Installing Node.js on Linux Using Node Version Manager (NVM)
 
 ## Introduction
 
@@ -31,11 +31,13 @@ Before diving into the installation process, let's understand why NVM is a prefe
 1. **Open your terminal**.
 
 2. **Download and install NVM** by running the following command. This command fetches the install script from NVM's GitHub repository and runs it:
+
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
    ```
 
 3. **Activate NVM** without restarting the terminal:
+
    ```bash
    source ~/.bashrc
    ```
@@ -45,21 +47,25 @@ Before diving into the installation process, let's understand why NVM is a prefe
 ## Step 2: Installing Node.js
 
 1. **List all available Node.js versions**:
+
    ```bash
    nvm list-remote
    ```
 
 2. **Install a specific Node.js version**. For example, to install Node.js version 16.14.0, use:
+
    ```bash
    nvm install 16.14.0
    ```
 
    Alternatively, you can install the latest version with:
+
    ```bash
    nvm install node
    ```
 
 3. **Verify the installation** by checking the Node.js version:
+
    ```bash
    node -v
    ```
@@ -67,16 +73,19 @@ Before diving into the installation process, let's understand why NVM is a prefe
 ## Step 3: Managing Node Versions
 
 - **Switch between installed Node versions**. For instance, to switch to version 14.17.0:
+
   ```bash
   nvm use 14.17.0
   ```
 
 - **List all installed Node versions**:
+
   ```bash
   nvm ls
   ```
 
 - **Set a default Node version**:
+
   ```bash
   nvm alias default 16.14.0
   ```
