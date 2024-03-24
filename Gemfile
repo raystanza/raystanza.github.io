@@ -9,7 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-avatar", "~> 0.7.0"
   gem "jekyll-github-metadata", "~> 2.13.0"
   gem "jemoji", "~> 0.12.0"
-  gem "webrick", "~> 1.7.0"
+  gem "webrick", "~> 1.8.1"
 end
 
 # Windows and JRuby zoneinfo files
