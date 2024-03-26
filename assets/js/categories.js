@@ -1,26 +1,28 @@
+---
+---
 //const categories = { {% for category in site.categories %}{% capture category_name %}{{ category | first }}{% endcapture %}{{ category_name | replace: " ", "_" }}: [{% for post in site.categories[category_name] %}{ url: `{{ site.baseurl }}{{ post.url }}`, date: `{{post.date | date_to_string}}`, title: `{{post.title}}`},{% endfor %}],{% endfor %} }
 const categories = {
-  {% for category in site.categories %}
+{% for category in site.categories %}
   {% capture category_name %}{{ category | first }}{% endcapture %}
   "{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}": [
     {% for post in site.categories[category_name] %}
-    {
-      url: `{{ site.baseurl }}{{ post.url }}`,
-      date: `{{ post.date | date_to_string }}`,
-      title: `{{ post.title | escape }}`
-    },
+      {
+        url: `{{ site.baseurl }}{{ post.url }}`,
+        date: `{{ post.date | date_to_string }}`,
+        title: `{{ post.title | escape }}`
+      }{% unless forloop.last %},{% endunless %}
     {% endfor %}
-  ],
-  {% endfor %}
+  ]{% unless forloop.last %},{% endunless %}
+{% endfor %}
 };
 console.log(categories);
 window.onload = function () {
-  console.log("Categories:", categories); // Log the categories object for debugging
+  //console.log("Categories:", categories); // Log the categories object for debugging
   document.querySelectorAll(".category").forEach((category) => {
-    console.log("Attaching event listener to category:", category.innerText); // Debugging
+    //console.log("Attaching event listener to category:", category.innerText); // Debugging
     category.addEventListener("click", function (e) {
       const categoryName = e.target.innerText.trim().replace(" ", "_");
-      console.log("Category clicked:", categoryName); // Debugging
+      //console.log("Category clicked:", categoryName); // Debugging
       const posts = categories[categoryName];
       if (!posts) {
         console.error("No posts found for category:", categoryName); // Error handling
