@@ -2,7 +2,7 @@
 layout: post
 title: Setting Up a Full-Stack Project (Next.js, tRPC, Prisma, PostgreSQL)
 date: 2024-03-21
-categories: ["tutorials", "full-stack","nextjs","trpc","prisma","postgresql"]
+categories: ["tutorials", "fullstack","nextjs","trpc","prisma","postgresql"]
 ---
 ## Setting Up a Full-Stack Project with Next.js, tRPC, Prisma, and PostgreSQL
 
