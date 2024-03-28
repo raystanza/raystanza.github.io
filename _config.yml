@@ -4,7 +4,7 @@
 
 title: An exercise in futility
 markdown: kramdown
-email: raystanza@js3tech.com
+email: raystanza@raystanza.uk
 description: >- # ignore newlines until "baseurl:"
   My goal is showcasing acts of futility.
 baseurl: "" # e.g. /docs
@@ -14,7 +14,7 @@ github_username:  raystanza
 
 author:
   name: Jim Sines
-  email: raystanza@js3tech.com
+  email: raystanza@raystanza.uk
 
 # Build settings
 
