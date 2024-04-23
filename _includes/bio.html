@@ -10,14 +10,13 @@
       <p>{{ site.data.author.description }}</p>
       {% assign hour = 'now' | date: "%H" | plus: 0 %}
       <p style="font-style: italic; font-size: 0.9rem; color: var(--white-2);">
-        {% case hour %}
-          {% when hour >= 6 and hour < 12 %}
-            Good morning! ☀️
-          {% when hour >= 12 and hour < 18 %}
-            Good afternoon! 🌞
-          {% when hour >= 18 or hour < 6 %}
-            Good evening! 🌜
-        {% endcase %}
+        {% if hour >= 6 and hour < 12 %}
+        Good morning! ☀️
+        {% elsif hour >= 12 and hour < 18 %}
+        Good afternoon! 🌞
+        {% else %}
+        Good evening! 🌜
+        {% endif %}
       </p>
     </div>
     <div id="social-wrapper">

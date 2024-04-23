@@ -7,9 +7,6 @@
       <p>🌟 Crafted with <span style="color: red;">♥</span> by {{ site.author.name }}</p>
       <p>&copy; 2020 - {{ 'now' | date: "%Y" }} | All rights reserved.</p>
       <p>🚀 Last updated: {{ site.time | date: "%B %d, %Y" }}
-        <span style="color: var(--white-2); font-size: 0.8rem;">
-          ({{ 'now' | date: '%s' | minus: site.time | date: '%s' | times: 1 | divided_by: 86400 | append: ' days ago' }})
-        </span>
      </p>     
   </div>
 </footer>
