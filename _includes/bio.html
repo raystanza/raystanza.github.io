@@ -1,15 +1,31 @@
-<section id="bio">
-  <section id="img-wrapper">
-    <a href="{{site.baseurl}}/bio.html"><img src="{{site.data.author.dp}}" alt="" /></a>
+<section id="bio" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 2rem; background-color: var(--gray-4); color: var(--white-1);">
+  <section id="img-wrapper" style="flex: 1; text-align: center; padding: 1rem;">
+    <a href="{{ site.baseurl }}/bio.html">
+      <img src="{{ site.data.author.dp }}" alt="{{ site.data.author.name }}" style="border-radius: 50%; width: 100px; height: 100px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    </a>
+    <h3 style="margin-top: 1rem; font-size: 1.2rem; color: var(--white-2);">{{ site.data.author.name }}</h3>
   </section>
-  <section id="bio-wrapper">
-    <div id="text-wrapper">{{site.data.author.description}}</div>
+  <section id="bio-wrapper" style="flex: 3; padding: 1rem;">
+    <div id="text-wrapper">
+      <p>{{ site.data.author.description }}</p>
+      {% assign hour = 'now' | date: "%H" | plus: 0 %}
+      <p style="font-style: italic; font-size: 0.9rem; color: var(--white-2);">
+        {% case hour %}
+          {% when hour >= 6 and hour < 12 %}
+            Good morning! ☀️
+          {% when hour >= 12 and hour < 18 %}
+            Good afternoon! 🌞
+          {% when hour >= 18 or hour < 6 %}
+            Good evening! 🌜
+        {% endcase %}
+      </p>
+    </div>
     <div id="social-wrapper">
       {% for i in site.data.author.contact %}
-      <a href="{{i.url}}" target="_blank" rel="noopener noreferrer">
-        <img src="{{site.baseurl}}/assets/icons/{{i.title}}.png" alt="" />
+      <a href="{{ i.url }}" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
+        <img src="{{ site.baseurl }}/assets/icons/{{ i.title }}.png" alt="{{ i.title }}" style="width: 30px; height: 30px;">
       </a>
-      {%endfor%}
+      {% endfor %}
     </div>
   </section>
 </section>

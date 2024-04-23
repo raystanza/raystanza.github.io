@@ -2,9 +2,9 @@
 layout: post
 title: How to Create Your Very Own Ethereum Crypto Address with MetaMask
 date: 2024-04-21
-categories: ["tutorials", "metamask"]
+categories: ["tutorials", "metamask", "eth"]
 ---
-🚀 Hey there, future crypto enthusiast! 🌟 Ready to dive into the world of Ethereum and feel like the cool cats of the crypto universe? 😎 Let's get you set up with your very own Ethereum address using the MetaMask wallet. It's easier than feeding your pet goldfish—trust me!
+🚀 Hey there, 🌟 Ready to dive into the world of Ethereum and feel like the cool kids? 😎 Let's get you set up with your very own Ethereum address using the MetaMask wallet. It's easier than feeding your pet goldfish — trust me!
 
 ## What is MetaMask? 🦊
 

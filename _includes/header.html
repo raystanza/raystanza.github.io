@@ -1,3 +1,13 @@
-<header>
-  <a class="site-title" href="{{site.baseurl}}/">{{site.title}}</a>
+<header style="background-color: var(--gray-2); padding: 1rem 0; text-align: center;">
+  <div style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
+    <a class="site-title" href="{{ site.baseurl }}/" style="font-size: 2rem; color: var(--white-1); text-decoration: none; font-weight: bold; transition: color 0.3s;">
+      {{ site.title }}
+    </a>
+    <nav>
+      <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+        <li style="margin: 0 10px;"><a href="{{ site.baseurl }}/" style="color: var(--white-1); text-decoration: none; font-size: 1rem;">Home</a></li>
+        <li style="margin: 0 10px;"><a href="{{ site.baseurl }}/bio/" style="color: var(--white-1); text-decoration: none; font-size: 1rem;">Bio</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
