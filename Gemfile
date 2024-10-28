@@ -2,7 +2,7 @@ source "https://rubygems.org"
 # to use diff ver, save the file, run `bundle install`.
 # Run Jekyll: `bundle exec jekyll serve`.
 # To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 231", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17.0"
