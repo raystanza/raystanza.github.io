@@ -1,18 +1,18 @@
-// Define the categories object using Jekyll's Liquid templating
+// Simple categories object for testing
 const categories = {
-  {% for category in site.categories %}
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    "{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}": [
-      {% for post in site.categories[category_name] %}
+  {% for category in site.categories limit:1 %} // Limit to one category to check syntax
+    "{% capture category_name %}{{ category | first }}{% endcapture %}{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}": [
+      {% for post in site.categories[category_name] limit:1 %}
         {
           "url": "{{ site.baseurl }}{{ post.url }}",
           "date": "{{ post.date | date: "%B %d, %Y" }}",
           "title": "{{ post.title | escape }}"
-        }{% unless forloop.last %},{% endunless %}
+        }
       {% endfor %}
-    ]{% unless forloop.last %},{% endunless %}
+    ]
   {% endfor %}
 };
+console.log(categories);
 
 // Event listener for loading categories
 window.onload = function () {
