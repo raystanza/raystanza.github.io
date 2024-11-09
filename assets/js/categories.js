@@ -5,9 +5,9 @@ const categories = {
     "{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}": [
       {% for post in site.categories[category_name] %}
         {
-          url: `{{ site.baseurl }}{{ post.url }}`,
-          date: `{{ post.date | date: "%B %d, %Y" }}`,
-          title: `{{ post.title | escape }}`
+          "url": "{{ site.baseurl }}{{ post.url }}",
+          "date": "{{ post.date | date: "%B %d, %Y" }}",
+          "title": "{{ post.title | escape }}"
         }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ]{% unless forloop.last %},{% endunless %}
