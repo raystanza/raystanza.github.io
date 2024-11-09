@@ -7,7 +7,7 @@
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
-  --highlight-color: #00aaff; /* Set this as the main highlight color */
+  --highlight-color: #348505; /* Set this as the main highlight color */
 }
 
 /* Category Modal Background and Container */
@@ -22,25 +22,34 @@
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
+  visibility: hidden; /* Ensures it's hidden when not active */
 }
 #category-modal {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 100;
+  width: 90%;
   max-width: 850px;
   max-height: 60vh;
   border-radius: 1rem;
   padding: 1rem;
-  margin: auto;
   background: var(--gray-3);
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
   line-height: 1.4;
   overflow-y: auto;
+  visibility: hidden; /* Ensures it's hidden when not active */
+}
+
+/* Modal Open State */
+#category-modal-bg.open,
+#category-modal.open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Modal Content */
@@ -56,14 +65,6 @@
   font-size: 2rem;
   padding: 1rem;
   color: var(--white-1);
-}
-
-/* Modal Open State */
-#category-modal-bg.open,
-#category-modal.open {
-  display: block;
-  opacity: 1;
-  visibility: visible;
 }
 
 /* Modal Article Links */
