@@ -1,29 +1,29 @@
-// Define the categories object using Jekyll's Liquid templating
+// Initialize categories object to hold post data by category
 const categories = {
   {% for category in site.categories %}
-    {% capture category_key %}
-      {{ category | first | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}
-    {% endcapture %}
-    "{{ category_key | strip }}": [
-      {% for post in site.categories[category | first] %}
+    {% assign category_key = category | first | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" %}
+    "{{ category_key }}": [
+      {% for post in site.categories[category[0]] %}
         {
-          "url": "{{ site.baseurl }}{{ post.url }}",
-          "date": "{{ post.date | date: "%B %d, %Y" }}",
-          "title": "{{ post.title | escape }}"
+          url: "{{ site.baseurl }}{{ post.url }}",
+          date: "{{ post.date | date: "%B %d, %Y" }}",
+          title: "{{ post.title | escape }}"
         }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ]{% unless forloop.last %},{% endunless %}
   {% endfor %}
 };
 
-// Event listener for loading categories
+// Event listener for category links
 window.onload = function () {
-  document.querySelectorAll(".category").forEach((category) => {
-    category.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevents the default link navigation
-
-      const categoryName = e.target.innerText.trim().replace(" ", "_");
+  document.querySelectorAll(".category").forEach((categoryLink) => {
+    categoryLink.addEventListener("click", function (e) {
+      e.preventDefault();  // Prevents the default link navigation
+      
+      // Format the clicked category name
+      const categoryName = e.target.innerText.trim().replace(/\s+/g, "_").toLowerCase();
       const posts = categories[categoryName];
+      
       if (!posts) {
         console.error("No posts found for category:", categoryName); // Error handling
         return;
@@ -43,8 +43,8 @@ window.onload = function () {
       // Set the modal content and open the modal
       document.querySelector("#category-modal-title").innerText = e.target.innerText;
       document.querySelector("#category-modal-content").innerHTML = html;
-      document.querySelector("#category-modal-bg").classList.toggle("open");
-      document.querySelector("#category-modal").classList.toggle("open");
+      document.querySelector("#category-modal-bg").classList.add("open");
+      document.querySelector("#category-modal").classList.add("open");
     });
   });
 
@@ -52,7 +52,7 @@ window.onload = function () {
   document.querySelector("#category-modal-bg").addEventListener("click", function(){
     document.querySelector("#category-modal-title").innerText = "";
     document.querySelector("#category-modal-content").innerHTML = "";
-    document.querySelector("#category-modal-bg").classList.toggle("open");
-    document.querySelector("#category-modal").classList.toggle("open");
+    document.querySelector("#category-modal-bg").classList.remove("open");
+    document.querySelector("#category-modal").classList.remove("open");
   });
 };
