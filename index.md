@@ -3,6 +3,7 @@ title: An Exercise in Futility
 layout: blog
 description: "Showcasing acts of futility, creativity, and technology projects by Jim Sines."
 keywords: "Jim Sines, tech blog, coding, creativity"
+permalink: /
 
 # Open Graph metadata for social sharing
 og_title: "An Exercise in Futility - Tech & Creativity by Jim Sines"
