@@ -1,7 +1,24 @@
+// Define the categories object using Jekyll's Liquid templating
+const categories = {
+  {% for category in site.categories %}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    "{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}": [
+      {% for post in site.categories[category_name] %}
+        {
+          url: `{{ site.baseurl }}{{ post.url }}`,
+          date: `{{ post.date | date: "%B %d, %Y" }}`,
+          title: `{{ post.title | escape }}`
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+};
+
+// Event listener for loading categories
 window.onload = function () {
   document.querySelectorAll(".category").forEach((category) => {
     category.addEventListener("click", function (e) {
-      e.preventDefault();  // Prevents the default link navigation
+      e.preventDefault(); // Prevents the default link navigation
 
       const categoryName = e.target.innerText.trim().replace(" ", "_");
       const posts = categories[categoryName];
