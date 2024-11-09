@@ -1,16 +1,31 @@
 <section id="bio" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 2rem; background-color: var(--gray-4); color: var(--white-1);">
+  <!-- Profile Picture and Name -->
   <section id="img-wrapper" style="flex: 1; text-align: center; padding: 1rem;">
-    <a href="{{ site.baseurl }}/bio.html">
+    <a href="{{ site.baseurl }}/bio/">
       <img src="{{ site.author.dp }}" alt="{{ site.author.name }}" style="border-radius: 50%; width: 100px; height: 100px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
     </a>
     <h3 style="margin-top: 1rem; font-size: 1.2rem; color: var(--white-2);">{{ site.author.name }}</h3>
   </section>
+
+  <!-- Bio Information -->
   <section id="bio-wrapper" style="flex: 3; padding: 1rem;">
-    <div id="text-wrapper">
-      {{ site.author.description | markdownify }}
+    <div id="text-wrapper" style="margin-bottom: 1rem;">
+      <p>{{ site.author.description | markdownify }}</p>
       <p id="greeting" style="font-style: italic; font-size: 0.9rem; color: var(--white-2);"></p>
     </div>
-    <div id="social-wrapper">
+
+    <!-- Quick Highlights or Short Bio Details -->
+    <div id="highlights-wrapper" style="margin-bottom: 1rem;">
+      <h4 style="font-size: 1.1rem; color: var(--white-1); margin-bottom: 0.5rem;">About Me</h4>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li>📍 Based in: <strong>{{ site.author.location | default: "Unknown" }}</strong></li>
+        <li>💼 Profession: <strong>{{ site.author.profession | default: "Web Developer" }}</strong></li>
+        <li>🌐 Languages: <strong>{{ site.author.languages | default: "English" }}</strong></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div id="social-wrapper" style="margin-top: 1rem;">
       {% for contact in site.author.contact %}
       <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
         <img src="{{ site.baseurl }}/assets/icons/{{ contact.title }}.png" alt="{{ contact.title }}" style="width: 30px; height: 30px;">
@@ -20,6 +35,7 @@
   </section>
 </section>
 
+<!-- Dynamic Greeting Script -->
 <script>
   const hour = new Date().getHours();
   const greetingElement = document.getElementById('greeting');

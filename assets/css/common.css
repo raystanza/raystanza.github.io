@@ -7,7 +7,7 @@
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
-  --highlight-color: #ff5a5f;
+  --highlight-color: #00aaff; /* Set this as the main highlight color */
 }
 
 /* Category Modal Background and Container */
@@ -47,7 +47,7 @@
 #category-modal-content {
   max-height: calc(100% - 5rem);
   overflow-y: auto;
-  padding-right: 0.5rem; /* Added padding for easier scroll */
+  padding-right: 0.5rem;
 }
 
 /* Modal Title */
