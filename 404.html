@@ -1,20 +1,29 @@
 ---
 layout: post
 permalink: /404.html
+title: "Page Not Found"
+description: "Oops! The page you're looking for can't be found. Please check the URL or return to the homepage."
+sitemap: false
+robots: noindex, nofollow
 ---
 
 <div style="text-align: center; padding: 4rem 2rem; background-color: var(--gray-3); color: var(--white-1); height: 100vh; box-sizing: border-box; overflow: hidden;">
     <h1 style="font-size: 4rem; font-weight: bold; color: var(--white-1);">🤨 Oops!</h1>
     <h2 style="font-size: 2rem; font-weight: bold; color: var(--white-1);">404 - Page Not Found</h2>
 
-    <p>It seems like something has gone awry. The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-    <p>Please try the following:</p>
-    <ul style="list-style-type: none;">
+    <p style="max-width: 600px; margin: auto;">It seems like something has gone awry. The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <p style="margin-top: 1rem;">Please try the following:</p>
+    <ul style="list-style-type: none; padding: 0;">
         <li>💡 Check your spelling if you typed the address.</li>
         <li>🔄 Refresh the page, or try using the navigation menu to find your way.</li>
     </ul>
-    <p>Or you can simply...</p>
+    <p style="margin-top: 2rem;">Or you can simply...</p>
+
     <div style="margin-top: 2rem;">
-        <a href="{{ site.baseurl }}/" style="font-size: 1rem; color: var(--white-1); background-color: var(--gray-4); padding: 1rem 1rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; box-sizing: border-box;">🏠 Go Home</a>
+        <a href="{{ site.baseurl }}/" style="font-size: 1rem; color: var(--white-1); background-color: var(--gray-4); padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: background-color 0.3s, transform 0.3s;" 
+           onmouseover="this.style.backgroundColor='var(--highlight-color)'; this.style.transform='scale(1.05)'" 
+           onmouseout="this.style.backgroundColor='var(--gray-4)'; this.style.transform='scale(1)'">
+            🏠 Go Home
+        </a>
     </div>
 </div>

@@ -1,12 +1,29 @@
 <!-- Footer -->
-<footer style="padding: 2rem; background-color: var(--gray-3); color: var(--white-1); text-align: center; font-size: 0.9rem; line-height: 1.6;">
-  <div style="max-width: 1200px; margin: auto;">
-      <p>🌍 Explore more about <strong>{{ site.title }}</strong></p>
-      <p>📬 Reach out to me at: <a href="mailto:raystanza@raystanza.uk" style="color: var(--white-1); text-decoration: none;">raystanza@raystanza.uk</a></p>
-      <hr style="border-top: 2px dashed var(--white-2); margin-top: 2rem;">
-      <p>🌟 Crafted with <span style="color: red;">♥</span> by {{ site.author.name }}</p>
-      <p>&copy; 2020 - {{ 'now' | date: "%Y" }} | All rights reserved.</p>
-      <p>🚀 Last updated: {{ site.time | date: "%B %d, %Y" }}
-     </p>     
+<footer style="padding: 2rem; background-color: var(--gray-3); color: var(--white-1); text-align: center; font-size: 1rem; line-height: 1.8;">
+  <div style="max-width: 800px; margin: auto;">
+      <p style="font-size: 1.2rem; font-weight: bold;">
+        🌍 Discover more about <strong>{{ site.title }}</strong>
+      </p>
+      
+      <p>
+        📬 Contact me at: 
+        <a href="mailto:{{ site.author.email }}" style="color: var(--highlight-color); text-decoration: underline;">
+          {{ site.author.email }}
+        </a>
+      </p>
+      
+      <hr style="border-top: 2px dashed var(--white-2); width: 80%; margin: 2rem auto;">
+      
+      <p>
+        🌟 Crafted with <span style="color: var(--highlight-color); font-size: 1.2rem;">♥</span> by <strong>{{ site.author.name }}</strong>
+      </p>
+      
+      <p>
+        &copy; 2020 - {{ 'now' | date: "%Y" }} | All rights reserved.
+      </p>
+      
+      <p>
+        🚀 Last updated: {{ site.time | date: "%B %d, %Y" }}
+      </p>
   </div>
 </footer>

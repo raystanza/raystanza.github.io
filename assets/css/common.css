@@ -7,7 +7,10 @@
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
+  --highlight-color: #ff5a5f;
 }
+
+/* Category Modal Background and Container */
 #category-modal-bg {
   position: fixed;
   top: 0;
@@ -17,7 +20,8 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 10;
   display: none;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 #category-modal {
   position: fixed;
@@ -33,24 +37,36 @@
   margin: auto;
   background: var(--gray-3);
   display: none;
-  visibility: hidden;
-  line-height: 140%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  line-height: 1.4;
+  overflow-y: auto;
 }
+
+/* Modal Content */
 #category-modal-content {
-  display: relative;
   max-height: calc(100% - 5rem);
-  overflow: auto;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* Added padding for easier scroll */
 }
+
+/* Modal Title */
 #category-modal-title {
   margin-bottom: 1rem;
   font-size: 2rem;
   padding: 1rem;
+  color: var(--white-1);
 }
+
+/* Modal Open State */
 #category-modal-bg.open,
 #category-modal.open {
   display: block;
+  opacity: 1;
   visibility: visible;
 }
+
+/* Modal Article Links */
 .modal-article,
 .modal-article-date {
   display: block;
@@ -59,19 +75,20 @@
 .modal-article {
   margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 .modal-article-date {
   font-size: 0.8rem;
+  color: var(--white-1);
 }
 .modal-article:hover {
   background: var(--gray-4);
+  color: var(--highlight-color);
 }
 
+/* Horizontal Rule Styling */
 hr {
-  border-top: 2px dashed var(--white-2) !important;
-  border-bottom: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  margin-bottom: 1.75rem !important;
+  border-top: 2px dashed var(--white-2);
+  border: none;
+  margin-bottom: 1.75rem;
 }

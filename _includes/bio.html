@@ -1,30 +1,34 @@
 <section id="bio" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 2rem; background-color: var(--gray-4); color: var(--white-1);">
   <section id="img-wrapper" style="flex: 1; text-align: center; padding: 1rem;">
     <a href="{{ site.baseurl }}/bio.html">
-      <img src="{{ site.data.author.dp }}" alt="{{ site.data.author.name }}" style="border-radius: 50%; width: 100px; height: 100px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="{{ site.author.dp }}" alt="{{ site.author.name }}" style="border-radius: 50%; width: 100px; height: 100px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
     </a>
-    <h3 style="margin-top: 1rem; font-size: 1.2rem; color: var(--white-2);">{{ site.data.author.name }}</h3>
+    <h3 style="margin-top: 1rem; font-size: 1.2rem; color: var(--white-2);">{{ site.author.name }}</h3>
   </section>
   <section id="bio-wrapper" style="flex: 3; padding: 1rem;">
     <div id="text-wrapper">
-      <p>{{ site.data.author.description }}</p>
-      {% assign hour = 'now' | date: "%H" | plus: 0 %}
-      <p style="font-style: italic; font-size: 0.9rem; color: var(--white-2);">
-        {% if hour >= 6 and hour < 12 %}
-        Good morning! ☀️
-        {% elsif hour >= 12 and hour < 18 %}
-        Good afternoon! 🌞
-        {% else %}
-        Good evening! 🌜
-        {% endif %}
-      </p>
+      {{ site.author.description | markdownify }}
+      <p id="greeting" style="font-style: italic; font-size: 0.9rem; color: var(--white-2);"></p>
     </div>
     <div id="social-wrapper">
-      {% for i in site.data.author.contact %}
-      <a href="{{ i.url }}" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
-        <img src="{{ site.baseurl }}/assets/icons/{{ i.title }}.png" alt="{{ i.title }}" style="width: 30px; height: 30px;">
+      {% for contact in site.author.contact %}
+      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
+        <img src="{{ site.baseurl }}/assets/icons/{{ contact.title }}.png" alt="{{ contact.title }}" style="width: 30px; height: 30px;">
       </a>
       {% endfor %}
     </div>
   </section>
 </section>
+
+<script>
+  const hour = new Date().getHours();
+  const greetingElement = document.getElementById('greeting');
+  
+  if (hour >= 6 && hour < 12) {
+    greetingElement.textContent = "Good morning! ☀️";
+  } else if (hour >= 12 && hour < 18) {
+    greetingElement.textContent = "Good afternoon! 🌞";
+  } else {
+    greetingElement.textContent = "Good evening! 🌜";
+  }
+</script>

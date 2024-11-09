@@ -1,23 +1,35 @@
-# If this file changes, restart server process.
 # Site settings
-# access via {{ site.title }}, {{ site.email }}, {{ site.myvariable }}, etc.
-
 title: An exercise in futility
 markdown: kramdown
 email: raystanza@raystanza.uk
 description: >- # ignore newlines until "baseurl:"
-  My goal is showcasing acts of futility.
+  This is a playground where an alternate 'Me' lives.
 baseurl: "" # e.g. /docs
 url: "https://raystanza.uk"
 twitter_username: realcaptgeech
-github_username:  raystanza
+github_username: raystanza
 
 author:
   name: Jim Sines
   email: raystanza@raystanza.uk
+  dp: https://avatars.githubusercontent.com/u/51805268?v=4
+  tagline: "<p>Coded by Jim Sines</p>"
+  contact:
+    - title: github
+      url: https://github.com/raystanza
+    - title: x
+      url: https://x.com/realcaptgeech
+    - title: email
+      url: mailto:raystanza@raystanza.uk
+
+# Default Open Graph Settings
+og:
+  title: "An Exercise in Futility"
+  description: "A personal blog and portfolio by Jim Sines."
+  type: "website"
+  image: "/assets/icons/og-image.png"
 
 # Build settings
-
 plugins:
   - jekyll-feed
   - jekyll-avatar
@@ -37,8 +49,7 @@ defaults:
       layout: "post"
       permalink: /posts/:title/
 
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
+# Excluded items
 exclude:
   - "sitemap.xml"
   - "feed.xml"

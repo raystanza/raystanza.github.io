@@ -1,30 +1,26 @@
-# Welcome to RayStanza.uk
+# RayStanza.uk - A Personal Development Showcase
 
-Welcome to the GitHub repository for [RayStanza.uk](https://raystanza.uk)! This site is built with Jekyll, the popular static site generator that allows for easy management and deployment of sites with a focus on simplicity and content first.
+Welcome to the GitHub repository for [RayStanza.uk](https://raystanza.uk)! This site is built with Jekyll, a powerful static site generator that enables efficient, content-focused web development. This repository contains the code and configuration that powers RayStanza.uk, a personal blog and portfolio site.
 
-## About This Site
+## About RayStanza.uk
 
-RayStanza.uk is a showcase of what modern web development can achieve with the right tools and creativity. Designed and maintained by a professional developer, this site serves as a portfolio and a demonstration of expert skill in web design and development using Jekyll and Liquid templating.
+RayStanza.uk is a personal project created and maintained by Jim Sines. The site showcases modern web development principles using Jekyll, Liquid templating, and thoughtful design. It serves as both a professional portfolio and a personal blog, demonstrating my approach to web design, development, and static site management.
 
 ## Features
 
-- **Responsive Design**: Ensures that the site is accessible and aesthetically pleasing across all devices.
-- **SEO Optimized**: Implements best practices for search engine optimization to increase visibility.
-- **Fast Loading Times**: Optimized to load quickly for better user experience and enhanced SEO.
-- **Dynamic Content Generation**: Uses Jekyll's powerful templating features to create engaging, up-to-date content.
+- **Responsive Design**: Ensures accessibility and visual appeal on all devices.
+- **Optimized Performance**: Each page is optimized for fast loading times, enhancing both user experience and SEO.
+- **Custom Theming and Dynamic Content**: Uses Jekyll's powerful templating to create engaging, up-to-date content with a unique, custom theme.
+- **Automated Dependency Management**: GitHub Dependabot helps keep site dependencies secure and up-to-date.
 
-## Interested in Collaborating?
+## Contact
 
-If you find the approach and style of RayStanza.uk compelling and think it could suit your project or business needs, don't hesitate to get in touch. I offer custom web development services tailored to meet your specific requirements, whether it's for a personal project, business, or something unique.
+If you find inspiration in my work, have questions about my development process, or wish to collaborate on custom web development projects, feel free to reach out.
 
-**Contact me** at [raystanza@raystanza.uk](mailto:raystanza@raystanza.uk) for professional inquiries or to discuss potential collaborations.
-
-## Contributing
-
-While this site primarily serves as a personal portfolio, contributions or suggestions for improvements are always welcome! If you have ideas on how to make this site better or want to report a bug, please feel free to open an issue or submit a pull request.
+**Email**: [raystanza@raystanza.uk](mailto:raystanza@raystanza.uk)
 
 ## Licensing
 
-Unless stated otherwise, the content on RayStanza.uk is © Jim Sines. Please contact me for any use beyond personal viewing.
+All content on RayStanza.uk is © 2020–present by Jim Sines. If you would like to use any content for purposes beyond personal viewing, please contact me for permission.
 
-Thank you for visiting my repository, and I hope you enjoy exploring my work!
+Thank you for visiting the repository for RayStanza.uk. I hope you enjoy exploring my work and find inspiration along the way!

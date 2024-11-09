@@ -3,9 +3,14 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
+# Dependabot configuration file to keep dependencies updated
 version: 2
 updates:
-  - package-ecosystem: "bundler" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # Ruby (Bundler) dependencies
+  - package-ecosystem: "bundler"
+    directory: "/"  # Location of the Gemfile
     schedule:
-      interval: "daily"
+      interval: "weekly"  # Adjusted to weekly to reduce frequency
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "rails"  # Example of ignored dependency; adjust as needed

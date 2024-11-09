@@ -1,8 +1,26 @@
+# Jekyll build and cache directories
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+
+# Ruby and Bundler dependencies
+.bundle
 vendor
+Gemfile.lock
+
+# System-specific and editor settings
 .vs
 .vscode
-.bundle
+.DS_Store  # macOS metadata file
+Thumbs.db  # Windows metadata file
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp  # Vim swap files
+
+# Backup or temporary files
+*.bak
+*~
