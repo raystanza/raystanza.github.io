@@ -1,7 +1,8 @@
 // Simple categories object for testing
-const categories = {
+const categories = [
   {% for category in site.categories limit:1 %} // Limit to one category to check syntax
-    "{% capture category_name %}{{ category | first }}{% endcapture %}{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}": [
+    "{% capture category_name %}{{ category | first }}{% endcapture %}{{ category_name | downcase | replace: " ", "_" | replace: "-", "_" | replace: "'", "" }}":
+    [
       {% for post in site.categories[category_name] limit:1 %}
         {
           "url": "{{ site.baseurl }}{{ post.url }}",
@@ -11,7 +12,7 @@ const categories = {
       {% endfor %}
     ]
   {% endfor %}
-};
+];
 console.log(categories);
 
 // Event listener for loading categories
