@@ -7,13 +7,13 @@
       <!-- Header Section -->
       {% include header.html %}
 
-      <!-- Projects Section -->
       <section class="projects-section">
         <h1 class="projects-title">Projects</h1>
         
         <!-- Project List -->
         <ul class="projects-list">
-          {% for project in site.projects %}
+          {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+          {% for project in sorted_projects %}
             <li class="project-item">
               <a href="{{ project.url }}" class="project-link">
                 {{ project.title }}

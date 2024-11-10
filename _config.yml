@@ -17,6 +17,11 @@ author:
   location: "USA"
   profession: "Wheelchair Repair Technician"
   languages: "English"
+  education: "Self-taught"
+  skills: "PHP, JavaScript, HTML, CSS"
+  experience: "5+ years"
+  availability: "Open to new projects"
+  achievements: "Developed a portfolio of abstract art generators"
   contact:
     - title: github
       url: https://github.com/raystanza

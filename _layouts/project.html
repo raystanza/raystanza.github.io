@@ -20,5 +20,20 @@
       <!-- Footer Section -->
       {% include footer.html %}
     </main>
+
+    <!-- Inline CSS for Project Link Styling -->
+    <style>
+      .project-content a {
+        color: var(--highlight-color); /* Set to your site's highlight color */
+        text-decoration: none;
+        border-bottom: 2px solid var(--highlight-color);
+        transition: color 0.3s ease, border-color 0.3s ease;
+      }
+      
+      .project-content a:hover {
+        color: var(--white-1); /* Adjust for your preferred hover color */
+        border-color: var(--white-1);
+      }
+    </style>
   </body>
 </html>

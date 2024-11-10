@@ -1,21 +1,23 @@
-<!-- Footer -->
-<footer style="padding: 2rem; background-color: var(--gray-3); color: var(--white-1); text-align: center; font-size: 1rem; line-height: 1.8;">
-  <div style="max-width: 800px; margin: auto;">
-      <p style="font-size: 1.2rem; font-weight: bold;">
-        🌍 Discover more about <strong>{{ site.title }}</strong>
+<!-- Footer Card -->
+<footer style="padding: 1.5rem; background-color: var(--gray-3); color: var(--white-1); text-align: center; font-size: 0.9rem; line-height: 1.5; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); max-width: 700px; margin: 2rem auto;">
+  <div style="margin: auto;">
+      <p style="font-weight: bold; font-size: 1rem;">
+        🌍 <a href="{{ site.url }}" style="color: var(--highlight-color); text-decoration: none;">
+          <strong>{{ site.title }}</strong>
+        </a>
       </p>
       
       <p>
-        📬 Contact me at: 
-        <a href="mailto:{{ site.author.email }}" style="color: var(--highlight-color); text-decoration: underline;">
+        ✉️ 
+        <a href="mailto:{{ site.author.email }}" style="color: var(--highlight-color); text-decoration: none;">
           {{ site.author.email }}
         </a>
       </p>
       
-      <hr style="border-top: 2px dashed var(--white-2); width: 80%; margin: 2rem auto;">
+      <hr style="border-top: 1px dashed var(--white-2); width: 60%; margin: 1.5rem auto;">
       
-      <p>
-        🌟 Crafted with <span style="color: var(--highlight-color); font-size: 1.2rem;">♥</span> by <strong>{{ site.author.name }}</strong>
+      <p style="margin: 0.5rem 0;">
+        Crafted with <span style="color: var(--highlight-color); font-size: 1.1rem;">❤️</span> by <strong>{{ site.author.name }}</strong>
       </p>
       
       <p>
@@ -23,7 +25,7 @@
       </p>
       
       <p>
-        🚀 Last updated: {{ site.time | date: "%B %d, %Y" }}
-      </p>
+        🚀 Updated: {{ site.time | date: "%B %d, %Y" }}
+      </p>  
   </div>
 </footer>

@@ -1,4 +1,4 @@
-<section id="bio" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 2rem; background-color: var(--gray-4); color: var(--white-1);">
+<section id="bio" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 2rem; background-color: var(--gray-4); color: var(--white-1); max-width: 100%; margin: auto;">
   <!-- Profile Picture and Name -->
   <section id="img-wrapper" style="flex: 1; text-align: center; padding: 1rem;">
     <a href="{{ site.baseurl }}/bio/">
@@ -14,25 +14,63 @@
       <p id="greeting" style="font-style: italic; font-size: 0.9rem; color: var(--white-2);"></p>
     </div>
 
-    <!-- Quick Highlights or Short Bio Details -->
     <div id="highlights-wrapper" style="margin-bottom: 1rem;">
       <ul style="list-style: none; padding: 0; margin: 0;">
-        <li>📍 Based in: <strong>{{ site.author.location | default: "Unknown" }}</strong></li>
-        <li>💼 Profession: <strong>{{ site.author.profession | default: "Web Developer" }}</strong></li>
-        <li>🌐 Languages: <strong>{{ site.author.languages | default: "English" }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">📍 Based in: <strong>{{ site.author.location }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">💼 Profession: <strong>{{ site.author.profession }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">🌐 Languages: <strong>{{ site.author.languages }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">🎓 Education: <strong>{{ site.author.education }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">⚙️ Skills: <strong>{{ site.author.skills }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">🕒 Experience: <strong>{{ site.author.experience }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">📆 Availability: <strong>{{ site.author.availability }}</strong></li>
+        <li style="margin-bottom: 0.5rem;">🏆 Notable Achievements: <strong>{{ site.author.achievements }}</strong></li>
       </ul>
     </div>
 
     <!-- Social Media Links -->
     <div id="social-wrapper" style="margin-top: 1rem;">
       {% for contact in site.author.contact %}
-      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
+      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" style="margin: 10px;">
         <img src="{{ site.baseurl }}/assets/icons/{{ contact.title }}.png" alt="{{ contact.title }}" style="width: 30px; height: 30px;">
       </a>
       {% endfor %}
     </div>
   </section>
 </section>
+
+<style>
+/* Styling for smaller screens */
+@media (max-width: 768px) {
+  #bio {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
+  #img-wrapper {
+    margin-bottom: 1rem;
+  }
+  #bio-wrapper {
+    padding: 0;
+  }
+  #text-wrapper, #highlights-wrapper, #social-wrapper {
+    margin-bottom: 1rem;
+  }
+  #highlights-wrapper ul li {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #highlights-wrapper ul li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+  }
+}
+
+</style>
 
 <!-- Dynamic Greeting Script -->
 <script>
