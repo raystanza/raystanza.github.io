@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <main>
+      
+      <!-- Header Section -->
+      {% include header.html %}
+
+      <!-- Projects Section -->
+      <section class="projects-section">
+        <h1 class="projects-title">Projects</h1>
+        
+        <!-- Project List -->
+        <ul class="projects-list">
+          {% for project in site.projects %}
+            <li class="project-item">
+              <a href="{{ project.url }}" class="project-link">
+                {{ project.title }}
+              </a>
+              <p class="project-description">
+                {{ project.description }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <!-- Footer Section -->
+      {% include footer.html %}
+    </main>
+  </body>
+</html>

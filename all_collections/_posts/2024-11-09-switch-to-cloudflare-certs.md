@@ -2,7 +2,9 @@
 layout: post
 title: Switching from Let's Encrypt to CloudFlare for SSL/TLS Certs
 date: 2024-11-09
-categories: ["tutorials", "SSL", "TLS", "Let's Encrypt", "CloudFlare"]
+categories: ["tutorials", "ssl", "tls", "let's encrypt", "cloudflare"]
+og_title: "Switching from Let's Encrypt to CloudFlare for SSL/TLS Certs"
+og_description: "SSL/TLS certificates are the backbone of secure web communication, and if you've been riding the Let’s Encrypt wave for a while, you know the benefits of free, automated, and open-source security."
 ---
 
 ## 🔐 Switching from Let’s Encrypt to Cloudflare for SSL/TLS

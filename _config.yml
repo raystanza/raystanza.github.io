@@ -44,6 +44,9 @@ collections_dir: all_collections
 collections:
   posts:
     output: true
+  projects:
+    output: true
+    permalink: /projects/:title/
 
 defaults:
   - scope:
@@ -51,6 +54,12 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
+  - scope:
+      path: "_projects"
+    values:
+      layout: "project"
+      permalink: /projects/:title/
+
 
 # Excluded items
 exclude:

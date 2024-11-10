@@ -3,6 +3,8 @@ layout: post
 title: Give Bun a Try
 date: 2024-05-15
 categories: ["tutorials", "bun", "npm"]
+og_title: "Replacing npm with Bun: A Guide for Linux"
+og_description: "Before diving into the technical details, it's important to understand why you might consider switching to Bun. Here are some key reasons."
 ---
 
 ## Replacing npm with Bun: A Guide for Linux

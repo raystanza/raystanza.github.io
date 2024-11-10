@@ -7,7 +7,9 @@
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
-  --highlight-color: #348505; /* Set this as the main highlight color */
+  --highlight-color: #348505;
+  --success-color: #348505;
+  --success-muted: #5a8a3c;
 }
 
 /* Category Modal Background and Container */

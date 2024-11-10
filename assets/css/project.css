@@ -1,0 +1,129 @@
+/* Root variables for project layout colors */
+:root {
+  --gray-1: #3f3f3f;
+  --gray-2: #32353a;
+  --gray-3: #25282c;
+  --gray-4: #151618;
+  --gray-6: #111111;
+  --white-1: #eeeeee;
+  --white-2: #a9abb3;
+  --highlight-color: #348505;
+}
+
+/* General Layout */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--white-1);
+  background-color: var(--gray-6);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Content Styling */
+main {
+  padding: 2rem;
+  max-width: 800px; /* Aligns with the other layouts */
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  margin-bottom: 2rem;
+}
+
+/* Project List Container (for projects.html layout) */
+.projects-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.projects-section h1 {
+  font-size: 2.5rem;
+  color: var(--highlight-color);
+  margin-bottom: 1.5rem;
+}
+
+.projects-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projects-section li {
+  margin-bottom: 1.5rem;
+  background: var(--gray-3);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.projects-section li:hover {
+  transform: translateY(-5px);
+}
+
+.projects-section a {
+  color: var(--white-1);
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.projects-section p {
+  color: var(--white-2);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Project Article Container (for project.html layout) */
+.project-content {
+  background-color: var(--gray-4);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  max-width: 800px;
+}
+
+/* Project Title Styling */
+.project-content h1 {
+  color: var(--highlight-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+/* Project Description Styling */
+.project-content p {
+  color: var(--white-2);
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+/* Project Body Content */
+.project-content section {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--white-1);
+  margin-top: 1.5rem;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+  }
+  .project-content h1,
+  .projects-section h1 {
+    font-size: 2rem;
+  }
+  .projects-section a {
+    font-size: 1.1rem;
+  }
+}

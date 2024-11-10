@@ -1,6 +1,6 @@
 ---
 title: Bio
-layout: blog
+layout: bio
 description: "Learn more about Jim Sines, the creator behind this site."
 keywords: "Jim Sines, bio, about, tech blog, coding"
 permalink: /bio/

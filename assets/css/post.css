@@ -1,13 +1,57 @@
 :root {
-  --gray-1: #3f3f3f;
-  --gray-2: #32353a;
-  --gray-3: #25282c;
-  --gray-4: #151618;
-  --gray-5: #151618;
-  --gray-6: #111111;
-  --white-1: #eeeeee;
-  --white-2: #a9abb3;
-  --highlight-color: #348505;
+  /* Primary Gray Tones */
+  --gray-1: #3f3f3f;   /* Dark Gray */
+  --gray-2: #32353a;   /* Medium Dark Gray */
+  --gray-3: #25282c;   /* Base Background Gray */
+  --gray-4: #151618;   /* Dark Background */
+  --gray-5: #0d0e0f;   /* Deeper Background */
+  --gray-6: #111111;   /* Deep Dark Gray */
+
+  /* Light Gray Shades */
+  --light-gray-1: #b0b3b8; /* Light Gray for borders or subtle backgrounds */
+  --light-gray-2: #d1d4d8; /* Very Light Gray for contrast or backgrounds */
+
+  /* White Tones */
+  --white-1: #eeeeee;  /* Base Text/Highlight */
+  --white-2: #a9abb3;  /* Muted Text */
+  --white-3: #ffffff;  /* Pure White */
+
+  /* Highlight and Accent Colors */
+  --highlight-color: #348505;   /* Primary Highlight (Buttons, Links) */
+  --highlight-hover: #4fa60a;   /* Hover for Primary Highlight */
+  --accent-color: #00aaff;      /* Secondary Accent (Links, Highlights) */
+  --accent-hover: #0099e6;      /* Hover for Accent */
+  --highlight-muted: #0b6623;   /* Muted highlight for subtle elements */
+
+  /* Alert Colors */
+  --warning-color: #ff5a5f;     /* Warning (Delete/Remove buttons) */
+  --warning-dark: #d9444b;      /* Darker Warning for emphasis */
+  --success-color: #4caf50;     /* Success Indicators (e.g., Alerts, Tags) */
+  --success-muted: #6fbf73;     /* Muted Success for subtle indicators */
+  --info-color: #3a9ad9;        /* Info Color for Alerts/Notes */
+  --info-muted: #68b2e3;        /* Lighter Info for softer alerts */
+
+  /* Background Colors */
+  --background-light: #1d1f21;  /* Light Background for Cards */
+  --background-muted: #2a2d31;  /* Muted Background for Sections */
+  --background-contrast: #2f3136; /* Contrast Background (Hover Effects) */
+  --background-dark: #0c0c0c;   /* Very Dark Background for depth */
+
+  /* Typography Colors */
+  --text-primary: var(--white-1); /* Primary Text */
+  --text-secondary: var(--white-2); /* Secondary Text */
+  --text-muted: #7d838b;        /* Muted Text */
+  --text-inverse: #131415;      /* Inverse color for use on light backgrounds */
+
+  /* Border Colors */
+  --border-color: #2d2d2d;      /* Standard Border for Dividers/Cards */
+  --border-highlight: #4b9cdb;  /* Border on Interactive Elements (Hover) */
+  --border-muted: #1e1e1e;      /* Soft border for subtle elements */
+
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Light Shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.2); /* Medium Shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.3); /* Dark Shadow */
 }
 
 /* Global Resets */
@@ -79,23 +123,32 @@ main {
 .categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
+
 .categories .category {
   margin: 0;
   display: inline-block;
-  color: var(--gray-4);
-  background: var(--white-2);
+  color: var(--white-1);
+  background: var(--gray-3);
   border-radius: 15px;
-  font-size: 0.7rem;
-  padding: 0 0.8rem;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
   line-height: 1.3;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
+
 .categories .category:hover {
-  background: var(--highlight-color);
-  color: var(--gray-6);
+  background: var(--background-dark);
+  color: var(--highlight-hover);
+  transform: translateY(-2px); /* Slight lift on hover for effect */
+}
+
+.categories .category:active {
+  background: var(--background-dark);
+  color: var(--highlight-hover);
+  transform: translateY(0); /* Reset to avoid stacking with hover lift */
 }
 
 /* Markdown Content Styling */

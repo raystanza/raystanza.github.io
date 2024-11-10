@@ -1,20 +1,67 @@
-<header style="background-color: var(--gray-2); padding: 1rem 0; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);">
+<header style="background-color: var(--gray-2); padding: 1rem 0; margin: 1rem; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);">
   <div style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;">
+    
     <!-- Site Title with Hover Effect -->
-    <a class="site-title" href="{{ site.baseurl }}/" style="font-size: 2rem; color: var(--white-1); text-decoration: none; font-weight: bold; transition: color 0.3s;">
+    <a class="site-title" href="{{ site.baseurl }}/" style="font-size: 1.1rem; color: var(--white-1); text-decoration: none; font-weight: bold; transition: color 0.3s;">
       {{ site.title }}
     </a>
     
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu with Enhanced Styling -->
     <nav>
-      <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
-        <li style="margin: 0 10px;">
-          <a href="{{ site.baseurl }}/" style="color: var(--white-1); text-decoration: none; font-size: 1rem; transition: color 0.3s;" onmouseover="this.style.color='var(--highlight-color)'" onmouseout="this.style.color='var(--white-1)'">Home</a>
+      <ul style="list-style: none; display: flex; gap: 1.1rem; margin: 0; padding: 0;">
+        
+        <!-- Home Link with Hover and Active Effects -->
+        <li style="position: relative;">
+          <a href="{{ site.baseurl }}/" style="color: var(--white-1); font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; position: relative; transition: color 0.3s;">
+            Home
+          </a>
+          <span class="underline"></span>
         </li>
-        <li style="margin: 0 10px;">
-          <a href="{{ site.baseurl }}/bio" style="color: var(--white-1); text-decoration: none; font-size: 1rem; transition: color 0.3s;" onmouseover="this.style.color='var(--highlight-color)'" onmouseout="this.style.color='var(--white-1)'">Bio</a>
+
+        <!-- Projects Link with Hover and Active Effects -->
+        <li style="position: relative;">
+          <a href="{{ site.baseurl }}/projects" style="color: var(--white-1); font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; position: relative; transition: color 0.3s;">
+            Projects
+          </a>
+          <span class="underline"></span>
         </li>
+        
+        <!-- Bio Link with Hover and Active Effects -->
+        <li style="position: relative;">
+          <a href="{{ site.baseurl }}/bio" style="color: var(--white-1); font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; position: relative; transition: color 0.3s;">
+            Bio
+          </a>
+          <span class="underline"></span>
+        </li>
+        
       </ul>
     </nav>
   </div>
 </header>
+
+<style>
+  /* Additional CSS for Navigation Styling */
+  .site-title:hover {
+    color: var(--highlight-color);
+  }
+  nav ul li a:hover {
+    color: var(--highlight-color);
+  }
+  
+  /* Underline Effect for Active Links */
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  nav ul li:hover .underline,
+  nav ul li a:focus .underline {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+</style>
