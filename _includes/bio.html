@@ -1,37 +1,41 @@
-<section id="bio" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 2rem; background-color: var(--gray-4); color: var(--white-1); max-width: 100%; margin: auto;">
+<section id="bio">
   <!-- Profile Picture and Name -->
-  <section id="img-wrapper" style="flex: 1; text-align: center; padding: 1rem;">
+  <section id="img-wrapper">
     <a href="{{ site.baseurl }}/bio/">
-      <img src="{{ site.author.dp }}" alt="{{ site.author.name }}" style="border-radius: 50%; width: 100px; height: 100px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      <img 
+        src="{{ site.author.dp }}" 
+        alt="{{ site.author.name }}" 
+        class="profile-picture"
+      >
     </a>
-    <h3 style="margin-top: 1rem; font-size: 1.2rem; color: var(--white-2);">{{ site.author.name }}</h3>
+    <h3 class="author-name">{{ site.author.name }}</h3>
   </section>
 
   <!-- Bio Information -->
-  <section id="bio-wrapper" style="flex: 3; padding: 1rem;">
-    <div id="text-wrapper" style="margin-bottom: 1rem;">
+  <section id="bio-wrapper">
+    <div id="text-wrapper">
       <p>{{ site.author.description | markdownify }}</p>
-      <p id="greeting" style="font-style: italic; font-size: 0.9rem; color: var(--white-2);"></p>
+      <p id="greeting" class="greeting"></p>
     </div>
 
-    <div id="highlights-wrapper" style="margin-bottom: 1rem;">
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin-bottom: 0.5rem;">📍 Based in: <strong>{{ site.author.location }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">💼 Profession: <strong>{{ site.author.profession }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">🌐 Languages: <strong>{{ site.author.languages }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">🎓 Education: <strong>{{ site.author.education }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">⚙️ Skills: <strong>{{ site.author.skills }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">🕒 Experience: <strong>{{ site.author.experience }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">📆 Availability: <strong>{{ site.author.availability }}</strong></li>
-        <li style="margin-bottom: 0.5rem;">🏆 Notable Achievements: <strong>{{ site.author.achievements }}</strong></li>
+    <div id="highlights-wrapper">
+      <ul>
+        <li>📍 Based in: <strong>{{ site.author.location }}</strong></li>
+        <li>💼 Profession: <strong>{{ site.author.profession }}</strong></li>
+        <li>🌐 Languages: <strong>{{ site.author.languages }}</strong></li>
+        <li>🎓 Education: <strong>{{ site.author.education }}</strong></li>
+        <li>⚙️ Skills: <strong>{{ site.author.skills }}</strong></li>
+        <li>🕒 Experience: <strong>{{ site.author.experience }}</strong></li>
+        <li>📆 Availability: <strong>{{ site.author.availability }}</strong></li>
+        <li>🏆 Notable Achievements: <strong>{{ site.author.achievements }}</strong></li>
       </ul>
     </div>
 
     <!-- Social Media Links -->
-    <div id="social-wrapper" style="margin-top: 1rem;">
+    <div id="social-wrapper">
       {% for contact in site.author.contact %}
-      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" style="margin: 10px;">
-        <img src="{{ site.baseurl }}/assets/icons/{{ contact.title }}.png" alt="{{ contact.title }}" style="width: 30px; height: 30px;">
+      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" class="social-link">
+        <img src="{{ site.baseurl }}/assets/icons/{{ contact.title }}.png" alt="{{ contact.title }}" class="social-icon">
       </a>
       {% endfor %}
     </div>
@@ -39,37 +43,130 @@
 </section>
 
 <style>
+/* Styling for the bio section */
+#bio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--gray-4);
+  color: var(--white-1);
+  max-width: 100%;
+  margin: auto;
+}
+
+#img-wrapper {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1);
+}
+
+.author-name {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--white-2);
+}
+
+#bio-wrapper {
+  flex: 3;
+  padding: 1rem;
+}
+
+#greeting {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--white-2);
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+#highlights-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+#highlights-wrapper ul li {
+  padding: 1rem;
+  background: var(--gray-3);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#highlights-wrapper ul li strong {
+  font-weight: bold;
+  color: var(--white-1);
+}
+
+.social-link {
+  margin: 10px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
 /* Styling for smaller screens */
 @media (max-width: 768px) {
   #bio {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
   }
+
   #img-wrapper {
     margin-bottom: 1rem;
   }
+
   #bio-wrapper {
     padding: 0;
   }
+
   #text-wrapper, #highlights-wrapper, #social-wrapper {
     margin-bottom: 1rem;
   }
+
+  #social-wrapper {
+    justify-content: center;
+  }
+
+  #highlights-wrapper ul {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
   #highlights-wrapper ul li {
     font-size: 1rem;
-    padding: 0.3rem 0;
   }
 }
 
 @media (max-width: 480px) {
   #highlights-wrapper ul li {
     font-size: 0.9rem;
-    padding: 0.4rem 0;
+    padding: 0.8rem;
+    line-height: 1.4;
   }
 }
-
 </style>
 
 <!-- Dynamic Greeting Script -->
