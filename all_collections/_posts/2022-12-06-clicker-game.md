@@ -45,11 +45,11 @@ This is fairly useless and is intented as an annoyance machine for my kids to pl
 
 #### Roadmap
 
-[ ] New UI (React/Vue/Angular)
+[ ] New UI
 
 [ ] Type in-> Emoji, output-> PlainText
 
-[ ] Output Emoji List as SVG image
+[X] Output Emoji List as SVG image
 
 ##### @raystanza
 

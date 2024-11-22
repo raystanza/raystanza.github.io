@@ -4,9 +4,6 @@ title: Installing Yarn
 date: 2024-03-23
 categories: ["tutorials", "yarn"]
 ---
-
-## How to Install Yarn: A Step-by-Step Guide
-
 Yarn is a fast, reliable, and secure dependency management tool that has become a popular choice among developers, particularly those working with JavaScript projects. It caches every package it downloads, so it never needs to download the same package again. It also parallelizes operations to maximize resource utilization, so install times are faster than ever. This guide will walk you through the process of installing Yarn on your system, ensuring you can start managing your project dependencies more efficiently.
 
 ## Prerequisites

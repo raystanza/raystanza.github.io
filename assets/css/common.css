@@ -1,15 +1,34 @@
 :root {
+  /* Grayscale */
   --gray-1: #3f3f3f;
   --gray-2: #32353a;
   --gray-3: #25282c;
   --gray-4: #151618;
   --gray-5: #151618;
   --gray-6: #111111;
+
+  /* Whites */
   --white-1: #eeeeee;
   --white-2: #a9abb3;
+
+  /* Highlight and Success */
   --highlight-color: #348505;
   --success-color: #348505;
   --success-muted: #5a8a3c;
+
+  /* Retro Text Colors */
+  --text-primary: #00ff00; /* Bright green for retro titles */
+  --text-secondary: #33cc33; /* Muted green for secondary text */
+  --text-muted: #66ff66; /* Light green for subtle text */
+  --text-inverted: #000000; /* Black text for light backgrounds */
+
+  /* Retro Highlight Colors */
+  --highlight-color-retro: #ff00ff; /* Magenta for retro highlights */
+  --highlight-muted-retro: #cc00cc; /* Muted magenta for hover states */
+
+  /* Background Colors for Retro Theme */
+  --bg-primary-retro: #000000; /* Black for retro background */
+  --bg-secondary-retro: #1a1a1a; /* Dark gray for secondary sections */
 }
 
 /* Category Modal Background and Container */
