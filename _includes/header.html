@@ -1,69 +1,121 @@
-<header style="background-color: var(--gray-2); padding: 1rem 0; margin: 1rem; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);">
-  <div style="max-width: 1200px; margin: auto; padding: 0 1rem;">
+<header class="site-header">
+  <div class="header-container">
     
-    <!-- Site Title with Hover Effect -->
-    <div style="text-align: center; margin-bottom: 0.5rem;">
-      <a class="site-title" href="{{ site.baseurl }}/" style="font-size: 1.5rem; color: var(--white-1); text-decoration: none; font-weight: bold; transition: color 0.3s;">
+    <!-- Site Title -->
+    <div class="title-wrapper">
+      <a class="site-title" href="{{ site.baseurl }}/">
         {{ site.title }}
       </a>
     </div>
     
-    <!-- Navigation Menu with Enhanced Styling -->
+    <!-- Navigation Menu -->
     <nav>
-      <ul style="list-style: none; display: flex; justify-content: center; gap: 1.1rem; margin: 0; padding: 0;">
-        
-        <!-- Home Link with Hover and Active Effects -->
-        <li style="position: relative;">
-          <a href="{{ site.baseurl }}/" style="color: var(--white-1); font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; position: relative; transition: color 0.3s;">
+      <ul class="nav-menu">
+        <li>
+          <a href="{{ site.baseurl }}/" class="nav-link">
             Home
           </a>
-          <span class="underline"></span>
         </li>
-
-        <!-- Projects Link with Hover and Active Effects -->
-        <li style="position: relative;">
-          <a href="{{ site.baseurl }}/projects" style="color: var(--white-1); font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; position: relative; transition: color 0.3s;">
+        <li>
+          <a href="{{ site.baseurl }}/projects" class="nav-link">
             Projects
           </a>
-          <span class="underline"></span>
         </li>
-        
-        <!-- Bio Link with Hover and Active Effects -->
-        <li style="position: relative;">
-          <a href="{{ site.baseurl }}/bio" style="color: var(--white-1); font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; position: relative; transition: color 0.3s;">
+        <li>
+          <a href="{{ site.baseurl }}/bio" class="nav-link">
             Bio
           </a>
-          <span class="underline"></span>
         </li>
-        
       </ul>
     </nav>
   </div>
 </header>
 
 <style>
-  /* Additional CSS for Navigation Styling */
-  .site-title:hover {
-    color: var(--highlight-color);
+/* Header Styling */
+.site-header {
+  background-color: var(--gray-2);
+  padding: 1rem 0;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--text-primary);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Site Title */
+.title-wrapper {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.site-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 4px var(--text-secondary), 0 0 8px var(--text-secondary);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.site-title:hover {
+  color: var(--highlight-color-retro);
+  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 12px var(--bg-primary-retro);
+}
+
+/* Navigation Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-link {
+  color: var(--text-primary);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.nav-link:hover {
+  color: var(--highlight-color-retro);
+  text-shadow: 0 0 6px var(--highlight-muted-retro);
+}
+
+/* Underline Animation for Links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--highlight-color-retro);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.nav-link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 750px) {
+  .site-title {
+    font-size: 1.5rem;
   }
-  nav ul li a:hover {
-    color: var(--highlight-color);
+  .nav-link {
+    font-size: 0.9rem;
   }
-  
-  /* Underline Effect for Active Links */
-  .underline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--highlight-color);
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  nav ul li:hover .underline,
-  nav ul li a:focus .underline {
-    opacity: 1;
-    transform: scaleX(1);
-  }
+}
 </style>

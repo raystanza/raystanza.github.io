@@ -147,8 +147,26 @@ main {
   text-overflow: ellipsis;
 }
 .article-divider {
-  border: 1px solid var(--gray-4);
-  margin: 1rem 0;
+  border: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--gray-6),
+    var(--text-primary),
+    var(--gray-6)
+  );
+  margin: 1.5rem 0;
+  text-align: center;
+  position: relative;
+}
+.article-divider::after {
+  content: "[====]";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-primary);
+  font-size: 0.8rem;
 }
 
 /* Media Queries */
