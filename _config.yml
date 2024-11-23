@@ -21,7 +21,8 @@ author:
   skills: "PHP, JavaScript, HTML, CSS"
   experience: "5+ years"
   availability: "Open to new projects"
-  achievements: "Developed a portfolio of abstract art generators"
+  achievements: "Developed an abstract art wallpaper generator"
+  technologies: "LAMP Stack, LIVT Stack, Linode VPS, CloudFlare"
   contact:
     - title: github
       url: https://github.com/raystanza

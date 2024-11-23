@@ -21,6 +21,8 @@ The **Abstract Wallpaper Generator** is a Node.js-based application that generat
 - **Web Interface**: Offers a user-friendly web interface to preview and fine-tune wallpaper effects in real-time.
 - **Resolution Flexibility**: Default resolution is set to 1920x1080, but you can adjust this to fit your screen or preferences.
 
+---
+
 ## Available Generators
 
 | Generator | Description |
@@ -62,6 +64,8 @@ Each generator offers its own unique style, and you can experiment with them to 
 - [ ] Enable randomization modes for pattern variations
 - [ ] Provide downloadable wallpaper packs
 - [x] Include interactive preview in web interface (completed 2024-11-10)
+
+---
 
 ### Project Author
 

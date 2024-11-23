@@ -25,15 +25,17 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,800;1,100;1,300;1,400;1,800&display=swap" rel="stylesheet" />
 
   <!-- CSS Links -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/common.css" />
   {% if page.layout == "post" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/post.css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css" />
   {% elsif page.layout == "projects" or page.layout == "project" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/project.css" />
-  {% else %}
+  {% elsif page.layout == "bio" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bio.css" />
+  {% elsif page.layout == "blog" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css" />
   {% endif %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/common.css" />
 
   <!-- JavaScript Links -->
   {% if page.layout == "blog" or page.layout == "post" %}

@@ -10,30 +10,10 @@
       </header>
 
       <!-- Bio Section -->
+      <h1 class="bio-title">Bio</h1>
       <section class="bio-section">
-        <h1 class="bio-title">Bio</h1>
         <!-- Profile and Bio -->
         {% include bio.html %}
-      </section>
-
-      <!-- Articles Section -->
-      <section class="articles-section">
-        <h2 class="articles-title">Latest Articles</h2>
-        <ul class="articles-list">
-          {% for post in site.posts limit:7 %}
-            <li class="article-item">
-              <a href="{{ post.url }}" class="article-link">
-                {{ post.title }}
-              </a>
-              <p class="article-meta">
-                <small>{{ post.date | date: "%B %d, %Y" }}</small>
-              </p>
-              <p class="article-excerpt">
-                {{ post.excerpt | strip_html | truncate: 120 }}
-              </p>
-            </li>
-          {% endfor %}
-        </ul>
       </section>
 
       <!-- Footer -->
@@ -41,107 +21,5 @@
         {% include footer.html %}
       </footer>
     </main>
-    {% include category-modal.html %}
   </body>
 </html>
-
-<style>
-/* Main Content Styling */
-.main-content {
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--white-1);
-  background-color: var(--gray-6);
-  padding: 2rem;
-}
-
-/* Bio Section */
-.bio-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  background: var(--gray-4);
-  border-radius: 8px;
-  max-width: 800px;
-  margin: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.bio-title {
-  color: var(--highlight-color);
-  font-size: 2rem;
-  text-align: center;
-  text-shadow: 0 0 4px var(--highlight-color), 0 0 8px var(--highlight-color);
-}
-
-/* Articles Section */
-.articles-section {
-  margin: 3rem auto 0;
-  max-width: 800px;
-  text-align: center;
-}
-
-.articles-title {
-  font-size: 1.8rem;
-  color: var(--highlight-color);
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 4px var(--highlight-color), 0 0 8px var(--highlight-color);
-}
-
-.articles-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.article-item {
-  background: var(--gray-5);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
-}
-
-.article-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.article-link {
-  color: var(--white-1);
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 4px var(--text-secondary);
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-.article-link:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 8px var(--highlight-color);
-}
-
-.article-meta {
-  color: var(--white-2);
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
-}
-
-.article-excerpt {
-  color: var(--white-1);
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* Footer Styling */
-.main-footer {
-  margin-top: 3rem;
-  text-align: center;
-}
-</style>

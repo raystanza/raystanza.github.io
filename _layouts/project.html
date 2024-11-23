@@ -5,35 +5,41 @@
     <main>
       <!-- Header Section -->
       {% include header.html %}
-      
+
       <!-- Project Content Section -->
       <article class="project-content">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.description }}</p>
-        
+        <!-- Project Title -->
+        <h1 class="project-title">{{ page.title }}</h1>
+
+        <!-- Project Metadata -->
+        {% if page.date or page.categories %}
+        <div class="project-metadata">
+          {% if page.date %}
+            <span class="project-date">🗓️ {{ page.date | date: "%B %d, %Y" }}</span>
+          {% endif %}
+          {% if page.categories %}
+            <ul class="project-categories">
+              {% for c in page.categories %}
+                <li>
+                  <p class="project-category">{{ c }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Project Description -->
+        <p class="project-description">{{ page.description }}</p>
+
         <!-- Main Project Content -->
-        <section>
+        <section class="project-main-content">
           {{ content }}
         </section>
       </article>
-      
+
       <!-- Footer Section -->
       {% include footer.html %}
     </main>
-
-    <!-- Inline CSS for Project Link Styling -->
-    <style>
-      .project-content a {
-        color: var(--highlight-color); /* Set to your site's highlight color */
-        text-decoration: none;
-        border-bottom: 2px solid var(--highlight-color);
-        transition: color 0.3s ease, border-color 0.3s ease;
-      }
-      
-      .project-content a:hover {
-        color: var(--white-1); /* Adjust for your preferred hover color */
-        border-color: var(--white-1);
-      }
-    </style>
   </body>
 </html>

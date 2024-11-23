@@ -3,29 +3,34 @@
   {% include head.html %}
   <body>
     <main>
-      
       <!-- Header Section -->
-      <header role="banner">
-        {% include header.html %}
-      </header>
+      {% include header.html %}
 
+      <!-- Projects Section -->
       <section class="projects-section">
         <h1 class="projects-title">Projects</h1>
-        
-        <!-- Project List -->
-        <ul class="projects-list">
-          {% assign sorted_projects = site.projects | sort: "date" | reverse %}
-          {% for project in sorted_projects %}
-            <li class="project-item">
-              <a href="{{ project.url }}" class="project-link">
-                {{ project.title }}
-              </a>
-              <p class="project-description">
-                {{ project.description }}
-              </p>
-            </li>
-          {% endfor %}
-        </ul>
+
+        <!-- Project List or Fallback Message -->
+        {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+        {% if sorted_projects.size > 0 %}
+          <ul class="projects-list">
+            {% for project in sorted_projects %}
+              <li class="project-item">
+                <!-- Project Title -->
+                <a href="{{ project.url }}" class="project-link">
+                  {{ project.title }}
+                </a>
+
+                <!-- Project Description -->
+                <p class="project-description">
+                  {{ project.description | truncate: 120 }}
+                </p>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="no-projects-message">No projects available at this time. Check back later!</p>
+        {% endif %}
       </section>
 
       <!-- Footer Section -->
