@@ -1,31 +1,89 @@
-<!-- Footer Card -->
-<footer style="padding: 1.5rem; background-color: var(--gray-3); color: var(--white-1); text-align: center; font-size: 0.9rem; line-height: 1.5; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); max-width: 700px; margin: 2rem auto;">
-  <div style="margin: auto;">
-      <p style="font-weight: bold; font-size: 1rem;">
-        🌍 <a href="{{ site.url }}" style="color: var(--highlight-color); text-decoration: none;">
-          <strong>{{ site.title }}</strong>
-        </a>
-      </p>
-      
-      <p>
-        ✉️ 
-        <a href="mailto:{{ site.author.email }}" style="color: var(--highlight-color); text-decoration: none;">
-          {{ site.author.email }}
-        </a>
-      </p>
-      
-      <hr style="border-top: 1px dashed var(--white-2); width: 60%; margin: 1.5rem auto;">
-      
-      <p style="margin: 0.5rem 0;">
-        Crafted with <span style="color: var(--highlight-color); font-size: 1.1rem;">❤️</span> by <strong>{{ site.author.name }}</strong>
-      </p>
-      
-      <p>
-        &copy; 2020 - {{ 'now' | date: "%Y" }} | All rights reserved.
-      </p>
-      
-      <p>
-        🚀 Updated: {{ site.time | date: "%B %d, %Y" }}
-      </p>  
+<footer class="footer-card">
+  <div class="footer-content">
+    <p class="footer-title">
+      🌍 <a href="{{ site.url }}" class="footer-link">
+        <strong>{{ site.title }}</strong>
+      </a>
+    </p>
+    
+    <p>
+      ✉️ 
+      <a href="mailto:{{ site.author.email }}" class="footer-link">
+        {{ site.author.email }}
+      </a>
+    </p>
+    
+    <hr class="footer-divider">
+    
+    <p class="footer-text">
+      Crafted with <span class="footer-heart">❤️</span> by <strong>{{ site.author.name }}</strong>
+    </p>
+    
+    <p class="footer-text">
+      &copy; 2020 - {{ 'now' | date: "%Y" }} | All rights reserved.
+    </p>
+    
+    <p class="footer-text">
+      🚀 Updated: {{ site.time | date: "%B %d, %Y" }}
+    </p>
   </div>
 </footer>
+
+<style>
+/* Footer Card Styling */
+.footer-card {
+  padding: 1.5rem;
+  background-color: var(--gray-5);
+  color: var(--white-1);
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin: 2rem auto;
+  border: 1px solid var(--text-primary); /* Retro green border */
+}
+
+/* Footer Content */
+.footer-content {
+  margin: auto;
+}
+
+/* Footer Title Styling */
+.footer-title {
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0px 0px 12px var(--text-secondary); /* Subtle glow effect */
+}
+
+/* Footer Links */
+.footer-link {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.footer-link:hover {
+  color: var(--highlight-color-retro);
+  text-shadow: 0px 0px 8px var(--highlight-muted-retro); /* Glow intensifies on hover */
+}
+
+/* Divider Styling */
+.footer-divider {
+  border: 0;
+  border-top: 1px dashed var(--white-2);
+  width: 60%;
+  margin: 1.5rem auto;
+}
+
+/* Footer Text Styling */
+.footer-text {
+  margin: 0.5rem 0;
+}
+
+/* Footer Heart */
+.footer-heart {
+  color: var(--highlight-color);
+  font-size: 1.1rem;
+}
+</style>

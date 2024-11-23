@@ -1,46 +1,49 @@
-/* Root variables for project layout colors */
-:root {
-  --gray-1: #3f3f3f;
-  --gray-2: #32353a;
-  --gray-3: #25282c;
-  --gray-4: #151618;
-  --gray-6: #111111;
-  --white-1: #eeeeee;
-  --white-2: #a9abb3;
-  --highlight-color: #348505;
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* General Layout */
+html,
 body {
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--white-1);
+  color: var(--white-2);
   background-color: var(--gray-6);
-  margin: 0;
-  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1.7;
 }
 
 /* Main Content Styling */
 main {
-  padding: 2rem;
-  max-width: 800px; /* Aligns with the other layouts */
-  margin: auto;
-  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem 0;
 }
 
-/* Header Styling */
-header {
-  margin-bottom: 2rem;
+/* Projects Section */
+
+.projects-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 12px var(--highlight-color), 0 0 8px var(--highlight-color);
+  text-align: center;
 }
 
-/* Project List Container (for projects.html layout) */
 .projects-section {
   text-align: center;
   margin: 2rem 0;
 }
 
 .projects-section h1 {
-  font-size: 2.5rem;
-  color: var(--highlight-color);
+  font-size: 2rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 4px var(--highlight-color), 0 0 8px var(--highlight-color);
   margin-bottom: 1.5rem;
 }
 
@@ -52,20 +55,30 @@ header {
 .projects-section li {
   margin-bottom: 1.5rem;
   background: var(--gray-3);
+  border: 1px solid var(--text-primary);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .projects-section li:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .projects-section a {
-  color: var(--white-1);
+  color: var(--text-primary);
   font-size: 1.3rem;
-  text-decoration: underline;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 4px var(--text-secondary); /* Glow effect on links */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.projects-section a:hover {
+  color: var(--highlight-color-retro);
+  text-shadow: 0 0 8px var(--highlight-color-retro), 0 0 12px var(--highlight-muted-retro); /* Glow intensifies on hover */
 }
 
 .projects-section p {
@@ -74,9 +87,10 @@ header {
   margin-top: 0.5rem;
 }
 
-/* Project Article Container (for project.html layout) */
+/* Project Article Container */
 .project-content {
   background-color: var(--gray-4);
+  border: 1px solid var(--text-primary); /* Green border for retro style */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -89,7 +103,8 @@ header {
   color: var(--highlight-color);
   font-size: 2.5rem;
   text-align: center;
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 0 6px var(--highlight-color), 0 0 12px var(--highlight-color);
 }
 
 /* Project Description Styling */
