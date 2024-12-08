@@ -28,10 +28,66 @@
       <ul>
         <li>📍 Based in: <strong>{{ site.author.location }}</strong></li>
         <li>💼 Profession: <strong>{{ site.author.profession }}</strong></li>
-        <li>🌐 Languages: <strong>{{ site.author.languages }}</strong></li>
-        <li>🎓 Education: <strong>{{ site.author.education }}</strong></li>
-        <li>⚙️ Skills: <strong>{{ site.author.skills }}</strong></li>
-        <li>🛠️ Tools & Technologies: <strong>{{ site.author.technologies }}</strong></li>
+        <li>
+          <details>
+            <summary>🎓 Education</summary>
+            <ul>
+              {% for edu in site.author.education %}
+              <li>
+                <strong>{{ edu.name }}</strong>: {{ edu.description }} ({{ edu.duration }})
+              </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>🌐 Languages</summary>
+            <ul>
+              {% for lang in site.author.languages %}
+              <li>
+                <strong>{{ lang.name }}</strong>: {{ lang.description }}
+              </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>🛠️ Stacks</summary>
+            <ul>
+              {% for stack in site.author.stacks %}
+              <li>
+                <strong>{{ stack.name }}</strong>: {{ stack.description }}
+              </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>⚙️ Backend Tools</summary>
+            <ul>
+              {% for tool in site.author.backend %}
+              <li>
+                <strong>{{ tool.name }}</strong>: {{ tool.description }}
+              </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>🎨 Frontend Tools</summary>
+            <ul>
+              {% for tool in site.author.frontend %}
+              <li>
+                <strong>{{ tool.name }}</strong>: {{ tool.description }}
+              </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
         <li>🕒 Experience: <strong>{{ site.author.experience }}</strong></li>
         <li>📆 Availability: <strong>{{ site.author.availability }}</strong></li>
         <li>🏆 Achievements: <strong>{{ site.author.achievements }}</strong></li>

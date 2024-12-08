@@ -16,13 +16,45 @@ author:
   tagline: "<p>Coded by Jim Sines</p>"
   location: "USA"
   profession: "Wheelchair Repair Technician"
-  languages: "English"
-  education: "Self-taught"
-  skills: "PHP, JavaScript, HTML, CSS"
+  education:
+  - name: ITT Tech
+    description: Technical College
+    duration: 1 year
+  languages:
+  - name: HTML
+    description: "Markup language for structuring web content"
+  - name: CSS
+    description: "Stylesheet language for designing web pages"
+  - name: JavaScript
+    description: "Dynamic scripting language for web applications"
+  - name: PHP
+    description: "Server-side scripting language for web development"
+  stacks:
+  - name: LAMP Stack
+    description: "Linux, Apache, MySQL, PHP"
+  - name: LIVT Stack
+    description: "Laravel, Inertia.js, Vue.js, Tailwind CSS"
+  backend:
+  - name: Apache
+    description: "Web server software"
+  - name: MySQL Server
+    description: "Relational database management system"
+  - name: Laravel
+    description: "PHP framework for building web applications"
+  - name: Linode VPS
+    description: "Virtual private servers for hosting and deployment"
+  frontend:
+  - name: Vue
+    description: "JavaScript framework for building user interfaces"
+  - name: Tailwind
+    description: "Utility-first CSS framework for rapid UI development"
+  - name: CloudFlare DNS and Proxy
+    description: "Content delivery network and DDoS mitigation services"
+  - name: Linode VPS
+    description: "Scalable and reliable cloud hosting for deploying websites, applications, and databases."
   experience: "5+ years"
   availability: "Open to new projects"
   achievements: "Developed an abstract art wallpaper generator"
-  technologies: "LAMP Stack, LIVT Stack, Linode VPS, CloudFlare"
   contact:
     - title: github
       url: https://github.com/raystanza
