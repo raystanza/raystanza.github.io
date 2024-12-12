@@ -3,6 +3,8 @@ layout: post
 title: Basic VIM Usage
 date: 2024-03-17
 categories: ["guide", "vim"]
+og_title: "Vim Mastery: A Beginner's Guide to Efficient Text Editing"
+og_description: "Unlock the power of Vim with this essential guide. Learn key modes, navigation techniques, and editing strategies to transform your text editing workflow and boost productivity."
 ---
 Using Vim, the highly configurable text editor, is akin to learning a new language for many. Its efficiency and power come at the cost of a steep learning curve, but once mastered, it can significantly speed up your workflow. This article aims to demystify Vim for beginners, providing a guide to get started with this versatile editor.
 

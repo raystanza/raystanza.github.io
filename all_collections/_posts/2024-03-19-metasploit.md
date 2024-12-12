@@ -3,6 +3,8 @@ layout: post
 title: Basic Guide to Metasploit
 date: 2024-03-19
 categories: ["guide", "metasploit"]
+og_title: "Metasploit Essentials: A Guide to Ethical Penetration Testing"
+og_description: "Master the fundamentals of cybersecurity testing with this in-depth Metasploit guide. Learn ethical hacking techniques, vulnerability assessment, and responsible security exploration."
 ---
 Metasploit is a powerful tool for conducting security assessments and penetration testing. It provides a robust framework for developing and executing exploit code against remote target machines. Moreover, Metasploit is equipped with a vast array of tools that can assist in the exploitation of vulnerabilities and the post-exploitation analysis of systems. This guide aims to provide a comprehensive overview of Metasploit, its core functionalities, and practical applications in ethical hacking contexts.
 
@@ -31,7 +33,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-#### On Ubuntu/Debian:
+#### On Ubuntu/Debian
 
 For other Linux distributions, you can install Metasploit by first adding its repository and then installing it through the package manager:
 
