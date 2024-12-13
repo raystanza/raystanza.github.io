@@ -2,9 +2,13 @@
 layout: post
 title: Setting Up a Full-Stack Project (Next.js, tRPC, Prisma, PostgreSQL)
 date: 2024-03-21
-categories: ["tutorials", "fullstack","nextjs","trpc","prisma","postgresql"]
+categories: ["tutorials", "fullstack", "nextjs", "trpc", "prisma", "postgresql"]
+tags: ["full-stack", "next.js", "trpc", "prisma", "postgresql", "typescript", "web development", "tutorial"]
 og_title: "Full-Stack Mastery: Architecting Modern Web Applications with Next.js, tRPC, Prisma, and PostgreSQL"
 og_description: "Dive into a comprehensive guide for building scalable, type-safe web applications. Learn to seamlessly integrate cutting-edge technologies for robust full-stack development."
+og_image: "/assets/icons/og-image.png"
+og_type: "article"
+og_author: "Jim Sines"
 ---
 In this article, we're diving into the process of setting up a full-stack project using a powerful combination of technologies: Next.js, tRPC, Prisma, and PostgreSQL. This stack enables developers to build scalable, type-safe applications with ease. We'll walk through each step, from initializing the project to configuring each technology, providing example code and commands to guide you through the setup.
 

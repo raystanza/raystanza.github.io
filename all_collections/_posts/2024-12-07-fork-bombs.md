@@ -3,10 +3,13 @@ layout: post
 title: Fork-Bombs Explained - Minimal Code with Maximum Impact
 date: 2024-12-07
 categories: ["tutorials", "security", "linux", "windows", "bash", "powershell"]
+tags: ["fork-bombs", "recursion", "bash", "powershell", "python", "security"]
 og_title: "Fork-Bombs Explained - Minimal Code with Maximum Impact"
 og_description: "Discover the fascinating (and dangerous) world of fork-bombs—simple yet powerful recursive scripts that exploit system resources. Learn how they're created using only language operators in Bash, PowerShell, Python, and more."
+og_image: "/assets/icons/og-image.png"
+og_type: "article"
+og_author: "Jim Sines"
 ---
-
 A **fork-bomb** is a type of Denial of Service (DoS) attack where a process continuously spawns itself, quickly consuming system resources like CPU and memory. Fork-bombs exploit a system's multitasking capabilities to overload it, rendering it unresponsive. While commonly associated with malicious behavior, fork-bombs are often used for educational purposes to demonstrate system vulnerabilities.
 
 This article focuses on creating fork-bombs using **only language operators**, showcasing their simplicity and creative implementations in various common languages, including **Bash**, **PowerShell**, **Python**, **Perl**, and **C**. The goal is to highlight how minimalistic code can wreak havoc.
@@ -37,7 +40,7 @@ Bash is notorious for its ability to implement fork-bombs concisely. Here's the 
 
 #### **Explanation:**
 
-- `:()` defines a function named `:`. 
+- `:()` defines a function named `:`.
 - Inside the function, `:|:` pipes the function's output to itself, effectively calling it twice.
 - The `&` runs both calls in the background.
 - `};:` ends the function definition and calls it immediately.

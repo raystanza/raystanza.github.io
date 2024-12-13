@@ -3,6 +3,12 @@ layout: post
 title: ClickeR 'Game'
 date: 2023-01-13
 categories: ["projects", "live"]
+tags: ["clicker game", "emoji", "javascript", "projects", "games", "fun", "web apps"]
+og_title: "ClickeR 'Game': An Emoji Generating Annoyance Machine"
+og_description: "Discover the ClickeR 'Game', a quirky and entertaining web app where you generate emojis, listen to their descriptions, and create nonsensical paragraphs. It's the ultimate fun annoyance machine!"
+og_image: "/assets/icons/og-image.png"
+og_type: "article"
+og_author: "Jim Sines"
 ---
 ## Purpose
 

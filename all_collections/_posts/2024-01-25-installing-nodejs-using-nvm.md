@@ -3,8 +3,12 @@ layout: post
 title: Installing NodeJS on Linux using NVM
 date: 2024-01-25
 categories: ["tutorials", "nodejs", "nvm"]
+tags: ["node.js", "nvm", "linux", "version management", "programming", "tutorial"]
 og_title: "Mastering Node.js Deployment: A NVM Installation Guide for Linux"
 og_description: "Unlock seamless Node.js version management on Linux with NVM. Explore a step-by-step tutorial for installing, switching, and optimizing Node.js environments across multiple projects."
+og_image: "/assets/icons/og-image.png"
+og_type: "article"
+og_author: "Jim Sines"
 ---
 Node.js, a runtime environment for executing JavaScript code server-side, is an essential tool in modern web development. In this tutorial, we'll focus on installing Node.js on a Linux system using Node Version Manager (NVM). NVM is a handy tool that allows you to install multiple versions of Node.js and switch between them with ease.
 

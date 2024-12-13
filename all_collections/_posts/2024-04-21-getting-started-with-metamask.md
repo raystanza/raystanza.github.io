@@ -3,6 +3,12 @@ layout: post
 title: How to Create Your Very Own Ethereum Crypto Address with MetaMask
 date: 2024-04-21
 categories: ["tutorials", "metamask", "eth"]
+tags: ["ethereum", "metamask", "crypto", "wallet", "blockchain", "security", "tutorial"]
+og_title: "How to Create Your Ethereum Address with MetaMask: A Beginner's Guide"
+og_description: "Dive into the Ethereum blockchain with this easy-to-follow guide on creating your own crypto address using MetaMask. Learn the steps to set up your wallet and secure your digital treasures."
+og_image: "/assets/icons/og-image.png"
+og_type: "article"
+og_author: "Jim Sines"
 ---
 🚀 Hey there, 🌟 Ready to dive into the world of Ethereum and feel like the cool kids? 😎 Let's get you set up with your very own Ethereum address using the MetaMask wallet. It's easier than feeding your pet goldfish — trust me!
 

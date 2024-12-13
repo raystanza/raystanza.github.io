@@ -3,8 +3,12 @@ layout: post
 title: Switching from Let's Encrypt to CloudFlare for SSL/TLS Certs
 date: 2024-11-09
 categories: ["tutorials", "ssl", "tls", "lets encrypt", "cloudflare"]
+tags: ["ssl", "tls", "let's encrypt", "cloudflare", "security", "certificates"]
 og_title: "Switching from Let's Encrypt to CloudFlare for SSL/TLS Certs"
 og_description: "SSL/TLS certificates are the backbone of secure web communication, and if you've been riding the Let’s Encrypt wave for a while, you know the benefits of free, automated, and open-source security."
+og_image: "/assets/icons/og-image.png"
+og_type: "article"
+og_author: "Jim Sines"
 ---
 SSL/TLS certificates are the backbone of secure web communication, and if you've been riding the Let’s Encrypt wave for a while, you know the benefits of free, automated, and open-source security. 🌊 But what if you’re ready to explore Cloudflare's SSL/TLS certificates? Let’s dive into why you might want to make the switch, what it involves, and how to keep your site running securely. 🚀
 
