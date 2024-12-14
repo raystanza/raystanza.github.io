@@ -74,6 +74,14 @@ main {
   text-shadow: 0 0 6px var(--highlight-color);
 }
 
+.author-quote {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-shadow: 0 0 6px var(--highlight-color);
+  font-style: italic;
+}
+
 /* Bio Information */
 .bio-info {
   flex: 3;

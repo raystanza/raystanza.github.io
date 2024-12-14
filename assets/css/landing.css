@@ -13,29 +13,34 @@ body {
   padding: 2rem 0;
 }
 
+/* Card Layout for Content */
+.landing-page .content-card {
+  background: var(--gray-4);
+  border: 1px solid var(--text-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
 /* Section Titles */
-.landing-page h1 {
+.landing-page .content-card h1 {
   font-size: 2rem;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
   text-shadow: 0 0 12px var(--highlight-color), 0 0 8px var(--highlight-color);
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 /* Articles Section */
-.landing-page ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-.landing-page .articles-list {
+.landing-page .articles-card ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-.landing-page .articles-list li {
+.landing-page .articles-card li {
   background: var(--gray-3);
   border: 1px solid var(--text-primary);
   padding: 1.5rem;
@@ -45,34 +50,34 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.landing-page .articles-list li:hover {
+.landing-page .articles-card li:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.landing-page .articles-list h2 {
+.landing-page .articles-card h2 {
   font-size: 1.5rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
-.landing-page .articles-list h2 a {
+.landing-page .articles-card h2 a {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
-.landing-page .articles-list h2 a:hover {
+.landing-page .articles-card h2 a:hover {
   color: var(--highlight-color-retro);
   text-shadow: 0px 0px 8px var(--highlight-muted-retro);
 }
 
-.landing-page .articles-list small {
+.landing-page .articles-card small {
   font-size: 0.9rem;
-  color: var(--white-1);
+  color: var(--text-muted);
 }
 
-.landing-page .articles-list p {
+.landing-page .articles-card p {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: var(--white-1);
@@ -80,11 +85,7 @@ body {
 }
 
 /* Project Section */
-.landing-page .latest-project {
-  margin-top: 3rem;
-}
-
-.landing-page .latest-project div {
+.landing-page .project-card div {
   background: var(--gray-3);
   border: 1px solid var(--text-primary);
   padding: 1.5rem;
@@ -93,29 +94,29 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.landing-page .latest-project div:hover {
+.landing-page .project-card div:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.landing-page .latest-project h2 {
+.landing-page .project-card h2 {
   font-size: 1.6rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
-.landing-page .latest-project h2 a {
+.landing-page .project-card h2 a {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
-.landing-page .latest-project h2 a:hover {
+.landing-page .project-card h2 a:hover {
   color: var(--highlight-color-retro);
   text-shadow: 0px 0px 8px var(--highlight-muted-retro);
 }
 
-.landing-page .latest-project p {
+.landing-page .project-card p {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: var(--white-1);
@@ -131,8 +132,65 @@ body {
     font-size: 1.8rem;
   }
 
-  .landing-page .articles-list h2,
-  .landing-page .latest-project h2 {
+  .landing-page .articles-card h2,
+  .landing-page .project-card h2 {
     font-size: 1.4rem;
   }
 }
+
+/* More Button */
+.landing-page .articles-card .more-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.landing-page .articles-card .btn-more {
+  display: inline-block;
+  background: var(--highlight-color);
+  color: var(--white-1);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.landing-page .articles-card .btn-more:hover {
+  background: var(--highlight-color-retro);
+  transform: scale(1.05);
+}
+
+/* Wave + Glow */
+.animated-heading {
+  position: relative;
+  animation: wave 1s 1 ease-in-out, glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 16px var(--highlight-color), 0 0 12px var(--highlight-muted-retro);
+  }
+  100% {
+    text-shadow: 0 0 40px var(--highlight-color), 0 0 30px var(--highlight-muted-retro);
+  }
+}
+
