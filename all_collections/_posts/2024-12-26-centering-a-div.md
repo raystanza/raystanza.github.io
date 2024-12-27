@@ -1,10 +1,10 @@
 ---
 layout: post
-title: The Great Centering Saga - How to Center a <div> Without Losing Your Sanity
+title: The Great Centering Saga - How to Center a < div > Without Losing Your Sanity
 date: 2024-12-26
 categories: ["guide", "css", "humor"]
 tags: ["guide", "css", "humor"]
-og_title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sanity"
+og_title: "The Great Centering Saga - How to Center a < div > Without Losing Your Sanity"
 og_description: "Come along on a humorous journey of figuring out how to center a <div> element."
 og_image: "/assets/icons/og-image.png"
 og_type: "article"
