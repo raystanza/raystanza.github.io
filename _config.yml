@@ -54,7 +54,7 @@ author:
     description: "Scalable and reliable cloud hosting for deploying websites, applications, and databases."
   experience: "5+ years"
   availability: "Open to new projects"
-  achievements: "Developed an abstract art wallpaper generator"
+  achievements: "Developed a Dynamic CloudFlare DNS updater."
   contact:
     - title: github
       url: https://github.com/raystanza
