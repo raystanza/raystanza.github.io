@@ -1,9 +1,15 @@
 ---
+layout: project
 title: "Abstract Wallpaper Generator"
 description: "Generate high-quality abstract wallpapers with customizable dimensions using Node.js."
 date: 2024-11-10
-categories: [projects, nodejs, javascript, canvas]
-layout: project
+categories: ["projects", "nodejs", "javascript", "canvas"]
+tags: ["wallpaper generator", "nodejs", "javascript", "canvas", "design", "customization"]
+og_title: "Abstract Wallpaper Generator - Create Unique Backgrounds"
+og_description: "Easily generate high-quality abstract wallpapers using Node.js with customizable dimensions and color schemes."
+og_image: "/assets/icons/og-image.png"
+og_type: "website"
+og_author: "Jim Sines"
 ---
 
 ## Overview

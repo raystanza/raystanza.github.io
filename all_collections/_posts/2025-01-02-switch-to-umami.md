@@ -2,7 +2,7 @@
 layout: post
 title: "Why Choose Umami Over Google Analytics"
 date: 2025-01-02
-categories: ["analytics", "privacy", "open-source"]
+categories: ["analytics", "privacy", "open source"]
 tags: ["analytics", "privacy", "umami", "google analytics", "self-hosting"]
 og_title: "Why Choose Umami Over Google Analytics"
 og_description: "A privacy-focused admin's take on why Umami is the better alternative to Google Analytics for website owners."

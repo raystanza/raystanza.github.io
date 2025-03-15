@@ -1,4 +1,17 @@
-# **Linux Cheat Sheet – Intermediate to Advanced Commands**
+---
+layout: post
+title: 'My Linux Cheat-Sheet'
+date: 2025-02-17
+categories: ['customization', 'linux']
+tags: ['linux', 'cheat sheet', 'customization']
+og_title: 'My Linux Cheat-Sheet'
+og_description: 'My personal collection of snippets to help make using Linux easier.'
+og_image: '/assets/icons/og-image.png'
+og_type: 'article'
+og_author: 'Jim Sines'
+---
+
+## **Linux Cheat Sheet – Intermediate to Advanced Commands**
 
 A reference for power users, sysadmins, and developers.
 
