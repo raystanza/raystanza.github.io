@@ -21,7 +21,7 @@ body {
 /* Main Content Styling */
 main {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 95vw;
   padding: 2rem 0;
 }
 
@@ -238,10 +238,138 @@ main {
   }
 }
 
-/* Footer Styling */
-footer {
-  text-align: center;
-  margin-top: 3rem;
+/* Tables */
+.project-main-content table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  border: 2px solid var(--highlight-color);
+  background-color: var(--gray-4);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.project-main-content thead {
+  background-color: var(--gray-5);
+  color: var(--highlight-color);
+}
+
+.project-main-content thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid var(--highlight-color);
+  text-shadow: 0 0 4px var(--highlight-color);
+}
+
+.project-main-content tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.project-main-content tbody tr:nth-child(even) {
+  background-color: var(--gray-3);
+}
+
+.project-main-content tbody tr:hover {
+  background-color: var(--gray-5);
+}
+
+.project-main-content td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--gray-5);
+  color: var(--white-2);
+}
+
+/* Lists */
+.project-main-content ul,
+.project-main-content ol {
+  margin: 1.5rem 0 1.75rem 2rem;
+  padding-left: 1rem;
+  line-height: 1.8;
+}
+
+.project-main-content li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: var(--white-1);
+}
+
+/* Custom Emoji List Markers */
+.project-main-content ul li::marker {
+  content: "🔸 ";
+  font-size: 1rem;
+  color: var(--highlight-color-retro);
+}
+
+.project-main-content ol li::marker {
+  content: "🔶 ";
+  font-size: 1rem;
+  color: var(--highlight-color-retro);
+  font-weight: normal;
+}
+
+/* Task Lists */
+.project-main-content ul.task-list {
+  margin-left: 2rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.project-main-content .task-list-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.9rem;
+  font-size: 1rem;
+  color: var(--white-1);
+}
+
+/* Custom Emoji Checkboxes with Green Border */
+.project-main-content .task-list-item-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 2px solid var(--highlight-color);
+  border-radius: 4px;
+  background-color: var(--gray-6);
+  cursor: not-allowed;
+  display: grid;
+  place-items: center;
+  transition: background 0.3s, border-color 0.3s;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.project-main-content .task-list-item-checkbox::after {
+  content: "⬜"; /* Unchecked state */
+  color: var(--highlight-color);
+  font-size: 1rem;
+}
+
+.project-main-content .task-list-item-checkbox:checked {
+  background-color: transparent;
+  border-color: var(--highlight-color);
+  box-shadow: none;
+  color: var(--bg-primary-retro);
+}
+
+.project-main-content .task-list-item-checkbox:checked::after {
+  content: "✅"; /* Checked state */
+  color: var(--highlight-color);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.project-main-content .task-list-item::marker {
+  content: "";
 }
 
 /* Media Queries */
