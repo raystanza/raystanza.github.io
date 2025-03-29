@@ -2,7 +2,7 @@
 layout: project
 title: 'Minecraft Dynamic Cloudflare DNS Updater'
 description: 'Keep your Minecraft server reachable by automatically updating its IP address on Cloudflare DNS.'
-date: 2025-03-15
+date: 2026-03-15
 categories: ['projects', 'python', 'networking', 'cloudflare', 'dns']
 tags: ['minecraft', 'dns updater', 'dynamic dns', 'cloudflare', 'python', 'networking', 'automation']
 og_title: 'Minecraft Dynamic DNS Updater - Keep Your Server Online'

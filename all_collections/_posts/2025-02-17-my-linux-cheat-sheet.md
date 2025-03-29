@@ -4,18 +4,18 @@ title: 'My Linux Cheat-Sheet'
 date: 2025-02-17
 categories: ['customization', 'linux']
 tags: ['linux', 'cheat sheet', 'customization']
-og_title: 'My Linux Cheat-Sheet'
-og_description: 'My personal collection of snippets to help make using Linux easier.'
+og_title: 'My Debian Linux Cheat-Sheet'
+og_description: 'My personal collection of snippets to help make using Debian Linux a bit easier.'
 og_image: '/assets/icons/og-image.png'
 og_type: 'article'
 og_author: 'Jim Sines'
 ---
 
-## **Linux Cheat Sheet – Intermediate to Advanced Commands**
-
-A reference for power users, sysadmins, and developers.
+> **🔍** Press `CTRL` + `F` (or `⌘` + `F`) to search this page.
 
 ---
+
+## **Text Processing**
 
 Text processing is a core function in Linux, enabling users to efficiently
 manipulate, search, and transform text-based data. This section expands on three
@@ -678,15 +678,20 @@ cat /proc/cpuinfo       # Show CPU information
 ### **Listing Processes with `ps`**
 
 ```bash
-ps aux                  # Show all running processes with detailed info
-ps -ef                  # Alternative format for listing processes
-ps -eo pid,ppid,user,%cpu,%mem,cmd --sort=-%cpu  # Sort by CPU usage
+ps aux # Show all running processes with detailed info
+ps -ef # Alternative format for listing processes
+ps -eo pid,ppid,user,%cpu,%mem,cmd --sort=-%cpu # Sort by CPU usage
 ```
 
-**Common `ps` Columns Explained:** | Column | Meaning | |--------|---------| |
-`PID` | Process ID | | `PPID` | Parent Process ID | | `%CPU` | CPU usage
-percentage | | `%MEM` | Memory usage percentage | | `COMMAND` | Executed command
-|
+**Common `ps` Columns Explained:**
+
+| Column   | Meaning                    |
+|----------|----------------------------|
+| `PID`    | Process ID                 |
+| `PPID`   | Parent Process ID          |
+| `%CPU`   | CPU usage percentage       |
+| `%MEM`   | Memory usage percentage    |
+| `COMMAND`| Executed command           |
 
 **Filter Specific Users' Processes:**
 
@@ -794,10 +799,13 @@ kill -9 PID              # Force kill a process (SIGKILL)
 kill -15 PID             # Gracefully terminate a process (SIGTERM)
 ```
 
-**Kill signal options:** | Signal | Name | Description |
-|--------|------|-------------| | `1` | SIGHUP | Restart process | | `9` |
-SIGKILL | Force kill process (cannot be caught) | | `15` | SIGTERM | Graceful
-termination |
+#### **Kill signal options**
+
+| Signal | Name | Description |
+|--------|------|-------------|
+| `1` | SIGHUP | Restart process |
+| `9` | SIGKILL | Force kill process (cannot be caught) |
+|`15` | SIGTERM | Graceful termination |
 
 ### **Killing Processes by Name**
 
@@ -842,8 +850,13 @@ renice +5 -p PID         # Increase the priority of a running process
 renice -10 -p PID        # Decrease priority (higher priority)
 ```
 
-**Priority Levels:** | Nice Value | Priority | |------------|----------| | `-20`
-| Highest priority | | `0` | Default | | `+19` | Lowest priority |
+#### **Priority Levels:**
+
+| Nice Value | Priority |
+|------------|----------|
+| `-20`| Highest priority |
+| `0` | Default |
+| `+19` | Lowest priority |
 
 ---
 
@@ -2625,17 +2638,72 @@ These are automatically deleted on system reboot.
 
 ## **9.9 Generating Random Numbers & Strings**
 
-### **Generate a Random Number**
+### **Generate a Random Number (0–32767)**
 
 ```bash
 echo $RANDOM
 ```
 
-### **Generate a 10-Character Random String**
+- Built-in Bash variable.
+- Produces a random integer between 0 and 32767.
+
+---
+
+### **Generate a Random Number in a Custom Range (e.g. 1–100)**
+
+```bash
+echo $(( RANDOM % 100 + 1 ))
+```
+
+- `% 100` gives you a number from 0–99.
+- `+ 1` shifts it to 1–100.
+- Useful for games, scripts, or seed values.
+
+---
+
+### **Generate a 10-Character Random Alphanumeric String**
 
 ```bash
 cat /dev/urandom | tr -dc 'A-Za-z0-9' | head -c 10
 ```
+
+- Uses the kernel's random byte stream.
+- Filters to alphanumeric characters only.
+- Generates a 10-character string.
+
+---
+
+### **Generate a Cryptographically Secure Random String (16 bytes)**
+
+```bash
+openssl rand -base64 16
+```
+
+- Uses OpenSSL’s secure random generator.
+- Encodes output in base64 (printable characters).
+- Ideal for secrets, tokens, or passwords.
+
+---
+
+### **Generate a Random Hexadecimal String (32 chars / 16 bytes)**
+
+```bash
+openssl rand -hex 16
+```
+
+- Outputs 16 random bytes in hexadecimal (32 hex chars).
+- Great for API keys, tokens, etc.
+
+---
+
+### **Generate a UUID (Universally Unique Identifier)**
+
+```bash
+uuidgen
+```
+
+- Outputs a standard UUID (e.g., `550e8400-e29b-41d4-a716-446655440000`).
+- Useful for unique file IDs, user tokens, etc.
 
 ---
 
@@ -2663,31 +2731,110 @@ set +x
 
 ---
 
-## **9.11 Scheduling Tasks (`at` & `cron`)**
+## **9.11 Scheduling Tasks (at & cron)**
 
-### **Run a Command Later (`at`)**
+Linux provides two main tools for scheduling tasks:
+
+- **`at`** — for one-time, scheduled tasks
+- **`cron`** — for recurring or periodic tasks
+
+---
+
+### **One-Time Tasks with `at`**
+
+Use `at` to schedule a command to run once at a specific time in the future.
+
+#### Run a Command at a Specific Time
 
 ```bash
 echo "shutdown -h now" | at 23:00
 ```
 
-Schedules a **system shutdown at 11 PM**.
+> Schedules a system shutdown at **11:00 PM** today.
 
-### **List Scheduled Jobs**
+You can also specify times like:
+
+- `at now + 1 hour`
+- `at 8:30 AM tomorrow`
+- `at midnight`
+
+#### List Scheduled `at` Jobs
 
 ```bash
 atq
 ```
 
-### **Remove a Scheduled Job**
+> Shows your currently scheduled `at` jobs.
+
+#### Remove a Scheduled `at` Job
 
 ```bash
 atrm <job_id>
 ```
 
-For **recurring tasks**, use **cron jobs**.
+> Removes a scheduled job by its ID (shown in `atq`).
 
 ---
+
+### **Recurring Tasks with `cron`**
+
+Use `cron` when you want to **run tasks repeatedly** (e.g., every day, every week, every 5 minutes, etc.).
+
+#### Edit Your Crontab
+
+```bash
+crontab -e
+```
+
+> Opens your user-specific cron schedule in the default text editor.
+
+#### View Your Crontab
+
+```bash
+crontab -l
+```
+
+> Lists your currently scheduled cron jobs.
+
+#### Remove Your Crontab
+
+```bash
+crontab -r
+```
+
+> Deletes your entire crontab file (⚠️ use with caution!).
+
+---
+
+### **Cron Job Format**
+
+Each line in your crontab follows this format:
+
+```text
+* * * * * /path/to/command
+│ │ │ │ │
+│ │ │ │ └─ Day of the week (0–7) (Sunday is 0 or 7)
+│ │ │ └─── Month (1–12)
+│ │ └───── Day of the month (1–31)
+│ └─────── Hour (0–23)
+└───────── Minute (0–59)
+```
+
+#### Example: Run a Backup Script Every Day at 2 AM
+
+```bash
+0 2 * * * /home/user/scripts/backup.sh
+```
+
+---
+
+### Use `cron` with `logger` to debug
+
+```bash
+* * * * * echo "It works!" | logger
+```
+
+> Sends output to syslog so you can check it with `journalctl` or `tail /var/log/syslog`.
 
 ## **Misc Quickview**
 

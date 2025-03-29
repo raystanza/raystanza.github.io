@@ -262,6 +262,17 @@ main {
   content: "";
 }
 
+.content blockquote {
+  background: var(--gray-4);
+  border-left: 4px solid var(--highlight-color);
+  padding: 1rem 0.5rem;
+  margin: 1rem 0.5rem;
+  color: var(--white-2);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+}
+
 /* Links */
 .content a {
   color: var(--highlight-color);
