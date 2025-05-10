@@ -1,112 +1,81 @@
 <section id="bio" class="bio-container">
-  <!-- Profile Picture and Name -->
-  <section id="img-wrapper" class="bio-profile">
-    <div id="text-wrapper" class="bio-description">
-      <p id="greeting" class="greeting"></p>
-    </div>
-    <a href="{{ site.baseurl }}/bio/">
-      <img
-        src="{{ site.data.author.dp }}"
-        alt="{{ site.data.author.name }}"
-        class="profile-picture"
-      >
-    </a>
-    <h3 class="author-name">{{ site.data.author.name }}</h3>
-    <p class="author-quote">"{{ site.data.author.quote }}"</p>
-    <!-- Social Media Links -->
-    <div id="social-wrapper" class="social-links">
-      {% for contact in site.data.author.contact %}
-      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" class="social-link">
-        <img src="{{ site.baseurl }}/assets/icons/{{ contact.title }}.png" alt="{{ contact.title }}" class="social-icon">
+  <!-- ▸ HERO -->
+  <div class="bio-profile">
+    <p class="greeting" id="greeting"></p>
+    <img src="{{ site.data.author.dp }}" alt="Avatar of {{ site.data.author.name }}" class="profile-picture">
+    <h2 class="author-name">{{ site.data.author.name }}</h2>
+    <p class="author-quote">“{{ site.data.author.quote }}”</p>
+
+    <!-- quick contacts -->
+    <div class="social-links">
+      {% for c in site.data.author.contact %}
+      <a href="{{ c.url }}" target="_blank" rel="noopener">
+        <img src="{{ site.baseurl }}/assets/icons/{{ c.title }}.png" alt="{{ c.title }}" class="social-icon">
       </a>
       {% endfor %}
     </div>
-  </section>
+  </div>
 
-  <!-- Bio Information -->
-  <section id="bio-wrapper" class="bio-info">
-    <div id="highlights-wrapper" class="bio-highlights">
-      <ul>
-        <li>📍 Based in: <strong>{{ site.data.author.location }}</strong></li>
-        <li>💼 Profession: <strong>{{ site.data.author.profession }}</strong></li>
-        <li>
-          <details>
-            <summary>🎓 Education</summary>
-            <ul>
-              {% for edu in site.data.education %}
-              <li>
-                <strong>{{ edu.name }}</strong>: {{ edu.description }} ({{ edu.duration }})
-              </li>
-              {% endfor %}
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>🌐 Languages</summary>
-            <ul>
-              {% for lang in site.data.languages %}
-              <li>
-                <strong>{{ lang.name }}</strong>: {{ lang.description }}
-              </li>
-              {% endfor %}
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>🛠️ Stacks</summary>
-            <ul>
-              {% for stack in site.data.stacks %}
-              <li>
-                <strong>{{ stack.name }}</strong>: {{ stack.description }}
-              </li>
-              {% endfor %}
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>⚙️ Backend Tools</summary>
-            <ul>
-              {% for tool in site.data.backend %}
-              <li>
-                <strong>{{ tool.name }}</strong>: {{ tool.description }}
-              </li>
-              {% endfor %}
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>🎨 Frontend Tools</summary>
-            <ul>
-              {% for tool in site.data.frontend %}
-              <li>
-                <strong>{{ tool.name }}</strong>: {{ tool.description }}
-              </li>
-              {% endfor %}
-            </ul>
-          </details>
-        </li>
-        <li>🕒 Experience: <strong>{{ site.data.author.experience }}</strong></li>
-        <li>📆 Availability: <strong>{{ site.data.author.availability }}</strong></li>
-        <li>
-          <details>
-            <summary>🏆 Achievements</summary>
-            <ul>
-              {% for achievement in site.data.achievements %}
-              <li>
-                <strong>{{ achievement.title }}</strong><br>
-                <small>{{ achievement.description }}</small>
-              </li>
-              {% endfor %}
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <!-- ▸ QUICK STATS -->
+  <ul class="quick-stats">
+    <li>📍 <strong>{{ site.data.author.location }}</strong></li>
+    <li>💼 <strong>{{ site.data.author.profession }}</strong></li>
+    <li>🕒 <strong>{{ site.data.author.experience }}</strong></li>
+    <li>📆 <strong>{{ site.data.author.availability }}</strong></li>
+  </ul>
+
+  <!-- ▸ EDUCATION TIMELINE -->
+  <h3 class="section-heading">Education</h3>
+  <ul class="timeline">
+    {% for edu in site.data.education %}
+    <li>
+      <span class="timeline-dot"></span>
+      <div class="timeline-content">
+        <h4>{{ edu.name }}</h4>
+        <p class="edu-meta">{{ edu.duration }} • {{ edu.location }}</p>
+        <p class="edu-desc">{{ edu.description }}</p>
+
+        {% if edu.degree %}
+        <p class="edu-degree">{{ edu.degree }}</p>
+        {% endif %}
+
+        {% if edu.notes %}
+        <p class="edu-notes">{{ edu.notes }}</p>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- ▸ SKILLS & TOOLS -->
+  <h3 class="section-heading">Skills &amp; Tools</h3>
+
+  {% assign groups = "languages,languages;backend,backend tools;frontend,frontend tools;stacks,stacks" | split: ";" %}
+  {% for g in groups %}
+    {% assign parts = g | split: "," %}
+    {% assign slug = parts[0] %}
+    {% assign label = parts[1] %}
+    <h4 class="chip-heading">{{ label | capitalize }}</h4>
+    <ul class="chip-list">
+      {% for item in site.data[slug] %}
+      <li class="chip" tabindex="0">
+        {{ item.name }}
+        <span class="chip-tooltip">{{ item.description }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  <!-- ▸ ACHIEVEMENTS -->
+  <h3 class="section-heading">Selected Achievements</h3>
+  <div class="achievements-grid">
+    {% for a in site.data.achievements %}
+    <article class="card">
+      <h4>{{ a.title }}</h4>
+      <p>{{ a.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
 </section>
 
 <!-- Dynamic Greeting Script -->
