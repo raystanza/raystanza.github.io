@@ -186,9 +186,9 @@ awk '{gsub(/apple/, "orange"); print}' file.txt  # Replace "apple" with "orange"
 
 ---
 
-## **Conclusion**
+## **Differences**
 
-Mastering `grep`, `sed`, and `awk` significantly enhances your ability to manipulate and analyze text efficiently. Here’s a  quick summary of their key differences:
+Here’s a  quick summary of the key differences between `grep`, `sed`, and `awk`:
 
 | Command | Use Case        | Key Features                                          |
 | ------- | --------------- | ----------------------------------------------------- |
