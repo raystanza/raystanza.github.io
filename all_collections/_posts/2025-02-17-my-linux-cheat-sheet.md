@@ -26,9 +26,7 @@ commands are essential for log analysis, data extraction, and automation.
 
 ## **1.1 grep – Searching for Patterns in Files**
 
-The `grep` (Global Regular Expression Print) command searches for patterns in
-files and outputs matching lines. It supports **regular expressions**,
-**recursive searches**, **inverted matches**, and more.
+The `grep` (Global Regular Expression Print) command searches for patterns in files and outputs matching lines. It supports **regular expressions**, **recursive searches**, **inverted matches**, and more.
 
 ### **Basic Usage**
 
@@ -81,9 +79,7 @@ ls -l | grep "^d"       # List only directories
 
 ## **1.2 sed – Stream Editor for Text Manipulation**
 
-`sed` (Stream Editor) is a powerful text manipulation tool that works on streams
-or files. It is commonly used for **find-and-replace**, **deleting lines**,
-**inserting text**, and **modifying files in-place**.
+`sed` (Stream Editor) is a powerful text manipulation tool that works on streams or files. It is commonly used for **find-and-replace**, **deleting lines**, **inserting text**, and **modifying files in-place**.
 
 ### **Basic Find and Replace**
 
@@ -135,9 +131,7 @@ sed -E 's/[aeiouAEIOU]//g' words.txt  # Remove all vowels
 
 ## **1.3 awk – Pattern Scanning and Processing**
 
-`awk` is a full-fledged programming language for text processing. It works
-line-by-line, allowing **field-based text extraction**, **mathematical
-operations**, **string manipulation**, and **pattern matching**.
+`awk` is a full-fledged programming language for text processing. It works line-by-line, allowing **field-based text extraction**, **mathematical operations**, **string manipulation**, and **pattern matching**.
 
 ```bash
 awk '{print $1}' file.txt       # Print first column of each line
@@ -194,9 +188,7 @@ awk '{gsub(/apple/, "orange"); print}' file.txt  # Replace "apple" with "orange"
 
 ## **Conclusion**
 
-Mastering `grep`, `sed`, and `awk` significantly enhances your ability to
-manipulate and analyze text efficiently. Here’s a quick summary of their key
-differences:
+Mastering `grep`, `sed`, and `awk` significantly enhances your ability to manipulate and analyze text efficiently. Here’s a  quick summary of their key differences:
 
 | Command | Use Case        | Key Features                                          |
 | ------- | --------------- | ----------------------------------------------------- |
@@ -208,10 +200,7 @@ differences:
 
 ## **2.1 Finding Files & Directories with `find`**
 
-The `find` command is a **powerful, recursive search tool** that locates files
-and directories based on name, type, size, modification time, permissions, and
-more. It operates in real time, scanning the filesystem without relying on a
-prebuilt index.
+The `find` command is a **powerful, recursive search tool** that locates files and directories based on name, type, size, modification time, permissions, and more. It operates in real time, scanning the filesystem without relying on a prebuilt index.
 
 ### **Basic Syntax**
 
@@ -349,8 +338,7 @@ find /scripts -type f -exec chmod +x {} \;
 
 ## **2.2 Locating Files Quickly with `locate`**
 
-The `locate` command is a **fast alternative** to `find` because it uses a
-prebuilt **file database** rather than searching in real-time.
+The `locate` command is a **fast alternative** to `find` because it uses a prebuilt **file database** rather than searching in real-time.
 
 ### **Updating the File Database**
 
@@ -390,17 +378,14 @@ locate -r '.*config.*'     # Use regex to find files containing "config"
 
 #### **When to Use Which?**
 
-- Use **`find`** for **real-time**, **customizable searches** based on
-  attributes like size, permissions, or modification date.
+- Use **`find`** for **real-time**, **customizable searches** based on attributes like size, permissions, or modification date.
 - Use **`locate`** for **instant** file lookups when speed is crucial.
 
 ---
 
 ## **2.3 Bonus: Other Useful File & Disk Management Commands**
 
-Managing files efficiently in Linux involves not just searching for them, but
-also listing, organizing, and managing disk usage. This section expands on
-essential **file listing**, **disk usage monitoring**, and **handling external
+Managing files efficiently in Linux involves not just searching for them, but also listing, organizing, and managing disk usage. This section expands on essential **file listing**, **disk usage monitoring**, and **handling external
 drives**.
 
 ---
