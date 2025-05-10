@@ -1,0 +1,88 @@
+<h1 class="resume-title">{{ site.data.author.name }}</h1>
+
+<div class="resume-meta">
+  <div>
+    <p><strong>Email:</strong> <a href="mailto:{{ site.data.author.email }}">{{ site.data.author.email }}</a></p>
+    <p><strong>Location:</strong> {{ site.data.author.location }}</p>
+  </div>
+  <div>
+    <p><strong>Profession:</strong> {{ site.data.author.profession }}</p>
+    <p><strong>Experience:</strong> {{ site.data.author.experience }}</p>
+    <p><strong>Availability:</strong> {{ site.data.author.availability }}</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Achievements</h2>
+  <ul class="resume-list">
+    {% for item in site.data.achievements %}
+    <li>
+      <div class="item-header">{{ item.title }}</div>
+      <div class="subitem">{{ item.description }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Education</h2>
+  <ul class="resume-list">
+    {% for edu in site.data.education %}
+    <li>
+      <div class="item-header">{{ edu.name }}</div>
+      <div class="subitem">{{ edu.description }} ({{ edu.duration }})</div>
+      <div class="subitem">{{ edu.location }}</div>
+      <div class="subitem">{{ edu.degree }}</div>
+      <div class="subitem">{{ edu.notes }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Languages</h2>
+  <ul class="resume-list">
+    {% for lang in site.data.languages %}
+    <li>
+      <div class="item-header">{{ lang.name }}</div>
+      <div class="subitem">{{ lang.description }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Stacks</h2>
+  <ul class="resume-list">
+    {% for stack in site.data.stacks %}
+    <li>
+      <div class="item-header">{{ stack.name }}</div>
+      <div class="subitem">{{ stack.description }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Backend Tools</h2>
+  <ul class="resume-list">
+    {% for tool in site.data.backend %}
+    <li>
+      <div class="item-header">{{ tool.name }}</div>
+      <div class="subitem">{{ tool.description }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Frontend Tools</h2>
+  <ul class="resume-list">
+    {% for tool in site.data.frontend %}
+    <li>
+      <div class="item-header">{{ tool.name }}</div>
+      <div class="subitem">{{ tool.description }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

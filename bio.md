@@ -10,4 +10,3 @@ og_image: "/assets/icons/bio.png"
 og_type: "website"
 og_author: "Jim Sines"
 ---
-{% include bio.html %}

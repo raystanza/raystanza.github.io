@@ -1,0 +1,62 @@
+- title: Laravel Image Generator
+  description: I built a queue-based image generator using Laravel, Inertia.js, and Vue 3 that gives users real-time updates while they wait. It handles requests smoothly and asynchronously — perfect for heavier jobs like interacting with external AI APIs.
+
+- title: Cloudflare Integration
+  description: I wrote Bash scripts that connect to the Cloudflare API to keep my home servers reachable, even on a residential IP. I also use Cloudflare Access to lock down my admin panels and internal tools.
+
+- title: Full-Stack Deployments
+  description: I've deployed Laravel, Jekyll, and Flask apps on my own Linux servers. I manage everything; Apache configs, MySQL, domain routing, Let's Encrypt SSL, and Cloudflare DNS. Everything's hand-built, secure, and stable.
+
+- title: ERP Extensions & Role Management
+  description: I've worked on customizing Aureus ERP, stripping out unneeded modules, tightening up permissions, and creating roles that make sense for the people using them. It gave me hands-on experience with RBAC in a real-world business tool.
+
+- title: Modular Jekyll Theme & Personal Site
+  description: My personal site runs on a Jekyll theme I built from scratch — modular, retro-styled, and CRT-themed. It uses YAML data files, GitHub Actions for deployment, and includes thoughtful UX touches like animated greetings and responsive layouts.
+
+- title: DevOps & Bash Automation
+  description: Over the years I've built up a huge set of Bash aliases and helper functions to speed up my work — from Laravel and Git to SSH and system tasks. I also run cron jobs for DNS updates and backups, keeping everything tidy and automated.
+
+- title: Minecraft Server Hosting & Monitoring
+  description: I run a Fabric-based Minecraft server on an old Dell R720xd. It's tuned for performance with port forwarding, UFW firewall rules, and a Flask-based status dashboard I coded myself. My kids and I use it all the time.
+
+- title: Real-Time WebSocket Chat App
+  description: I built a Flask app that wraps the Ollama API and lets me chat with AI in real time over WebSockets. It has markdown rendering and a retro terminal-style UI. Full-stack from backend to front, all coded by hand.
+
+- title: Cross-Platform CLI Tools
+  description: I've made CLI scripts for Git changelogs, project setup, and Laravel tasks. These tools make my workflow faster, especially when jumping between machines or OSes.
+
+- title: Technical Writing & Documentation
+  description: I try to write code and documentation that my future self (or a teammate) would appreciate. I've written full README files, internal wikis, and project documentation using MkDocs and Markdown.
+
+- title: Multi-Environment Laravel Architecture
+  description: My Laravel projects are set up to run smoothly across dev, staging, and production with `.env` files, custom deployment scripts, and alias-driven workflows.
+
+- title: Cloudflare-Proxied SSL with Apache
+  description: I set up SSL with Let's Encrypt behind Cloudflare's proxy, using Apache virtual hosts and DNS validation. It works across my Jekyll site, Laravel apps, and internal tools.
+
+- title: Web Accessibility and Responsive Design
+  description: I care about clean, accessible layouts. I use semantic HTML, Tailwind CSS, and always test on mobile. Everything I build should be readable and easy to use.
+
+- title: Inertia.js Deep Integration
+  description: I've gone deep with Inertia.js — handling transitions, form validation, queue job polling, and more. I love how it keeps things reactive without building a full SPA.
+
+- title: Bash Toolkit for Laravel Developers
+  description: I created a Laravel-focused Bash toolkit to speed up things like running Artisan commands, resetting databases, and managing queues. It's part of my everyday workflow now.
+
+- title: Advanced Git Workflows
+  description: I use Git tags, hooks, and branches to stay organized. I wrote a script called `generate_changelog.sh` that creates structured changelogs based on version tags.
+
+- title: MkDocs-Powered Dev Documentation
+  description: I used MkDocs (with the Material theme) to document internal projects like Whiskers and Wheels — with setup guides, styling references, and deployment steps all in one place.
+
+- title: Home Lab & Local Networking
+  description: My homelab is made up of Ubuntu servers running apps, games, and tools for my family and my projects. I manage local DNS, IP assignments, and routing myself. It's my playground and my proving ground.
+
+- title: PHP & Vue Form Systems
+  description: I've built fully reactive forms in Vue 3 tied into Laravel's form requests. They support real-time validation and error handling without the complexity of a full SPA.
+
+- title: GitHub Actions for Static Sites
+  description: I set up GitHub Actions to automatically build and deploy my Jekyll site when I push to `master`. It includes steps for building, checking, and publishing — no manual work needed.
+
+- title: Self-Taught Journey
+  description: I've been in IT for over 20 years, and I've taught myself full-stack web development while working full time and raising two teenage boys. I do this because I love it — and I believe in always learning, building, and improving.

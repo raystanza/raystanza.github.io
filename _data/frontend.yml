@@ -1,0 +1,32 @@
+- name: Vue.js
+  description: Progressive JavaScript framework employed for constructing reactive, component-based UIs. Utilized in both single-page and multi-page applications, often paired with Laravel via Inertia.js for seamless backend integration.
+
+- name: Tailwind CSS
+  description: Utility-first CSS framework designed for rapid, responsive design iteration. Applied for building accessible and consistent UI components with design system enforcement and theming capabilities.
+
+- name: Inertia.js
+  description: Client-side adapter layer facilitating SPA-like user interactions in full-stack applications without the need for a REST API. Enables smooth page transitions, persistent layouts, and reactive form validation.
+
+- name: Bootstrap
+  description: Component-rich CSS framework used for rapid prototyping and layout structuring in admin interfaces, internal dashboards, and early-phase MVPs.
+
+- name: Markdown + Toast UI Editor
+  description: Utilized for composing, styling, and previewing content-driven user interfaces. Integrated with Vue-based applications to support code highlighting, chart embedding, and structured content editing.
+
+- name: HTML5 & ARIA Semantics
+  description: Emphasized accessibility-first markup patterns, including landmark regions, role-based navigation, and keyboard accessibility best practices across all responsive layouts.
+
+- name: Cloudflare CDN & Caching
+  description: Edge-cached delivery platform used to reduce latency and asset load times for user-facing web applications. Applied to static and dynamic content via Smart Caching rules and Page Rules.
+
+- name: Cloudflare Images
+  description: Scalable image optimization and delivery service offering automatic resizing, compression, and WebP conversion. Planned for integration into content-heavy or portfolio sites.
+
+- name: Cloudflare Pages
+  description: Used for hosting frontend documentation and landing pages with integrated CI workflows and custom domain support. Supports instant cache invalidation and build previews.
+
+- name: Cloudflare Fonts & Workers (UI)
+  description: Font delivery and small-scale UI content generation using Workers and caching layers for time-sensitive front-facing endpoints such as dynamic greetings, avatars, or AI-generated content.
+
+- name: Cloudflare Analytics (UI)
+  description: Privacy-friendly, serverless analytics integrated for gathering non-invasive metrics on page views, load times, and client-side navigation behavior without requiring external cookies or third-party tracking.

@@ -1,0 +1,26 @@
+- name: LAMP Stack
+  description: Classic server-side application stack consisting of Linux, Apache HTTP Server, MySQL, and PHP. Utilized for deploying stable, monolithic web applications with structured relational databases and tight integration between server logic and rendering layer. Often deployed behind Cloudflare Proxy with managed DNS, flexible SSL, and caching policies.
+
+- name: LIVT Stack
+  description: Modern full-stack architecture composed of Laravel, Inertia.js, Vue.js, and Tailwind CSS. Designed for building reactive, SPA-like interfaces without client-side routing complexity. Frequently deployed using Cloudflare for DNS, Access control, and edge-cached public content.
+
+- name: JAMstack
+  description: Static-first architecture leveraging Jekyll, Markdown, and third-party APIs to pre-generate performant, CDN-delivered sites. Sites are distributed via GitHub Pages and proxied through Cloudflare for performance optimization and SSL termination.
+
+- name: Custom Bash-Laravel Toolkit
+  description: Hybrid CLI-based stack tailored for Laravel project scaffolding and task automation using Bash functions and aliases. Enables rapid execution of Artisan commands, queue monitoring, and changelog generation in cross-platform development environments.
+
+- name: Flask + SocketIO Stack
+  description: Lightweight Python-based stack used for implementing real-time bidirectional communication with WebSocket support. Combines Flask for REST endpoints with Socket.IO for streaming AI responses and client interaction in low-latency applications.
+
+- name: MkDocs + Cloudflare Pages Stack
+  description: Static documentation stack built on Python's MkDocs and deployed through Cloudflare Pages. Benefits from CI-based builds, instant cache purging, and privacy enforcement via Cloudflare Access for internal wikis and style guides.
+
+- name: GitHub Pages + Jekyll
+  description: Static site generator stack using Jekyll and GitHub Pages for version-controlled deployments. Augmented with YAML-driven configuration and modular includes to build performant, retro-themed portfolios and project archives. Served via Cloudflare for DNS, CDN, and flexible SSL.
+
+- name: Self-Hosted Infrastructure Stack
+  description: Full control environment consisting of Linode VPS, Apache2, UFW, Certbot, Cron, and Git. Typically combined with Cloudflare's DNS proxy, caching, Access control, and analytics for robust perimeter defense and minimized attack surface.
+
+- name: Developer Productivity Stack
+  description: Collection of tooling including VS Code, Git, GitHub CLI, and Bash scripting configured to streamline the development lifecycle. Includes changelog automation, repo bootstrapping, and environment-specific alias sets with integrations into GitHub Actions and Cloudflare CLI tooling.
