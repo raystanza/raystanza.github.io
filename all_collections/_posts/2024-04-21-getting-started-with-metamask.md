@@ -39,7 +39,7 @@ Now that you’re all set up, let’s talk security. Your private key and seed p
 - **No Screenshots:** Try not to keep digital copies lying around on your devices. Screenshots can be hacked, and you don’t want to hand over the keys to your digital kingdom!
 - **Use a Hardware Wallet:** For extra security, consider using a hardware wallet. It's like a USB stick for your crypto. Plug it in when you need it, and keep it safe when you don't.
 
-## Conclusion 🌈
+## In The End 🌈
 
 There you have it! You’re now the proud owner of an Ethereum address. Welcome to the blockchain party! 🎈 Remember, with great power comes great responsibility, so keep those keys safe, and start exploring the vast, exciting realm of cryptocurrencies. Who knows? Maybe you'll be the next big thing in the world of digital finance! 💰
 

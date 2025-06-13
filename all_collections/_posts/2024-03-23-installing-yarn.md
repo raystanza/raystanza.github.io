@@ -104,6 +104,6 @@ yarn --version
 
 This command should return the version of Yarn installed on your system, indicating that Yarn has been successfully installed.
 
-## Conclusion
+## In The End
 
 With Yarn installed, you're now ready to manage your project dependencies more efficiently. Yarn's speed and reliability can significantly improve your development workflow, especially in projects with a large number of dependencies. Remember to consult the [Yarn documentation](https://yarnpkg.com/getting-started) for more advanced features and usage instructions, enhancing your development experience even further.

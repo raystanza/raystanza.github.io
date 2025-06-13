@@ -89,6 +89,6 @@ set backspace=indent,eol,start
 
 Vim has a built-in tutorial that you can access by typing `vimtutor` in your terminal. It's an excellent way to start learning Vim commands interactively.
 
-## Conclusion
+## In The End
 
 Vim's learning curve is undeniable, but its design as a modal editor with a focus on keyboard commands allows for efficient text editing once mastered. Start with basic commands, gradually incorporate more into your workflow, and explore customization options to make Vim your own. Remember, like any skill, proficiency comes with practice.

@@ -167,7 +167,7 @@ export const appRouter = t.router({
 });
 ```
 
-## Conclusion
+## In The End
 
 You've now set up a full-stack project using Next.js, tRPC, Prisma, and PostgreSQL. This stack provides you with a robust starting point for building type-safe applications with ease. Explore further by adding more models to your Prisma schema, expanding your tRPC API, and building out your Next.js frontend.
 

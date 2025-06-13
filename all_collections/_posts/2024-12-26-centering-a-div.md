@@ -99,7 +99,7 @@ And there it is: your `<div>`, perfectly centered. Grid doesn’t care about you
 
 ---
 
-## In Conclusion, Why Centering Is a Rite of Passage
+## In In The End, Why Centering Is a Rite of Passage
 
 Centering a `<div>` isn’t just a technical challenge; it’s a journey of growth, a test of patience, and a rite of passage for web developers. Like a medieval quest, it teaches us humility, resilience, and the importance of browser testing.
 

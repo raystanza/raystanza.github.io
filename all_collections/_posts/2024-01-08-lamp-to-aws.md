@@ -37,7 +37,7 @@ When replacing a traditional LAMP (Linux, Apache, MySQL, PHP) stack with AWS ser
 
 - PHP can be run on various AWS services like EC2, Elastic Beanstalk, and Lambda
 
-## 5. Conclusion
+## 5. In The End
 
 It is possible to completely replace the LAMP stack with AWS for either speed and stability or cost.  This article is just a brief overview of where to start.
 
