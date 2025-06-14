@@ -1,14 +1,46 @@
 ---
 layout: post
-title: Fork-Bombs Explained - Minimal Code with Maximum Impact
-date: 2024-12-07
-categories: ["tutorials", "security", "linux", "windows", "bash", "powershell"]
-tags: ["fork-bombs", "recursion", "bash", "powershell", "python", "security"]
-og_title: "Fork-Bombs Explained - Minimal Code with Maximum Impact"
-og_description: "Discover the fascinating (and dangerous) world of fork-bombs—simple yet powerful recursive scripts that exploit system resources. Learn how they're created using only language operators in Bash, PowerShell, Python, and more."
-og_image: "/assets/icons/og-image.png"
+title: "Fork-Bombs Explained: Minimal Code with Maximum Impact"
+date: 2024-12-07 07:00:00 -05:00
+
+description: >
+  Discover the fascinating (and dangerous) world of fork-bombs—simple yet powerful
+  recursive scripts that exploit system resources. See how they’re written in Bash,
+  PowerShell, Python, and more.
+
+canonical_url: "https://raystanza.uk/posts/fork-bombs/"
+
+categories:
+  - tutorials
+  - security
+  - linux
+  - windows
+  - bash
+  - powershell
+
+tags:
+  - fork-bombs
+  - recursion
+  - bash
+  - powershell
+  - python
+  - security
+
+image: "/assets/images/articles/fork-bombs-explained-og.png"
+image_alt: "Diagram of a fork-bomb process spawning child processes recursively"
+image_caption: "Illustration of a fork-bomb creating exponential child processes"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Fork-Bombs Explained: Minimal Code with Maximum Impact"
+og_description: >
+  A deep dive into how fork-bombs use minimal code to spawn infinite processes
+  and overwhelm system resources in Bash, PowerShell, Python, and beyond.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 A **fork-bomb** is a type of Denial of Service (DoS) attack where a process continuously spawns itself, quickly consuming system resources like CPU and memory. Fork-bombs exploit a system's multitasking capabilities to overload it, rendering it unresponsive. While commonly associated with malicious behavior, fork-bombs are often used for educational purposes to demonstrate system vulnerabilities.
 

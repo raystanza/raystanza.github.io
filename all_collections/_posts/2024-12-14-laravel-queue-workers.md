@@ -1,14 +1,45 @@
 ---
 layout: post
-title: Laravel Queue Workers - A Guide for Advanced Developers
-date: 2024-12-14
-categories: ["tutorials", "backend", "laravel", "php", "queueing"]
-tags: ["laravel", "queue workers", "queues", "redis", "php", "supervisor", "horizon"]
-og_title: "Laravel Queue Workers - A Guide for Advanced Developers"
-og_description: "Explore the inner workings of Laravel Queue Workers in this guide. Learn how to configure, optimize, and scale asynchronous job processing for robust and efficient applications."
-og_image: "/assets/icons/og-image.png"
+title: "Laravel Queue Workers: A Guide for Advanced Developers"
+date: 2024-12-14 07:00:00 -05:00
+
+description: >
+  Explore configuring, optimizing, and scaling Laravel queue workers using Redis,
+  Supervisor, and Horizon for robust, efficient asynchronous job processing.
+
+canonical_url: "https://raystanza.uk/posts/laravel-queue-workers/"
+
+categories:
+  - tutorials
+  - backend
+  - laravel
+  - php
+  - queueing
+
+tags:
+  - laravel
+  - queue workers
+  - queues
+  - redis
+  - php
+  - supervisor
+  - horizon
+
+image: "/assets/images/articles/laravel-queue-workers-og.png"
+image_alt: "Horizon dashboard showing Laravel queue workers and Redis metrics"
+image_caption: "Monitoring and scaling Laravel queue workers with Horizon, Supervisor, and Redis"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Laravel Queue Workers: A Guide for Advanced Developers"
+og_description: >
+  Learn how to configure, optimize, and scale Laravel queue workers for
+  asynchronous job processing using Redis, Supervisor, and Horizon.
+
+robots: "index, follow"
+
+twitter:
+  card:    "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 Laravel, one of the most popular PHP frameworks, is known for its elegant syntax and robust features. Among its many capabilities, **queue workers** stand out as a powerful tool for managing asynchronous tasks. Laravel queue workers handle the execution of jobs in a queue, enabling developers to offload resource-intensive or time-consuming tasks, improve application performance, and ensure a seamless user experience.
 

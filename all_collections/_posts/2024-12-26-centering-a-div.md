@@ -1,14 +1,47 @@
 ---
 layout: post
-title: "The Great Centering Saga - How to Center a &lt;div&gt; Without Losing Your Sanity"
-date: 2024-12-26
-categories: ["guide", "css", "humor", "web development", "frontend"]
-tags: ["guide", "css", "humor", "web development", "frontend", "developer tips", "UI/UX", "flexbox", "css-grid"]
-og_title: "The Great Centering Saga - How to Center a &lt;div&gt; Without Losing Your Sanity"
-og_description: "Struggling to center a <div>? Join us on a hilariously relatable journey through the quirks of CSS. Discover the trials, triumphs, and ultimate solutions to one of web development's most notorious challenges."
-og_image: "/assets/icons/og-image.png"
+title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sanity"
+date: 2024-12-26 07:00:00 -05:00
+
+description: >
+  Hilariously relatable guide to centering a <div> in CSS using flexbox,
+  CSS Grid, and legacy techniques—so you never lose your sanity.
+
+canonical_url: "https://raystanza.uk/posts/centering-a-div/"
+
+categories:
+  - guide
+  - css
+  - humor
+  - web development
+  - frontend
+
+tags:
+  - guide
+  - css
+  - humor
+  - web development
+  - frontend
+  - developer tips
+  - UI/UX
+  - flexbox
+  - css-grid
+
+image: "/assets/images/articles/centering-div-saga-og.png"
+image_alt: "Illustration of CSS centering techniques with flexbox and grid"
+image_caption: "Comparing CSS centering methods: flexbox, grid, and classic approaches"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sanity"
+og_description: >
+  Struggling to center a <div>? Join us on a hilarious journey through CSS flexbox,
+  grid, and classic methods to achieve perfect centering.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 
 Ah, the age-old question: "How do I center a `<div>`?" Ask it in any developer community, and you'll likely summon a mob armed with pitchforks (read: Stack Overflow links). The truth is, centering a `<div>` is the software equivalent of assembling IKEA furniture—it seems simple in theory, but in practice, you'll need divine intervention, a PhD in CSS, and probably a good cry.

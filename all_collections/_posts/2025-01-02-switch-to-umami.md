@@ -1,14 +1,41 @@
 ---
 layout: post
 title: "Why Choose Umami Over Google Analytics"
-date: 2025-01-02
-categories: ["analytics", "privacy", "open source"]
-tags: ["analytics", "privacy", "umami", "google analytics", "self-hosting"]
-og_title: "Why Choose Umami Over Google Analytics"
-og_description: "A privacy-focused admin's take on why Umami is the better alternative to Google Analytics for website owners."
-og_image: "/assets/icons/og-image-umami.png"
+date: 2025-01-02 07:00:00 -05:00
+
+description: >
+  A privacy-first administrator’s guide to self-hosted Umami analytics vs Google
+  Analytics, protecting user data while delivering actionable insights.
+
+canonical_url: "https://raystanza.uk/posts/switch-to-umami/"
+
+categories:
+  - analytics
+  - privacy
+  - open source
+
+tags:
+  - analytics
+  - privacy
+  - umami
+  - google analytics
+  - self-hosting
+
+image: "/assets/images/articles/umami-google-analytics-og.png"
+image_alt: "Dashboard comparison between Umami and Google Analytics"
+image_caption: "Privacy-first Umami analytics dashboard"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Why Choose Umami Over Google Analytics"
+og_description: >
+  A privacy-focused admin's take on why Umami is the better alternative to
+  Google Analytics for website owners.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 
 If you’ve ever run a website—or ten—you’ve probably used Google Analytics. It’s the 800-pound gorilla of web analytics, and for a while, I used it too. Back then, it felt like the logical choice: it’s free, powerful, and gives you more data than you know what to do with.
