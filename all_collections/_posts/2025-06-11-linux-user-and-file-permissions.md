@@ -19,7 +19,7 @@ tags:
   - filesystem
   - reference
 
-image: "/assets/images/linux-user-file-permissions.png"
+image: "/assets/images/articles/linux-user-file-permissions.png"
 image_alt: "Example ls -l output showing file permissions"
 image_caption: "Illustration of standard Debian file permissions"
 

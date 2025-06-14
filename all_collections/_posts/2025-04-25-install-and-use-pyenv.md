@@ -25,7 +25,7 @@ tags:
   - pip
   - dependency management
 
-image: "/assets/images/pyenv-debian-env-management.png"
+image: "/assets/images/articles/pyenv-debian-env-management.png"
 image_alt: "Terminal showing pyenv versions and virtual environments"
 image_caption: "Managing Python versions with pyenv on Debian"
 

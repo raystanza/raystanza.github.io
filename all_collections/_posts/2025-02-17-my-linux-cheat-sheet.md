@@ -18,7 +18,7 @@ tags:
   - cheat sheet
   - customization
 
-image: "/assets/images/linux-cheat-sheet.png"
+image: "/assets/images/articles/linux-cheat-sheet.png"
 image_alt: "Terminal displaying Debian Linux command cheat-sheet"
 image_caption: "Key Debian commands and snippets at a glance"
 

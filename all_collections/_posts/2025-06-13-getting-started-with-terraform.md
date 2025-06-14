@@ -16,7 +16,7 @@ tags:
   - multi-cloud
   - guide
 
-image: "/assets/images/terraform-debian.png"
+image: "/assets/images/articles/terraform-debian.png"
 image_alt: "Terminal showing Terraform init on Debian"
 image_caption: "Initializing Terraform on Debian 12"
 
