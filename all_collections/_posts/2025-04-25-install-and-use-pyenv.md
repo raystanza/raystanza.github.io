@@ -1,14 +1,47 @@
 ---
 layout: post
 title: "Controlling Python Environment Management with pyenv: A How-To for Debian-Based Systems"
-date: 2025-04-25
-categories: ["development", "linux", "python"]
-tags: ["pyenv", "virtual environments", "python", "debian", "ubuntu", "development tools", "version management", "pip", "dependency management"]
-og_title: "Controlling Python Environment Management with pyenv on Debian Systems"
-og_description: "Learn how to efficiently manage multiple Python versions and virtual environments using pyenv on Debian-based Linux, solving common dependency conflicts for smoother development workflows."
-og_image: "/assets/icons/og-image.png"
+date: 2025-04-25 07:00:00 -04:00
+
+description: >
+  Guide to installing and using pyenv on Debian/Ubuntu for seamless Python
+  version and virtual environment management, avoiding dependency conflicts.
+
+canonical_url: "https://raystanza.uk/posts/install-and-use-pyenv"
+
+categories:
+  - development
+  - linux
+  - python
+
+tags:
+  - pyenv
+  - virtual environments
+  - python
+  - debian
+  - ubuntu
+  - development tools
+  - version management
+  - pip
+  - dependency management
+
+image: "/assets/images/pyenv-debian-env-management.png"
+image_alt: "Terminal showing pyenv versions and virtual environments"
+image_caption: "Managing Python versions with pyenv on Debian"
+
 og_type: "article"
+og_title: "Controlling Python Environment Management with pyenv: A How-To for Debian-Based Systems"
 og_author: "Jim Sines"
+og_description: >
+  Learn how to efficiently manage multiple Python versions and virtual
+  environments using pyenv on Debian-based Linux, resolving dependency
+  conflicts for smoother development workflows.
+
+robots: "index, follow"
+
+twitter:
+  card:    "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 If you've spent any time in Python development, you've likely encountered the notorious "dependency hell" or struggled with conflicting Python versions across projects. Enter **pyenv**, a robust tool that quietly revolutionizes how developers manage Python installations and virtual environments. This comprehensive guide will walk you through implementing pyenv on Debian-based Linux systems, empowering you with precise control over your Python development environments.
 

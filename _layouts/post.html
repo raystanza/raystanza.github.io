@@ -10,15 +10,37 @@
 
       <!-- Article Section -->
       <article class="article" role="article" aria-labelledby="article-title">
+        <!-- Back -->
+        <a href="/blog" class="back-button" aria-label="Go back">
+          &lt;- Back
+        </a>
         <header class="article-header">
           <h2 id="article-title" class="article-title">{{ page.title }}</h2>
           <small class="date">{{ page.date | date: "%B %d, %Y" }}</small>
         </header>
 
+        {% if page.image %}
+          <figure class="article-image">
+            <img 
+              src="{{ page.image | relative_url }}" 
+              alt="{{ page.image_alt | default: page.title }}" 
+            />
+            {% if page.image_caption %}
+              <figcaption class="image-caption">{{ page.image_caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+
         <!-- Article Content -->
         <section class="content" aria-label="Post Content">
           {{ content }}
         </section>
+        <!-- ↑ Back To Top -->
+        <div class="back-to-top-container">
+          <a href="#top" class="back-to-top" aria-label="Back to top">
+            ↑ Back To Top
+          </a>
+        </div>
       </article>
 
       <!-- Footer -->

@@ -16,7 +16,7 @@ og:
   title: "An Exercise in Futility"
   description: "A personal blog and portfolio by Jim Sines."
   type: "website"
-  image: "/assets/icons/og-image.png"
+  image: "/assets/icons/og-image-original.png"
 
 # Build settings
 plugins:
@@ -24,7 +24,7 @@ plugins:
   - jekyll-avatar
   - jekyll-github-metadata
   - jemoji
-  - kramdown
+  - jekyll-seo-tag
 
 collections_dir: all_collections
 collections:
@@ -46,6 +46,12 @@ defaults:
       layout: "project"
       permalink: /projects/:title/
 
+seo:
+  title: "An Exercise in Futility"
+  description: "A personal blog and portfolio by Jim Sines."
+  url: "https://raystanza.uk"
+  image: "/assets/icons/og-image.png"
+  twitter: "@realcaptgeech"
 
 # Excluded items
 exclude:

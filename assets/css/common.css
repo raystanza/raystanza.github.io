@@ -30,6 +30,12 @@
   --bg-primary-retro: #000000; /* Black for retro background */
   --bg-secondary-retro: #1a1a1a; /* Dark gray for secondary sections */
 }
+
+/* Smooth in-page scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header Styling */
 .site-header {
   background-color: var(--gray-5);

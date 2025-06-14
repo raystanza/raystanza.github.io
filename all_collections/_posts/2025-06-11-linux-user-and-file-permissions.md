@@ -1,14 +1,40 @@
 ---
 layout: post
 title: "Demystifying User & File Permissions on Debian Linux"
-date: 2025-06-11
-categories: ["reference", "linux", "permissions"]
-tags: ["debian", "linux", "permissions", "filesystem", "reference"]
-og_title: "A Permissions Guide"
-og_description: "A comprehensive guide to understanding and mastering user, group, and file permissions on Debian-based systems."
-og_image: "/assets/icons/og-image.png"
+date: 2025-06-11 07:00:00 -04:00
+description: >
+  A guide on Debian user, group, and file permissions: numeric modes, symbolic flags, umasks, and practical examples to secure your Linux filesystem.
+
+canonical_url: "https://raystanza.uk/posts/linux-user-and-file-permissions/"
+
+categories:
+  - reference
+  - linux
+  - permissions
+
+tags:
+  - debian
+  - linux
+  - permissions
+  - filesystem
+  - reference
+
+image: "/assets/images/linux-user-file-permissions.png"
+image_alt: "Example ls -l output showing file permissions"
+image_caption: "Illustration of standard Debian file permissions"
+
 og_type: "article"
+og_title: "Demystifying User & File Permissions on Debian Linux"
 og_author: "Jim Sines"
+og_description: >
+  A comprehensive guide to understanding and mastering user, group, and file
+  permissions on Debian-based systems.
+
+robots: "index, follow"
+
+twitter:
+  card:    "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 
 > *"Unix was not designed to stop you from doing stupid things, because that would also stop you from doing clever things."* ― *Doug Gwyn*
@@ -17,7 +43,7 @@ og_author: "Jim Sines"
 
 ## 1. Introduction
 
-File‑system permissions are the bouncers of your Debian system—deciding who gets past the velvet rope and who’s left outside clutching their `Permission denied` errors. Whether you are hardening a production server or simply configuring your personal laptop, understanding **user, group, and other** permissions is crucial. This article serves both as a **step‑by‑step tutorial** and a **quick‑reference manual** for everyday use.
+Whether you are hardening a production server or simply configuring your personal laptop, understanding **user, group, and other** permissions is crucial. This article serves both as a **step‑by‑step tutorial** and a **quick‑reference manual** for everyday use.
 
 ---
 

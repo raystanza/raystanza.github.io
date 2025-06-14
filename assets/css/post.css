@@ -60,6 +60,58 @@ main {
   margin-bottom: 1rem;
 }
 
+/* Article Image & Caption */
+.article-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.article-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--white-2);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Back button beside the title */
+.back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back-button:hover {
+  color: var(--text-primary);
+}
+
+/* Container for the “Back To Top” link */
+.back-to-top-container {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+/* The “Back To Top” link itself */
+.back-to-top {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back-to-top:hover {
+  color: var(--text-primary);
+}
+
 /* Categories */
 .categories {
   display: flex;

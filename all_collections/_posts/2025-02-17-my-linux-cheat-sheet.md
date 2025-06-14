@@ -1,15 +1,40 @@
 ---
 layout: post
-title: 'My Linux Cheat-Sheet'
-date: 2025-02-17
-categories: ['customization', 'linux']
-tags: ['linux', 'cheat sheet', 'customization']
-og_title: 'My Debian Linux Cheat-Sheet'
-og_description: 'My personal collection of snippets to help make using Debian Linux a bit easier.'
-og_image: '/assets/icons/og-image.png'
-og_type: 'article'
-og_author: 'Jim Sines'
+title: "My Linux Cheat-Sheet"
+date: 2025-02-17 07:00:00 -05:00
+
+description: >
+  A handy cheat-sheet of essential Debian Linux command snippets for quick reference
+  and system customization.
+
+canonical_url: "https://raystanza.uk/posts/my-linux-cheat-sheet/"
+
+categories:
+  - customization
+  - linux
+
+tags:
+  - linux
+  - cheat sheet
+  - customization
+
+image: "/assets/images/linux-cheat-sheet.png"
+image_alt: "Terminal displaying Debian Linux command cheat-sheet"
+image_caption: "Key Debian commands and snippets at a glance"
+
+og_type: "article"
+og_author: "Jim Sines"
+og_title: "My Debian Linux Cheat-Sheet"
+og_description: >
+  My personal collection of snippets to help make using Debian Linux a bit easier.
+
+robots: "index, follow"
+
+twitter:
+  card:    "summary_large_image"
+  creator: "@realcaptgeech"
 ---
+
 
 > **🔍** Press `CTRL` + `F` (or `⌘` + `F`) to search this page.
 
