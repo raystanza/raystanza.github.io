@@ -1,16 +1,41 @@
 ---
 layout: post
-title: Give Bun a Try
-date: 2024-05-15
-categories: ["tutorials", "bun", "npm"]
-tags: ["bun", "npm", "javascript", "package manager", "linux"]
-og_title: "Replacing npm with Bun: A Guide for Linux"
-og_description: "Before diving into the technical details, it's important to understand why you might consider switching to Bun. Here are some key reasons."
-og_image: "/assets/icons/og-image.png"
+title: "Give Bun a Try"
+date: 2024-05-15 07:00:00 -04:00
+
+description: >
+  Before diving into the technical details, learn why you might consider switching from npm to Bun: faster installs, built-in bundling, and a modern JS runtime.
+
+canonical_url: "https://raystanza.uk/posts/switch-to-bun/"
+
+categories:
+  - tutorials
+  - bun
+  - npm
+
+tags:
+  - bun
+  - npm
+  - javascript
+  - package manager
+  - linux
+
+image: "/assets/images/articles/bun-npm-try-og.png"
+image_alt: "Terminal window showing Bun replacing npm for package management"
+image_caption: "Using Bun in place of npm for lightning-fast installs and built-in tooling"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Replacing npm with Bun: A Guide for Linux"
+og_description: >
+  Before diving into the technical details, it's important to understand why you might consider switching to Bun. Here are some key reasons.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
-As the JavaScript ecosystem continues to evolve, developers are always on the lookout for tools that can enhance their productivity and streamline their workflows. One such tool that has been gaining attention is **Bun**—a fast, modern, and all-in-one JavaScript runtime that aims to replace traditional package managers like `npm`. This article delves into the intricacies of replacing `npm` with `bun`, providing a step-by-step guide tailored for Linux users.
+As the JavaScript ecosystem continues to evolve, developers are always on the lookout for tools that can enhance their productivity and streamline their workflows. One such tool that has been gaining attention is **Bun** - a fast, modern, and all-in-one JavaScript runtime that aims to replace traditional package managers like `npm`. This article delves into the intricacies of replacing `npm` with `bun`, providing a step-by-step guide tailored for Linux users.
 
 ## Why Bun?
 

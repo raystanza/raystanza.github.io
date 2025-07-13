@@ -4,8 +4,7 @@ title: "Laravel Queue Workers: A Guide for Advanced Developers"
 date: 2024-12-14 07:00:00 -05:00
 
 description: >
-  Explore configuring, optimizing, and scaling Laravel queue workers using Redis,
-  Supervisor, and Horizon for robust, efficient asynchronous job processing.
+  Explore configuring, optimizing, and scaling Laravel queue workers using Redis, Supervisor, and Horizon for robust, efficient asynchronous job processing.
 
 canonical_url: "https://raystanza.uk/posts/laravel-queue-workers/"
 
@@ -32,8 +31,7 @@ image_caption: "Monitoring and scaling Laravel queue workers with Horizon, Super
 og_type: "article"
 og_title: "Laravel Queue Workers: A Guide for Advanced Developers"
 og_description: >
-  Learn how to configure, optimize, and scale Laravel queue workers for
-  asynchronous job processing using Redis, Supervisor, and Horizon.
+  Learn how to configure, optimize, and scale Laravel queue workers for asynchronous job processing using Redis, Supervisor, and Horizon.
 
 robots: "index, follow"
 

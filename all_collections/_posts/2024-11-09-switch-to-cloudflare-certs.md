@@ -4,8 +4,7 @@ title: "Switching from Let's Encrypt to CloudFlare for SSL/TLS Certs"
 date: 2024-11-09 07:00:00 -05:00
 
 description: >
-  Learn how to migrate your SSL/TLS certificates from Let’s Encrypt to Cloudflare,
-  leveraging Cloudflare’s edge network for streamlined issuance and enhanced security.
+  Learn how to migrate your SSL/TLS certificates from Let’s Encrypt to Cloudflare, leveraging Cloudflare’s edge network for streamlined issuance and enhanced security.
 
 canonical_url: "https://raystanza.uk/posts/switch-to-cloudflare-certs/"
 
@@ -31,9 +30,7 @@ image_caption: "Comparing certificate issuance: Let’s Encrypt vs Cloudflare"
 og_type: "article"
 og_title: "Switching from Let's Encrypt to CloudFlare for SSL/TLS Certs"
 og_description: >
-  SSL/TLS certificates are the backbone of secure web communication. Discover
-  why you might switch from Let’s Encrypt’s automated, free model to Cloudflare’s
-  edge-based certificate management.
+  SSL/TLS certificates are the backbone of secure web communication. Discover why you might switch from Let’s Encrypt’s automated, free model to Cloudflare’s edge-based certificate management.
 
 robots: "index, follow"
 

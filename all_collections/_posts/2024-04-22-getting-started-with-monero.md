@@ -1,14 +1,41 @@
 ---
 layout: post
-title: Setting Up a Full Node Monero (XMR) Wallet
-date: 2024-04-21
-categories: ["tutorials", "monero", "xmr"]
-tags: ["monero", "xmr", "cryptocurrency", "privacy", "wallet", "full node", "blockchain"]
-og_title: "Mastering Monero: Setting Up a Full Node Wallet for Ultimate Privacy"
-og_description: "A comprehensive guide to establishing a full Monero (XMR) node wallet, exploring the critical intersection of cryptocurrency privacy, system security, and digital sovereignty."
-og_image: "/assets/icons/og-image.png"
+title: "Setting Up a Full Node Monero (XMR) Wallet"
+date: 2024-04-21 07:00:00 -04:00
+
+description: >
+  Step-by-step guide to running a Monero full node wallet locally, ensuring maximum privacy, security, and sovereignty over your XMR funds.
+
+canonical_url: "https://raystanza.uk/posts/getting-started-with-monero/"
+
+categories:
+  - tutorials
+  - monero
+  - xmr
+
+tags:
+  - monero
+  - xmr
+  - cryptocurrency
+  - privacy
+  - wallet
+  - full node
+  - blockchain
+
+image: "/assets/images/articles/monero-full-node-wallet-og.png"
+image_alt: "Diagram showing Monero full node wallet syncing the blockchain"
+image_caption: "Running a Monero full node wallet for private, decentralized validation"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Mastering Monero: Setting Up a Full Node Wallet for Ultimate Privacy"
+og_description: >
+  A comprehensive guide to establishing a full Monero (XMR) node wallet, exploring the critical intersection of cryptocurrency privacy, system security, and digital sovereignty.
+
+robots: "index, follow"
+
+twitter:
+  card:    "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 In the digital wilderness, where the 👁️‍🗨️ eyes of surveillance loom large, privacy is not merely a luxury—it is a fundamental right. For those committed to maintaining absolute anonymity, 🛡️ Monero (XMR) emerges as the beacon of privacy. Running a full node Monero wallet represents the pinnacle of personal sovereignty and data security in the cryptocurrency world. Let's dive into why Monero is the currency of choice for privacy purists and how to set up a full node wallet.
 

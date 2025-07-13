@@ -1,14 +1,40 @@
 ---
 layout: post
-title: Installing PostgreSQL
-date: 2024-03-22
-categories: ["tutorials", "postgresql"]
-tags: ["postgresql", "database", "installation", "windows", "macOS", "linux", "tutorial"]
-og_title: "PostgreSQL Installation Mastery: A Guide for Windows, macOS, and Linux"
-og_description: "Unlock the power of PostgreSQL with this definitive, cross-platform installation tutorial. Learn to set up this robust, enterprise-grade database management system across multiple operating systems with expert precision."
-og_image: "/assets/icons/og-image.png"
+title: "Installing PostgreSQL"
+date: 2024-03-22 07:00:00 -04:00
+
+description: >
+  Unlock the power of PostgreSQL with this cross-platform installation tutorial. Learn to set up this robust, enterprise-grade database management system across Windows, macOS, and Linux with expert precision.
+
+canonical_url: "https://raystanza.uk/posts/installing-postgresql/"
+
+categories:
+  - tutorials
+  - postgresql
+
+tags:
+  - postgresql
+  - database
+  - installation
+  - windows
+  - macos
+  - linux
+  - tutorial
+
+image: "/assets/images/articles/installing-postgresql-og.png"
+image_alt: "Terminal showing PostgreSQL installation commands for Windows, macOS, and Linux"
+image_caption: "Installing PostgreSQL across popular operating systems"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "PostgreSQL Installation Mastery: A Guide for Windows, macOS, and Linux"
+og_description: >
+  Unlock the power of PostgreSQL with this cross-platform installation tutorial. Learn to set up this robust, enterprise-grade database management system across multiple operating systems with expert precision.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 PostgreSQL, commonly known as Postgres, is an open-source, powerful, and advanced relational database management system (RDBMS). It's widely used for its reliability, robustness, and performance, especially in handling complex data types and large volumes of data. This guide will walk you through the steps to install PostgreSQL on various operating systems, ensuring you have a solid foundation for developing database-driven applications.
 

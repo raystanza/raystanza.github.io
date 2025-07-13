@@ -4,8 +4,7 @@ title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sani
 date: 2024-12-26 07:00:00 -05:00
 
 description: >
-  Hilariously relatable guide to centering a <div> in CSS using flexbox,
-  CSS Grid, and legacy techniques—so you never lose your sanity.
+  Hilariously relatable guide to centering a <div> in CSS using flexbox, CSS Grid, and legacy techniques—so you never lose your sanity.
 
 canonical_url: "https://raystanza.uk/posts/centering-a-div/"
 
@@ -34,8 +33,7 @@ image_caption: "Comparing CSS centering methods: flexbox, grid, and classic appr
 og_type: "article"
 og_title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sanity"
 og_description: >
-  Struggling to center a <div>? Join us on a hilarious journey through CSS flexbox,
-  grid, and classic methods to achieve perfect centering.
+  Struggling to center a <div>? Join us on a hilarious journey through CSS flexbox, grid, and classic methods to achieve perfect centering.
 
 robots: "index, follow"
 

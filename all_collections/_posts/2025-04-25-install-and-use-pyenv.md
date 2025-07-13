@@ -4,8 +4,7 @@ title: "Controlling Python Environment Management with pyenv: A How-To for Debia
 date: 2025-04-25 07:00:00 -04:00
 
 description: >
-  Guide to installing and using pyenv on Debian/Ubuntu for seamless Python
-  version and virtual environment management, avoiding dependency conflicts.
+  A guide to installing and using pyenv on Debian/Ubuntu for seamless Python version and virtual environment management, avoiding dependency conflicts.
 
 canonical_url: "https://raystanza.uk/posts/install-and-use-pyenv"
 
@@ -33,9 +32,7 @@ og_type: "article"
 og_title: "Controlling Python Environment Management with pyenv: A How-To for Debian-Based Systems"
 og_author: "Jim Sines"
 og_description: >
-  Learn how to efficiently manage multiple Python versions and virtual
-  environments using pyenv on Debian-based Linux, resolving dependency
-  conflicts for smoother development workflows.
+  Learn how to efficiently manage multiple Python versions and virtual environments using pyenv on Debian-based Linux, resolving dependency conflicts for smoother development workflows.
 
 robots: "index, follow"
 

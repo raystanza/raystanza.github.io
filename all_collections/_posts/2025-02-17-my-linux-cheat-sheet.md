@@ -4,8 +4,7 @@ title: "My Linux Cheat-Sheet"
 date: 2025-02-17 07:00:00 -05:00
 
 description: >
-  A handy cheat-sheet of essential Debian Linux command snippets for quick reference
-  and system customization.
+  A handy cheat-sheet of essential Debian Linux command snippets for quick reference and system customization.
 
 canonical_url: "https://raystanza.uk/posts/my-linux-cheat-sheet/"
 

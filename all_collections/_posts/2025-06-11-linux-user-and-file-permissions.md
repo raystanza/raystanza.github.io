@@ -27,8 +27,7 @@ og_type: "article"
 og_title: "Demystifying User & File Permissions on Debian Linux"
 og_author: "Jim Sines"
 og_description: >
-  A comprehensive guide to understanding and mastering user, group, and file
-  permissions on Debian-based systems.
+  A guide to understanding and mastering user, group, and file permissions on Debian-based systems.
 
 robots: "index, follow"
 
