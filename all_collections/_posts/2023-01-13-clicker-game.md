@@ -1,14 +1,40 @@
 ---
 layout: post
-title: ClickeR 'Game'
-date: 2023-01-13
-categories: ["projects", "live"]
-tags: ["clicker game", "emoji", "javascript", "projects", "games", "fun", "web apps"]
-og_title: "ClickeR 'Game': An Emoji Generating Annoyance Machine"
-og_description: "Discover the ClickeR 'Game', a quirky and entertaining web app where you generate emojis, listen to their descriptions, and create nonsensical paragraphs. It's the ultimate fun annoyance machine!"
-og_image: "/assets/icons/og-image.png"
+title: "ClickeR 'Game'"
+date: 2023-01-13 07:00:00 -05:00
+
+description: >
+  A quirky, emoji-generating clicker web app where you click “Click Me!” to spawn random emojis, build nonsensical paragraphs, and listen as their descriptions are read aloud—your ultimate annoyance machine.
+
+canonical_url: "https://raystanza.uk/posts/clicker-game/"
+
+categories:
+  - projects
+  - live
+
+tags:
+  - clicker game
+  - emoji
+  - javascript
+  - projects
+  - games
+  - fun
+  - web apps
+
+image: "/assets/images/articles/clicker-game-og.png"
+image_alt: "Browser window with a glowing Click Me button surrounded by emojis"
+image_caption: "Generating random emojis and their spoken descriptions for fun"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "ClickeR 'Game': An Emoji Generating Annoyance Machine"
+og_description: >
+  Discover the ClickeR 'Game' — a playful clicker web app that spawns random emojis, weaves them into nonsense paragraphs, and reads them aloud for pure fun and annoyance.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 ## Purpose
 
@@ -29,7 +55,7 @@ This is fairly useless and is intented as an annoyance machine written in MD/HTM
 ## Game Legend
 
 | UI item | description |
-| :--- | :--- |
+| ---: | :--- |
 | 🔊 | Choose voice, change pitch & rate |
 | 😃 | Show Emoji 'paragraph' |
 | ✏️ | Show text 'paragraph' |
@@ -57,7 +83,3 @@ This is fairly useless and is intented as an annoyance machine written in MD/HTM
 [ ] Type in-> Emoji, output-> PlainText
 
 [X] Output Emoji List as SVG (2024-01-21)
-
-##### @raystanza
-
-post updated @ {{ 'now' | date: "%s" }}

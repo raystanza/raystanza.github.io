@@ -1,14 +1,40 @@
 ---
 layout: post
-title: Installing Yarn
-date: 2024-03-23
-categories: ["tutorials", "yarn"]
-tags: ["yarn", "dependency management", "package manager", "javascript", "node.js", "npm", "installation"]
-og_title: "A Complete Guide to Installing Yarn"
-og_description: "Learn how to install Yarn, the fast and reliable dependency management tool, across Windows, macOS, and Linux. This step-by-step guide ensures a smooth installation process."
-og_image: "/assets/icons/og-image.png"
+title: "Installing Yarn"
+date: 2024-03-23 07:00:00 -04:00
+
+description: >
+  Learn how to install Yarn, the fast and reliable dependency management tool, across Windows, macOS, and Linux. This step-by-step guide ensures a smooth installation process.
+
+canonical_url: "https://raystanza.uk/posts/installing-yarn/"
+
+categories:
+  - tutorials
+  - yarn
+
+tags:
+  - yarn
+  - dependency management
+  - package manager
+  - javascript
+  - node.js
+  - npm
+  - installation
+
+image: "/assets/images/articles/installing-yarn-og.png"
+image_alt: "Terminal showing Yarn installation commands on Windows, macOS, and Linux"
+image_caption: "Installing Yarn across popular operating systems"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "A Complete Guide to Installing Yarn"
+og_description: >
+  Learn how to install Yarn, the fast and reliable dependency management tool, across Windows, macOS, and Linux. This step-by-step guide ensures a smooth installation process.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 Yarn is a fast, reliable, and secure dependency management tool that has become a popular choice among developers, particularly those working with JavaScript projects. It caches every package it downloads, so it never needs to download the same package again. It also parallelizes operations to maximize resource utilization, so install times are faster than ever. This guide will walk you through the process of installing Yarn on your system, ensuring you can start managing your project dependencies more efficiently.
 

@@ -4,8 +4,7 @@ title: "Why Choose Umami Over Google Analytics"
 date: 2025-01-02 07:00:00 -05:00
 
 description: >
-  A privacy-first administrator’s guide to self-hosted Umami analytics vs Google
-  Analytics, protecting user data while delivering actionable insights.
+  A privacy-first administrator’s guide to self-hosted Umami analytics vs Google Analytics, protecting user data while delivering actionable insights.
 
 canonical_url: "https://raystanza.uk/posts/switch-to-umami/"
 
@@ -28,8 +27,7 @@ image_caption: "Privacy-first Umami analytics dashboard"
 og_type: "article"
 og_title: "Why Choose Umami Over Google Analytics"
 og_description: >
-  A privacy-focused admin's take on why Umami is the better alternative to
-  Google Analytics for website owners.
+  A privacy-focused admin's take on why Umami is the better alternative to Google Analytics for website owners.
 
 robots: "index, follow"
 

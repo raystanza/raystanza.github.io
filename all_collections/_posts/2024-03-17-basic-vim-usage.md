@@ -1,14 +1,39 @@
 ---
 layout: post
-title: Basic VIM Usage
-date: 2024-03-17
-categories: ["guide", "vim"]
-tags: ["vim", "text editing", "productivity", "programming tools", "navigation", "beginner guide"]
-og_title: "Vim Mastery: A Beginner's Guide to Efficient Text Editing"
-og_description: "Unlock the power of Vim with this essential guide. Learn key modes, navigation techniques, and editing strategies to transform your text editing workflow and boost productivity."
-og_image: "/assets/icons/og-image.png"
+title: "Basic Vim Usage"
+date: 2024-03-17 07:00:00 -04:00
+
+description: >
+  Learn the basics of Vim with this guide. Learn key modes, navigation techniques, and editing strategies to transform your text editing workflow.
+
+canonical_url: "https://raystanza.uk/posts/basic-vim-usage/"
+
+categories:
+  - guide
+  - vim
+
+tags:
+  - vim
+  - text editing
+  - productivity
+  - programming tools
+  - navigation
+  - beginner guide
+
+image: "/assets/images/articles/basic-vim-usage-og.png"
+image_alt: "Vim editor interface showcasing normal and insert mode with navigation shortcuts"
+image_caption: "Efficient navigation and editing in Vim using key modes and shortcuts"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Vim Mastery: A Beginner's Guide to Efficient Text Editing"
+og_description: >
+  Learn the basics of Vim with this guide. Learn key modes, navigation techniques, and editing strategies to transform your text editing workflow.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 Using Vim, the highly configurable text editor, is akin to learning a new language for many. Its efficiency and power come at the cost of a steep learning curve, but once mastered, it can significantly speed up your workflow. This article aims to demystify Vim for beginners, providing a guide to get started with this versatile editor.
 

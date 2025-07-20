@@ -4,8 +4,7 @@ title: "Fork-Bombs Explained: Minimal Code with Maximum Impact"
 date: 2024-12-07 07:00:00 -05:00
 
 description: >
-  Discover the fascinating (and dangerous) world of fork-bombs—simple yet powerful
-  recursive scripts that exploit system resources. See how they’re written in Bash,
+  Discover the fascinating (and dangerous) world of fork-bombs—simple yet powerful recursive scripts that exploit system resources. See how they’re written in Bash,
   PowerShell, Python, and more.
 
 canonical_url: "https://raystanza.uk/posts/fork-bombs/"
@@ -33,8 +32,7 @@ image_caption: "Illustration of a fork-bomb creating exponential child processes
 og_type: "article"
 og_title: "Fork-Bombs Explained: Minimal Code with Maximum Impact"
 og_description: >
-  A deep dive into how fork-bombs use minimal code to spawn infinite processes
-  and overwhelm system resources in Bash, PowerShell, Python, and beyond.
+  A look into how fork-bombs use minimal code to spawn infinite processes and overwhelm system resources in Bash, PowerShell, Python, and beyond.
 
 robots: "index, follow"
 

@@ -1,14 +1,40 @@
 ---
 layout: post
-title: Installing NodeJS on Linux using NVM
-date: 2024-01-25
-categories: ["tutorials", "nodejs", "nvm"]
-tags: ["node.js", "nvm", "linux", "version management", "programming", "tutorial"]
-og_title: "Mastering Node.js Deployment: A NVM Installation Guide for Linux"
-og_description: "Unlock seamless Node.js version management on Linux with NVM. Explore a step-by-step tutorial for installing, switching, and optimizing Node.js environments across multiple projects."
-og_image: "/assets/icons/og-image.png"
+title: "Installing NodeJS on Linux using NVM"
+date: 2024-01-25 07:00:00 -05:00
+
+description: >
+  Explore a step-by-step tutorial for installing, switching, and optimizing Node.js environments across multiple projects.
+
+canonical_url: "https://raystanza.uk/posts/installing-nodejs-using-nvm/"
+
+categories:
+  - tutorials
+  - nodejs
+  - nvm
+
+tags:
+  - node.js
+  - nvm
+  - linux
+  - version management
+  - programming
+  - tutorial
+
+image: "/assets/images/articles/installing-nodejs-on-linux-using-nvm-og.png"
+image_alt: "Terminal showing nvm install, nvm use, and node -v commands with the NVM logo and Linux penguin"
+image_caption: "Using NVM to install and manage Node.js versions on Linux"
+
 og_type: "article"
-og_author: "Jim Sines"
+og_title: "Mastering Node.js Deployment: A NVM Installation Guide for Linux"
+og_description: >
+  Explore a step-by-step tutorial for installing, switching, and optimizing Node.js environments across multiple projects.
+
+robots: "index, follow"
+
+twitter:
+  card: "summary_large_image"
+  creator: "@realcaptgeech"
 ---
 Node.js, a runtime environment for executing JavaScript code server-side, is an essential tool in modern web development. In this tutorial, we'll focus on installing Node.js on a Linux system using Node Version Manager (NVM). NVM is a handy tool that allows you to install multiple versions of Node.js and switch between them with ease.
 
