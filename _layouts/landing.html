@@ -36,11 +36,14 @@
           <h1 class="animated-heading">🚀 Latest Project</h1>
           {% assign latest_project = site.projects | sort: "date" | reverse | first %}
           {% if latest_project %}
-          <div>
+          <div class="project-content">
             <h2>
               <a href="{{ latest_project.url }}">🔧 {{ latest_project.title }}</a>
             </h2>
             <p>{{ latest_project.description | truncate: 150 }}</p>
+          </div>
+          <div class="more-link">
+            <a href="/projects/" class="btn-more">All Projects</a>
           </div>
           {% else %}
           <p>❌ No projects available at this time. Check back later!</p>

@@ -13,17 +13,6 @@ body {
   padding: 2rem 0;
 }
 
-/* Card Layout for Content */
-.landing-page .content-card {
-  background: var(--gray-4);
-  border: 1px solid var(--text-primary);
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 2rem 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
 /* Section Titles */
 .landing-page .content-card h1 {
   font-size: 2rem;
@@ -85,7 +74,7 @@ body {
 }
 
 /* Project Section */
-.landing-page .project-card div {
+.landing-page .project-card .project-content {
   background: var(--gray-3);
   border: 1px solid var(--text-primary);
   padding: 1.5rem;
@@ -94,7 +83,7 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.landing-page .project-card div:hover {
+.landing-page .project-card .project-content:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -139,12 +128,14 @@ body {
 }
 
 /* More Button */
-.landing-page .articles-card .more-link {
+.landing-page .articles-card .more-link,
+.landing-page .project-card .more-link {
   text-align: center;
   margin-top: 1.5rem;
 }
 
-.landing-page .articles-card .btn-more {
+.landing-page .articles-card .btn-more,
+.landing-page .project-card .btn-more {
   display: inline-block;
   background: var(--highlight-color);
   color: var(--white-1);
@@ -156,7 +147,8 @@ body {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.landing-page .articles-card .btn-more:hover {
+.landing-page .articles-card .btn-more:hover,
+.landing-page .project-card .btn-more:hover {
   background: var(--highlight-color-retro);
   transform: scale(1.05);
 }
