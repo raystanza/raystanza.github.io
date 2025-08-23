@@ -7,28 +7,91 @@
       <header role="banner">
         {% include header.html %}
       </header>
+      <!-- Header -->
+      <header role="banner">
+        {% include header.html %}
+      </header>
 
-      <!-- Project Content Section -->
-      <article class="project-content">
-        <!-- Project Title -->
-        <h1 class="project-title">{{ page.title }}</h1>
+      <!-- Project -->
+      <article class="article project" role="article" aria-labelledby="project-title">
+        <!-- Back -->
+        <a href="/projects" class="back-button" aria-label="Go back">
+          &lt;- Back
+        </a>
 
-        <!-- Project Metadata -->
-        {% if page.date or page.categories %}
-        <div class="project-metadata">
+        <!-- Title & Date -->
+        <header class="article-header">
+          <h2 id="project-title" class="article-title">{{ page.title }}</h2>
           {% if page.date %}
-            <span class="project-date">🗓️ {{ page.date | date: "%B %d, %Y" }}</span>
+            <small class="date">{{ page.date | date: "%B %d, %Y" }}</small>
           {% endif %}
-          {% if page.categories %}
-            <ul class="project-categories">
-              {% for c in page.categories %}
-                <li>
-                  <p class="project-category">{{ c }}</p>
-                </li>
+        </header>
+
+        <!-- Hero image (same behavior as posts) -->
+        {% if page.image %}
+          <figure class="article-image">
+            <img
+              src="{{ page.image | relative_url }}"
+              alt="{{ page.image_alt | default: page.title }}"
+            />
+            {% if page.image_caption %}
+              <figcaption class="image-caption">{{ page.image_caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+
+        <!-- Description (optional) -->
+        {% if page.description %}
+          <p class="project-description">{{ page.description }}</p>
+        {% endif %}
+
+        <!-- Main Content -->
+        <section class="content" aria-label="Project Content">
+          {{ content }}
+        </section>
+
+        <!-- Auto gallery sourced from /assets/images/projects/<slug-or-title>/ -->
+        {% assign project_slug = page.slug | default: page.title | slugify %}
+        {% assign base_path = "/assets/images/projects/" | append: project_slug | append: "/" %}
+        {% assign gallery = site.static_files | where_exp: "f", "f.path contains base_path" %}
+
+        {% if gallery and gallery.size > 0 %}
+          <section class="project-gallery" aria-label="Project Gallery">
+            <h3>Gallery</h3>
+            <ul class="gallery-grid">
+              {% for f in gallery %}
+                {% unless f.path == page.image %}
+                  <li class="gallery-item">
+                    <a href="{{ f.path | relative_url }}">
+                      <img src="{{ f.path | relative_url }}" alt="{{ page.title }} asset {{ forloop.index }}" loading="lazy" />
+                    </a>
+                  </li>
+                {% endunless %}
               {% endfor %}
             </ul>
-          {% endif %}
-        </div>
+          </section>
+        {% endif %}
+
+        <!-- Tags/Categories (optional display) -->
+        {% if page.categories or page.tags %}
+          <section class="meta-lists" aria-label="Taxonomy">
+            {% if page.categories %}
+              <div class="cats">
+                <strong>Categories:</strong>
+                <ul>
+                  {% for c in page.categories %}<li>{{ c }}</li>{% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            {% if page.tags %}
+              <div class="tags">
+                <strong>Tags:</strong>
+                <ul>
+                  {% for t in page.tags %}<li>#{{ t }}</li>{% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </section>
         {% endif %}
 
         <!-- Project Description -->
@@ -63,6 +126,10 @@
         </div>
       </article>
 
+      <!-- Footer -->
+      <footer role="contentinfo">
+        {% include footer.html %}
+      </footer>
       <!-- Footer -->
       <footer role="contentinfo">
         {% include footer.html %}

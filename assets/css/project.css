@@ -411,6 +411,37 @@ main {
   content: "";
 }
 
+/* Project Gallery */
+.project-gallery {
+  margin-top: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.meta-lists ul {
+  display: inline-flex;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+  margin: .25rem 0 0;
+}
+
+.meta-lists .cats, .meta-lists .tags {
+  margin-top: 1rem;
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   main {
