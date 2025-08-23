@@ -3,32 +3,37 @@
   {% include head.html %}
   <body>
     <main>
-      <!-- Header -->
-      <header role="banner">
-        {% include header.html %}
-      </header>
+      <!-- Header Section -->
+      {% include header.html %}
 
-      <!-- Project -->
-      <article class="article project" role="article" aria-labelledby="project-title">
-        <!-- Back -->
-        <a href="/projects" class="back-button" aria-label="Go back">
-          &lt;- Back
-        </a>
+      <!-- Project Content Section -->
+      <article class="project-content">
+        <!-- Project Title -->
+        <h1 class="project-title">{{ page.title }}</h1>
 
-        <!-- Title & Date -->
-        <header class="article-header">
-          <h2 id="project-title" class="article-title">{{ page.title }}</h2>
+        <!-- Project Metadata -->
+        {% if page.date or page.categories %}
+        <div class="project-metadata">
           {% if page.date %}
-            <small class="date">{{ page.date | date: "%B %d, %Y" }}</small>
+            <span class="project-date">🗓️ {{ page.date | date: "%B %d, %Y" }}</span>
           {% endif %}
-        </header>
+          {% if page.categories %}
+            <ul class="project-categories">
+              {% for c in page.categories %}
+                <li>
+                  <p class="project-category">{{ c }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        {% endif %}
 
-        <!-- Hero image -->
         {% if page.image %}
-          <figure class="article-image">
-            <img
-              src="{{ page.image | relative_url }}"
-              alt="{{ page.image_alt | default: page.title }}"
+          <figure class="project-image">
+            <img 
+              src="{{ page.image | relative_url }}" 
+              alt="{{ page.image_alt | default: page.title }}" 
             />
             {% if page.image_caption %}
               <figcaption class="image-caption">{{ page.image_caption }}</figcaption>
@@ -40,22 +45,13 @@
         <p class="project-description">{{ page.description }}</p>
 
         <!-- Main Project Content -->
-        <section class="project-main-content" aria-label="Project Content">
+        <section class="project-main-content">
           {{ content }}
         </section>
-        
-        <!-- Back to Top -->
-        <div class="back-to-top-container">
-          <a href="#top" class="back-to-top" aria-label="Back to top">
-            ↑ Back To Top
-          </a>
-        </div>
       </article>
 
-      <!-- Footer -->
-      <footer role="contentinfo">
-        {% include footer.html %}
-      </footer>
+      <!-- Footer Section -->
+      {% include footer.html %}
     </main>
   </body>
 </html>
