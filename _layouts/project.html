@@ -7,10 +7,6 @@
       <header role="banner">
         {% include header.html %}
       </header>
-      <!-- Header -->
-      <header role="banner">
-        {% include header.html %}
-      </header>
 
       <!-- Project -->
       <article class="article project" role="article" aria-labelledby="project-title">
@@ -27,7 +23,7 @@
           {% endif %}
         </header>
 
-        <!-- Hero image (same behavior as posts) -->
+        <!-- Hero image -->
         {% if page.image %}
           <figure class="article-image">
             <img
@@ -40,78 +36,8 @@
           </figure>
         {% endif %}
 
-        <!-- Description (optional) -->
-        {% if page.description %}
-          <p class="project-description">{{ page.description }}</p>
-        {% endif %}
-
-        <!-- Main Content -->
-        <section class="content" aria-label="Project Content">
-          {{ content }}
-        </section>
-
-        <!-- Auto gallery sourced from /assets/images/projects/<slug-or-title>/ -->
-        {% assign project_slug = page.slug | default: page.title | slugify %}
-        {% assign base_path = "/assets/images/projects/" | append: project_slug | append: "/" %}
-        {% assign gallery = site.static_files | where_exp: "f", "f.path contains base_path" %}
-
-        {% if gallery and gallery.size > 0 %}
-          <section class="project-gallery" aria-label="Project Gallery">
-            <h3>Gallery</h3>
-            <ul class="gallery-grid">
-              {% for f in gallery %}
-                {% unless f.path == page.image %}
-                  <li class="gallery-item">
-                    <a href="{{ f.path | relative_url }}">
-                      <img src="{{ f.path | relative_url }}" alt="{{ page.title }} asset {{ forloop.index }}" loading="lazy" />
-                    </a>
-                  </li>
-                {% endunless %}
-              {% endfor %}
-            </ul>
-          </section>
-        {% endif %}
-
-        <!-- Tags/Categories (optional display) -->
-        {% if page.categories or page.tags %}
-          <section class="meta-lists" aria-label="Taxonomy">
-            {% if page.categories %}
-              <div class="cats">
-                <strong>Categories:</strong>
-                <ul>
-                  {% for c in page.categories %}<li>{{ c }}</li>{% endfor %}
-                </ul>
-              </div>
-            {% endif %}
-            {% if page.tags %}
-              <div class="tags">
-                <strong>Tags:</strong>
-                <ul>
-                  {% for t in page.tags %}<li>#{{ t }}</li>{% endfor %}
-                </ul>
-              </div>
-            {% endif %}
-          </section>
-        {% endif %}
-
         <!-- Project Description -->
         <p class="project-description">{{ page.description }}</p>
-
-        <!-- Project Hero Image (uses page.image or falls back to page.og_image) -->
-        {% assign hero_image = page.image | default: page.og_image %}
-        {% if hero_image %}
-          <figure class="project-image">
-            <img
-              src="{{ hero_image | relative_url }}"
-              alt="{{ page.image_alt | default: page.og_image_alt | default: page.title }}"
-              loading="eager"
-            />
-            {% assign cap = page.image_caption | default: page.og_image_caption %}
-            {% if cap %}
-              <figcaption class="image-caption">{{ cap }}</figcaption>
-            {% endif %}
-          </figure>
-        {% endif %}
 
         <!-- Main Project Content -->
         <section class="project-main-content" aria-label="Project Content">
@@ -126,10 +52,6 @@
         </div>
       </article>
 
-      <!-- Footer -->
-      <footer role="contentinfo">
-        {% include footer.html %}
-      </footer>
       <!-- Footer -->
       <footer role="contentinfo">
         {% include footer.html %}
