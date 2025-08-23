@@ -3,7 +3,6 @@ html,
 body {
   color: var(--white-2);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
   line-height: 1.7;
 }
 
@@ -70,7 +69,6 @@ body {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: var(--white-1);
-  text-align: justify;
 }
 
 /* Project Section */

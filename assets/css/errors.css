@@ -6,7 +6,6 @@ body.error-page {
   padding: 0;
   background-color: var(--gray-6);
   color: var(--white-2);
-  font-family: "JetBrains Mono", monospace;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -67,7 +66,6 @@ body.error-page {
 
 /* Call‐to‐action button */
 .error-container a.button {
-  font-family: inherit;
   font-size: 1rem;
   color: var(--white-1);
   background-color: var(--highlight-color);

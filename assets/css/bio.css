@@ -1,7 +1,6 @@
 *,
 *::before,
 *::after {
-  font-family: inherit;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -13,9 +12,9 @@ html,
 body {
   color: var(--white-2);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
   line-height: 1.7;
 }
+
 main {
   margin: 0 auto;
   max-width: 95vw;

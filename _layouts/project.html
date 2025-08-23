@@ -4,12 +4,21 @@
   <body>
     <main>
       <!-- Header Section -->
-      {% include header.html %}
+      <header role="banner">
+        {% include header.html %}
+      </header>
 
       <!-- Project Content Section -->
       <article class="project-content">
+        <!-- Back -->
+        <a href="/projects" class="back-button" aria-label="Go back">
+          &lt;- Back
+        </a>
+
         <!-- Project Title -->
-        <h1 class="project-title">{{ page.title }}</h1>
+        <header class="project-header">
+          <h1 class="project-title">{{ page.title }}</h1>
+        </header>
 
         <!-- Project Metadata -->
         {% if page.date or page.categories %}
@@ -29,6 +38,7 @@
         </div>
         {% endif %}
 
+        <!-- Project Image -->
         {% if page.image %}
           <figure class="project-image">
             <img 
@@ -48,10 +58,18 @@
         <section class="project-main-content">
           {{ content }}
         </section>
+        <!-- ↑ Back To Top -->
+        <div class="back-to-top-container">
+          <a href="#top" class="back-to-top" aria-label="Back to top">
+            ↑ Back To Top
+          </a>
+        </div>
       </article>
 
-      <!-- Footer Section -->
-      {% include footer.html %}
+      <!-- Footer -->
+      <footer role="contentinfo">
+        {% include footer.html %}
+      </footer>
     </main>
   </body>
 </html>

@@ -32,8 +32,9 @@
 }
 
 /* Smooth in-page scrolling */
-html {
+html, body {
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
 }
 
 /* Header Styling */

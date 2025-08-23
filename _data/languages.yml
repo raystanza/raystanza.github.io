@@ -1,3 +1,6 @@
+- name: C#
+  description: Object-oriented language used in limited project scopes and early experimentation with .NET-based applications. Familiar with core syntax, control structures, and general usage patterns, though not actively used in production environments.
+
 - name: HTML5
   description: Core markup language for structuring web content and UI components. Extensive experience using semantic elements, accessibility-first patterns, and responsive structure across full-stack and static applications.
 
@@ -10,14 +13,11 @@
 - name: PHP
   description: Server-side language used extensively with Laravel and procedural PHP applications. Proficient in MVC patterns, templating, route controllers, service containers, and queue-based job systems.
 
-- name: Bash
-  description: Shell scripting language used to automate server administration, development tooling, deployment routines, and CLI interfaces. Scripts are modular, portable, and designed for long-term maintainability.
-
 - name: Python
   description: Versatile general-purpose language used for scripting, Flask-based APIs, WebSocket handling, and small-scale automation tools. Employed in real-time chat apps and internal monitoring dashboards.
 
 - name: SQL (MySQL dialect)
   description: Structured Query Language used for schema creation, data retrieval, joins, and relational modeling. Strong familiarity with CRUD operations and normalization; typically administered via phpMyAdmin or CLI tools.
 
-- name: C#
-  description: Object-oriented language used in limited project scopes and early experimentation with .NET-based applications. Familiar with core syntax, control structures, and general usage patterns, though not actively used in production environments.
+- name: Bash
+  description: Shell scripting language used to automate server administration, development tooling, deployment routines, and CLI interfaces. Scripts are modular, portable, and designed for long-term maintainability.
