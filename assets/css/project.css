@@ -26,7 +26,6 @@ main {
 }
 
 /* Projects Section */
-
 .projects-title {
   font-size: 2rem;
   color: var(--text-primary);
@@ -208,6 +207,27 @@ main {
   padding: 1rem;
 }
 
+/* Project Image & Caption */
+.project-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--white-2);
+  font-style: italic;
+  text-align: center;
+}
+
 /* Project Main Content */
 .project-main-content {
   margin-top: 2rem;
@@ -224,6 +244,25 @@ main {
 
 .project-main-content a:hover {
   color: var(--highlight-muted-retro);
+}
+
+/* Container for the “Back To Top” link */
+.back-to-top-container {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+/* The “Back To Top” link itself */
+.back-to-top {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-to-top:hover {
+  color: var(--text-primary);
 }
 
 /* Fade-In Animation */

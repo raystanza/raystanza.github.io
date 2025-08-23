@@ -3,8 +3,10 @@
   {% include head.html %}
   <body>
     <main>
-      <!-- Header Section -->
-      {% include header.html %}
+      <!-- Header -->
+      <header role="banner">
+        {% include header.html %}
+      </header>
 
       <!-- Project Content Section -->
       <article class="project-content">
@@ -32,14 +34,39 @@
         <!-- Project Description -->
         <p class="project-description">{{ page.description }}</p>
 
+        <!-- Project Hero Image (uses page.image or falls back to page.og_image) -->
+        {% assign hero_image = page.image | default: page.og_image %}
+        {% if hero_image %}
+          <figure class="project-image">
+            <img
+              src="{{ hero_image | relative_url }}"
+              alt="{{ page.image_alt | default: page.og_image_alt | default: page.title }}"
+              loading="eager"
+            />
+            {% assign cap = page.image_caption | default: page.og_image_caption %}
+            {% if cap %}
+              <figcaption class="image-caption">{{ cap }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+
         <!-- Main Project Content -->
-        <section class="project-main-content">
+        <section class="project-main-content" aria-label="Project Content">
           {{ content }}
         </section>
+        
+        <!-- Back to Top -->
+        <div class="back-to-top-container">
+          <a href="#top" class="back-to-top" aria-label="Back to top">
+            ↑ Back To Top
+          </a>
+        </div>
       </article>
 
-      <!-- Footer Section -->
-      {% include footer.html %}
+      <!-- Footer -->
+      <footer role="contentinfo">
+        {% include footer.html %}
+      </footer>
     </main>
   </body>
 </html>

@@ -40,11 +40,17 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
+      og_type: "article"
+      twitter:
+        card: "summary_large_image"
   - scope:
       path: "_projects"
     values:
       layout: "project"
       permalink: /projects/:title/
+      og_type: "article"
+      twitter:
+        card: "summary_large_image"
 
 seo:
   title: "An Exercise in Futility"
