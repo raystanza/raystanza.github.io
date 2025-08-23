@@ -12,9 +12,9 @@
 /* General Layout */
 html,
 body {
-  color: var(--white-2);
+  color: var(--text-primary);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.7;
 }
 
@@ -30,7 +30,6 @@ main {
   font-size: 2rem;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px var(--highlight-color), 0 0 8px var(--highlight-color);
   text-align: center;
 }
 
@@ -79,14 +78,12 @@ main {
   font-size: 1.3rem;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 0 4px var(--text-secondary);
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 
 .projects-section a:hover,
 .projects-section a:focus {
   color: var(--highlight-color-retro);
-  text-shadow: 0 0 8px var(--highlight-color-retro), 0 0 12px var(--highlight-muted-retro);
   outline: none;
 }
 
@@ -144,7 +141,6 @@ main {
   font-size: 2.6rem;
   text-align: center;
   margin: 0 0 1.5rem;
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 14px var(--highlight-color);
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--text-secondary);
 }
@@ -296,7 +292,6 @@ main {
 .project-main-content h6 {
   margin: 1.75rem 0;
   color: var(--text-primary);
-  text-shadow: 0 0 8px var(--highlight-color);
 }
 
 .project-main-content ul,
@@ -344,7 +339,6 @@ main {
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
 }
 
 .project-main-content tbody tr {

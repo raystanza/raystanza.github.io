@@ -5,8 +5,8 @@ body.error-page {
   margin: 0;
   padding: 0;
   background-color: var(--gray-6);
-  color: var(--white-2);
-  font-family: "JetBrains Mono", monospace;
+  color: var(--text-primary);
+  font-family: "Helvetica Neue", Arial, sans-serif;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -35,7 +35,6 @@ body.error-page {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px var(--highlight-color);
 }
 
 .error-container h2 {

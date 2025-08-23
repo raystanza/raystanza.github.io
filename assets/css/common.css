@@ -1,34 +1,34 @@
 :root {
   /* Grayscale */
-  --gray-1: #3f3f3f;
-  --gray-2: #32353a;
-  --gray-3: #25282c;
-  --gray-4: #151618;
-  --gray-5: #151618;
-  --gray-6: #111111;
+  --gray-1: #f9f9f9;
+  --gray-2: #f0f0f0;
+  --gray-3: #e0e0e0;
+  --gray-4: #d0d0d0;
+  --gray-5: #ffffff;
+  --gray-6: #f5f5f5;
 
-  /* Whites */
-  --white-1: #eeeeee;
-  --white-2: #a9abb3;
+  /* Text Colors */
+  --white-1: #222222;
+  --white-2: #555555;
 
-  /* Highlight and Success */
-  --highlight-color: #348505;
-  --success-color: #348505;
-  --success-muted: #5a8a3c;
+  /* Accent Colors */
+  --highlight-color: #007acc;
+  --success-color: #007acc;
+  --success-muted: #5aa3e6;
 
-  /* Retro Text Colors */
-  --text-primary: #00ff00; /* Bright green for retro titles */
-  --text-secondary: #33cc33; /* Muted green for secondary text */
-  --text-muted: #66ff66; /* Light green for subtle text */
-  --text-inverted: #000000; /* Black text for light backgrounds */
+  /* Standard Text Colors */
+  --text-primary: #222222;
+  --text-secondary: #555555;
+  --text-muted: #777777;
+  --text-inverted: #ffffff;
 
-  /* Retro Highlight Colors */
-  --highlight-color-retro: #ff00ff; /* Magenta for retro highlights */
-  --highlight-muted-retro: #cc00cc; /* Muted magenta for hover states */
+  /* Accent Colors (legacy vars) */
+  --highlight-color-retro: var(--highlight-color);
+  --highlight-muted-retro: #005fa3;
 
-  /* Background Colors for Retro Theme */
-  --bg-primary-retro: #000000; /* Black for retro background */
-  --bg-secondary-retro: #1a1a1a; /* Dark gray for secondary sections */
+  /* Background Colors */
+  --bg-primary-retro: #ffffff;
+  --bg-secondary-retro: #f0f0f0;
 }
 
 /* Smooth in-page scrolling */
@@ -40,10 +40,9 @@ html {
 .site-header {
   background-color: var(--gray-5);
   padding: 1rem 0;
-  margin: 1rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid var(--text-primary);
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -62,12 +61,10 @@ html {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 4px var(--text-secondary), 0 0 8px var(--text-secondary);
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 .site-title:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 12px var(--bg-primary-retro);
+  color: var(--highlight-color);
 }
 
 /* Navigation Menu */
@@ -80,18 +77,17 @@ html {
   padding: 0;
 }
 .nav-link {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 1rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 .nav-link:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 6px var(--highlight-muted-retro);
+  color: var(--highlight-color);
 }
 
 /* Underline Animation for Links */
@@ -102,7 +98,7 @@ html {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--highlight-color-retro);
+  background-color: var(--highlight-color);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: center;
@@ -177,14 +173,14 @@ html {
   margin-bottom: 1rem;
   font-size: 2rem;
   padding: 1rem;
-  color: var(--white-1);
+  color: var(--text-primary);
 }
 
 /* Modal Article Links */
 .modal-article,
 .modal-article-date {
   display: block;
-  color: var(--white-2);
+  color: var(--text-secondary);
 }
 .modal-article {
   margin-bottom: 0.5rem;
@@ -193,7 +189,7 @@ html {
 }
 .modal-article-date {
   font-size: 0.8rem;
-  color: var(--white-1);
+  color: var(--text-primary);
 }
 .modal-article:hover {
   background: var(--gray-4);
@@ -202,7 +198,7 @@ html {
 
 /* Horizontal Rule Styling */
 hr {
-  border-top: 2px dashed var(--white-2);
+  border-top: 2px solid var(--gray-3);
   border: none;
   margin-bottom: 1.75rem;
 }
