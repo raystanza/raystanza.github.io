@@ -265,8 +265,6 @@ main {
   color: var(--text-primary);
 }
 
-
-
 /* Fade-In Animation */
 @keyframes fadeIn {
   from {
@@ -277,6 +275,49 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Markdown Content Styling */
+.project-main-content * {
+  line-height: 1.8;
+}
+
+.project-main-content p {
+  margin: 0 0 1.75rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.project-main-content h1,
+.project-main-content h2,
+.project-main-content h3,
+.project-main-content h4,
+.project-main-content h5,
+.project-main-content h6 {
+  margin: 1.75rem 0;
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--highlight-color);
+}
+
+.project-main-content ul,
+.project-main-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.project-main-content pre {
+  background: var(--gray-3);
+  padding: 1rem 2rem;
+  margin-bottom: 1.75rem;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.project-main-content code {
+  padding: 3px 5px;
+  color: var(--white-2);
+  background-color: var(--gray-3);
+  border-radius: 4px;
 }
 
 /* Tables */
@@ -333,22 +374,22 @@ main {
 }
 
 .project-main-content li {
-  margin-bottom: 0.6rem;
-  font-size: 1rem;
-  color: var(--white-1);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--white-2);
 }
 
 /* Custom Emoji List Markers */
 .project-main-content ul li::marker {
   content: "🔸 ";
   font-size: 1rem;
-  color: var(--highlight-color-retro);
+  color: var(--highlight-color);
 }
 
 .project-main-content ol li::marker {
   content: "🔶 ";
   font-size: 1rem;
-  color: var(--highlight-color-retro);
+  color: var(--highlight-color);
   font-weight: normal;
 }
 
@@ -362,9 +403,9 @@ main {
 .project-main-content .task-list-item {
   position: relative;
   padding-left: 2rem;
-  margin-bottom: 0.9rem;
-  font-size: 1rem;
-  color: var(--white-1);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--white-2);
 }
 
 /* Custom Emoji Checkboxes with Green Border */
@@ -406,42 +447,93 @@ main {
   content: "✅"; /* Checked state */
   color: var(--highlight-color);
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .project-main-content .task-list-item::marker {
   content: "";
 }
 
-/* Project Gallery */
-.project-gallery {
-  margin-top: 2rem;
+.project-main-content blockquote {
+  background: var(--gray-4);
+  border-left: 4px solid var(--highlight-color);
+  padding: 1rem 0.5rem;
+  margin: 1rem 0.5rem;
+  color: var(--white-2);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  padding: 0;
-  list-style: none;
+/* Links */
+.project-main-content a {
+  color: var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
+  transition: color 0.3s, border-color 0.3s;
 }
 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+.project-main-content a:hover {
+  color: var(--white-2);
+  border-bottom-color: var(--white-2);
 }
 
-.meta-lists ul {
-  display: inline-flex;
-  gap: .5rem;
-  list-style: none;
-  padding: 0;
-  margin: .25rem 0 0;
+/* Horizontal Rule */
+.project-main-content hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--gray-6),
+    var(--text-primary),
+    var(--gray-6)
+  );
+  margin: 1.5rem 0;
+  position: relative;
 }
 
-.meta-lists .cats, .meta-lists .tags {
-  margin-top: 1rem;
+.project-main-content hr::after {
+  content: "[====]";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+/* Lightbox for Images */
+.project-main-content img {
+  cursor: zoom-in;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#lightbox.active {
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px solid white;
 }
 
 /* Media Queries */
