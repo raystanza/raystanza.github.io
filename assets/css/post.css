@@ -12,9 +12,9 @@
 /* General Layout */
 html,
 body {
-  color: var(--white-2);
+  color: var(--text-primary);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.7;
 }
 
@@ -27,15 +27,11 @@ main {
 
 /* Article Section Styling */
 .article {
-  background: linear-gradient(
-    to bottom,
-    var(--gray-5),
-    var(--gray-4)
-  );
-  border: 2px solid var(--highlight-color);
+  background: var(--gray-3);
+  border: 1px solid var(--gray-4);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
   animation: fadeIn 0.6s ease-in-out;
 }
@@ -46,7 +42,6 @@ main {
   font-size: 2.6rem;
   text-align: center;
   margin: 0 0 1.5rem;
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 14px var(--highlight-color);
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--text-secondary);
 }
@@ -122,11 +117,11 @@ main {
 }
 
 .categories .category {
-  background: var(--gray-3);
+  background: var(--gray-2);
   border-radius: 8px;
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
-  color: var(--white-1);
+  color: var(--text-primary);
   text-transform: uppercase;
   transition: background 0.3s, color 0.3s;
   cursor: pointer;
@@ -134,7 +129,7 @@ main {
 
 .categories .category:hover {
   background: var(--highlight-color);
-  color: var(--bg-primary-retro);
+  color: var(--text-inverted);
 }
 
 /* Markdown Content Styling */
@@ -156,7 +151,6 @@ main {
 .content h6 {
   margin: 1.75rem 0;
   color: var(--text-primary);
-  text-shadow: 0 0 8px var(--highlight-color);
 }
 
 .content ul,
@@ -204,7 +198,6 @@ main {
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
 }
 
 .content tbody tr {

@@ -5,8 +5,8 @@ body.error-page {
   margin: 0;
   padding: 0;
   background-color: var(--gray-6);
-  color: var(--white-2);
-  font-family: "JetBrains Mono", monospace;
+  color: var(--text-primary);
+  font-family: "Helvetica Neue", Arial, sans-serif;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -15,15 +15,11 @@ body.error-page {
 
 /* Container styled like .article in post.css */
 .error-container {
-  background: linear-gradient(
-    to bottom,
-    var(--gray-5),
-    var(--gray-4)
-  );    
-  border: 2px solid var(--highlight-color);
+  background: var(--gray-3);
+  border: 1px solid var(--gray-4);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   max-width: 95vw;
   width: 600px;
   text-align: center;
@@ -35,11 +31,10 @@ body.error-page {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px var(--highlight-color);
 }
 
 .error-container h2 {
-  color: var(--white-2);
+  color: var(--text-secondary);
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -50,7 +45,7 @@ body.error-page {
   margin: 0 0 1.75rem;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--white-2);
+  color: var(--text-primary);
 }
 
 .error-container ul {
@@ -62,7 +57,7 @@ body.error-page {
 .error-container li {
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
-  color: var(--white-2);
+  color: var(--text-primary);
 }
 
 /* Call‐to‐action button */

@@ -11,9 +11,9 @@
 
 html,
 body {
-  color: var(--white-2);
+  color: var(--text-primary);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.7;
 }
 main {
@@ -26,8 +26,6 @@ main {
   font-size: 2rem;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px var(--highlight-color),
-               0 0 8px var(--highlight-color);
   text-align: center;
 }
 
@@ -59,13 +57,11 @@ main {
   margin-top: 1rem;
   font-size: 1.6rem;
   color: var(--text-primary);
-  text-shadow: 0 0 6px var(--highlight-color);
 }
 .author-quote {
   margin-top: .5rem;
   font-size: 1rem;
   color: var(--text-muted);
-  text-shadow: 0 0 6px var(--highlight-color);
   font-style: italic;
 }
 
