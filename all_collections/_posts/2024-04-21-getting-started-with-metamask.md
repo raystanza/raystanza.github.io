@@ -113,7 +113,7 @@ Once unlocked, MetaMask shows you:
 ### Receiving ETH or Tokens
 
 1. Click **“Receive”**
-2. Copy your Ethereum address (0x…) or scan the QR code
+2. Copy your Ethereum address (0x...) or scan the QR code
 3. Share it to receive assets
 
 ### Sending Transactions

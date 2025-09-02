@@ -87,7 +87,7 @@ There! The `<div>` now sits in the middle. But now you’re stuck explaining to 
 }
 ```
 
-Congratulations! You’ve now made your `<div>` look like a weirdly stretched label. It’s centered… sort of. You squint, you tinker, and then realize you just invented a new way to make users hate you.
+Congratulations! You’ve now made your `<div>` look like a weirdly stretched label. It’s centered... sort of. You squint, you tinker, and then realize you just invented a new way to make users hate you.
 
 ### The Right Way™
 
@@ -106,7 +106,7 @@ Behold! Flexbox, the magical incantation that makes vertical and horizontal cent
 
 ## Centering in the Wild: A Horror Story
 
-Imagine this: you’ve perfectly centered your `<div>`. It’s pixel-perfect in Chrome. You proudly open Firefox, and… oh no. Your `<div>` is off-center. You debug furiously, only to discover that your CSS relies on a browser quirk. You rewrite your code with more cross-browser hacks than you’d like to admit.
+Imagine this: you’ve perfectly centered your `<div>`. It’s pixel-perfect in Chrome. You proudly open Firefox, and...oh no. Your `<div>` is off-center. You debug furiously, only to discover that your CSS relies on a browser quirk. You rewrite your code with more cross-browser hacks than you’d like to admit.
 
 And then your boss asks, “Does this work on IE11?”
 
