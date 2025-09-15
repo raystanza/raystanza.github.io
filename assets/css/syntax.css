@@ -1,11 +1,13 @@
 /* syntax */
 
+
 .highlight .hll {
-  background-color: #333333;
+  background-color: #ffffcc;
 }
 
 .highlight {
-  color: #ffffff;
+  background-color: #f5f5f5;
+  color: #333333;
 }
 
 .highlight * {

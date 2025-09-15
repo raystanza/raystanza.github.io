@@ -1,40 +1,46 @@
 :root {
-  /* Grayscale */
-  --gray-1: #3f3f3f;
-  --gray-2: #32353a;
-  --gray-3: #25282c;
-  --gray-4: #151618;
-  --gray-5: #151618;
-  --gray-6: #111111;
+  /* Neumorphic grayscale palette */
+  --gray-1: #ffffff;
+  --gray-2: #f5f5f5;
+  --gray-3: #e0e0e0; /* surface */
+  --gray-4: #d1d9e6; /* pressed surface */
+  --gray-5: #e0e0e0; /* header/footer background */
+  --gray-6: #e0e0e0; /* page background */
 
-  /* Whites */
-  --white-1: #eeeeee;
-  --white-2: #a9abb3;
+  /* Text colours */
+  --white-1: #333333; /* primary text */
+  --white-2: #555555; /* muted text */
 
-  /* Highlight and Success */
-  --highlight-color: #348505;
-  --success-color: #348505;
-  --success-muted: #5a8a3c;
+  /* Accent colours */
+  --highlight-color: #6c63ff; /* primary accent */
+  --success-color: #6c63ff;
+  --success-muted: #8a80ff;
 
-  /* Retro Text Colors */
-  --text-primary: #00ff00; /* Bright green for retro titles */
-  --text-secondary: #33cc33; /* Muted green for secondary text */
-  --text-muted: #66ff66; /* Light green for subtle text */
-  --text-inverted: #000000; /* Black text for light backgrounds */
+  /* Generic text helpers */
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-muted: #777777;
+  --text-inverted: #ffffff;
 
-  /* Retro Highlight Colors */
-  --highlight-color-retro: #ff00ff; /* Magenta for retro highlights */
-  --highlight-muted-retro: #cc00cc; /* Muted magenta for hover states */
+  /* Accent variations */
+  --highlight-color-retro: #6c63ff;
+  --highlight-muted-retro: #8a80ff;
 
-  /* Background Colors for Retro Theme */
-  --bg-primary-retro: #000000; /* Black for retro background */
-  --bg-secondary-retro: #1a1a1a; /* Dark gray for secondary sections */
+  /* Background helpers */
+  --bg-primary-retro: #e0e0e0;
+  --bg-secondary-retro: #f5f5f5;
+
+  /* Neumorphic shadows */
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
 }
 
 /* Smooth in-page scrolling */
 html, body {
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
+  background: var(--gray-6);
+  color: var(--white-1);
 }
 
 /* Header Styling */
@@ -43,8 +49,8 @@ html, body {
   padding: 1rem 0;
   margin: 1rem;
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid var(--text-primary);
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
 }
 
 .header-container {
@@ -63,12 +69,10 @@ html, body {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 4px var(--text-secondary), 0 0 8px var(--text-secondary);
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 .site-title:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 12px var(--bg-primary-retro);
+  color: var(--highlight-color);
 }
 
 /* Navigation Menu */
@@ -85,14 +89,13 @@ html, body {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 .nav-link:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 6px var(--highlight-muted-retro);
+  color: var(--highlight-color);
 }
 
 /* Underline Animation for Links */
@@ -103,7 +106,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--highlight-color-retro);
+  background-color: var(--highlight-color);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: center;
@@ -150,6 +153,8 @@ html, body {
   border-radius: 1rem;
   padding: 1rem;
   background: var(--gray-3);
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
