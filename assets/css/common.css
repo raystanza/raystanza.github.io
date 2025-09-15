@@ -1,50 +1,57 @@
 :root {
-  /* Grayscale */
-  --gray-1: #3f3f3f;
-  --gray-2: #32353a;
-  --gray-3: #25282c;
-  --gray-4: #151618;
-  --gray-5: #151618;
-  --gray-6: #111111;
+  /* Base grayscale for soft surfaces */
+  --gray-1: #ffffff;
+  --gray-2: #f2f2f2;
+  --gray-3: #e0e0e0;
+  --gray-4: #d1d1d1;
+  --gray-5: #c5c5c5;
+  --gray-6: #e0e0e0;
 
-  /* Whites */
-  --white-1: #eeeeee;
-  --white-2: #a9abb3;
+  /* Text palette */
+  --white-1: #333333;
+  --white-2: #555555;
 
   /* Highlight and Success */
   --highlight-color: #348505;
   --success-color: #348505;
   --success-muted: #5a8a3c;
 
-  /* Retro Text Colors */
-  --text-primary: #00ff00; /* Bright green for retro titles */
-  --text-secondary: #33cc33; /* Muted green for secondary text */
-  --text-muted: #66ff66; /* Light green for subtle text */
-  --text-inverted: #000000; /* Black text for light backgrounds */
+  /* Typography colors */
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-muted: #777777;
+  --text-inverted: #ffffff;
 
-  /* Retro Highlight Colors */
-  --highlight-color-retro: #ff00ff; /* Magenta for retro highlights */
-  --highlight-muted-retro: #cc00cc; /* Muted magenta for hover states */
+  /* Accent colors */
+  --highlight-color-retro: #4caf50;
+  --highlight-muted-retro: #8bd48f;
 
-  /* Background Colors for Retro Theme */
-  --bg-primary-retro: #000000; /* Black for retro background */
-  --bg-secondary-retro: #1a1a1a; /* Dark gray for secondary sections */
+  /* Neumorphic shadows */
+  --shadow-light: #ffffff;
+  --shadow-dark: #b3b3b3;
+
+  /* Background Colors */
+  --bg-primary-retro: var(--gray-6);
+  --bg-secondary-retro: var(--gray-3);
 }
 
 /* Smooth in-page scrolling */
 html, body {
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
+  background: var(--gray-6);
+  color: var(--text-primary);
 }
 
 /* Header Styling */
 .site-header {
-  background-color: var(--gray-5);
+  background: var(--gray-6);
   padding: 1rem 0;
   margin: 1rem;
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid var(--text-primary);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  border: none;
 }
 
 .header-container {
@@ -63,12 +70,10 @@ html, body {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 4px var(--text-secondary), 0 0 8px var(--text-secondary);
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 .site-title:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 12px var(--bg-primary-retro);
+  color: var(--highlight-color);
 }
 
 /* Navigation Menu */
@@ -81,18 +86,17 @@ html, body {
   padding: 0;
 }
 .nav-link {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 1rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
 .nav-link:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 6px var(--highlight-muted-retro);
+  color: var(--highlight-color);
 }
 
 /* Underline Animation for Links */
@@ -103,7 +107,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--highlight-color-retro);
+  background-color: var(--highlight-color);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: center;
@@ -203,7 +207,12 @@ html, body {
 
 /* Horizontal Rule Styling */
 hr {
-  border-top: 2px dashed var(--white-2);
   border: none;
-  margin-bottom: 1.75rem;
+  height: 2px;
+  margin: 2rem 0;
+  background: linear-gradient(
+    to right,
+    var(--shadow-light),
+    var(--shadow-dark)
+  );
 }
