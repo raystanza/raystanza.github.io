@@ -11,8 +11,8 @@
 /* General Layout */
 html,
 body {
-  color: var(--white-2);
-  background-color: var(--gray-6);
+  color: var(--text-primary);
+  background-color: var(--bg);
   line-height: 1.7;
 }
 
@@ -25,15 +25,11 @@ main {
 
 /* Article Section Styling */
 .article {
-  background: linear-gradient(
-    to bottom,
-    var(--gray-5),
-    var(--gray-4)
-  );
-  border: 2px solid var(--highlight-color);
+  background: var(--bg);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+              -8px -8px 16px var(--shadow-light);
   margin-bottom: 2rem;
   animation: fadeIn 0.6s ease-in-out;
 }
@@ -44,7 +40,6 @@ main {
   font-size: 2.6rem;
   text-align: center;
   margin: 0 0 1.5rem;
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 14px var(--highlight-color);
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--text-secondary);
 }
@@ -53,7 +48,7 @@ main {
 .article-header .date {
   display: block;
   font-size: 1.1rem;
-  color: var(--highlight-color);
+  color: var(--accent);
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -68,7 +63,8 @@ main {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 12px var(--shadow-dark),
+              -6px -6px 12px var(--shadow-light);
 }
 
 .image-caption {
@@ -83,7 +79,7 @@ main {
 .back-button {
   display: inline-block;
   margin-bottom: 1rem;
-  color: var(--highlight-color);
+  color: var(--accent);
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s;
@@ -102,7 +98,7 @@ main {
 .back-to-top {
   display: inline-block;
   font-size: 1rem;
-  color: var(--highlight-color);
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -120,19 +116,21 @@ main {
 }
 
 .categories .category {
-  background: var(--gray-3);
+  background: var(--bg);
   border-radius: 8px;
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
-  color: var(--white-1);
+  color: var(--text-secondary);
   text-transform: uppercase;
-  transition: background 0.3s, color 0.3s;
   cursor: pointer;
+  box-shadow: 3px 3px 6px var(--shadow-dark),
+              -3px -3px 6px var(--shadow-light);
+  transition: background 0.3s, color 0.3s;
 }
 
 .categories .category:hover {
-  background: var(--highlight-color);
-  color: var(--bg-primary-retro);
+  background: var(--accent);
+  color: var(--bg);
 }
 
 /* Markdown Content Styling */
@@ -163,20 +161,24 @@ main {
 }
 
 .content pre {
-  background: var(--gray-3);
+  background: var(--bg);
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
   overflow-x: auto;
   border-radius: 8px;
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+              inset -3px -3px 6px var(--shadow-light);
 }
 
 .content code {
   padding: 3px 5px;
-  color: var(--white-2);
-  background-color: var(--gray-3);
+  color: var(--text-secondary);
+  background-color: var(--bg);
   border-radius: 4px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.95rem;
+  box-shadow: inset 2px 2px 4px var(--shadow-dark),
+              inset -2px -2px 4px var(--shadow-light);
 }
 
 /* Tables */
@@ -184,26 +186,25 @@ main {
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  border: 2px solid var(--highlight-color);
-  background-color: var(--gray-4);
+  background-color: var(--bg);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+             -5px -5px 10px var(--shadow-light);
   font-size: 1rem;
   text-align: left;
 }
 
 .content thead {
-  background-color: var(--gray-5);
-  color: var(--highlight-color);
+  background-color: var(--bg-light);
+  color: var(--accent);
 }
 
 .content thead th {
   padding: 1rem;
   text-align: left;
   font-weight: bold;
-  border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
+  border-bottom: 2px solid var(--accent);
 }
 
 .content tbody tr {
@@ -211,17 +212,17 @@ main {
 }
 
 .content tbody tr:nth-child(even) {
-  background-color: var(--gray-3);
+  background-color: var(--bg-light);
 }
 
 .content tbody tr:hover {
-  background-color: var(--gray-5);
+  background-color: var(--bg-light);
 }
 
 .content td {
   padding: 0.9rem 1.2rem;
-  border-bottom: 1px solid var(--gray-5);
-  color: var(--white-2);
+  border-bottom: 1px solid var(--bg-light);
+  color: var(--text-secondary);
 }
 
 /* Lists */
@@ -242,13 +243,13 @@ main {
 .content ul li::marker {
   content: "🔸 ";
   font-size: 1rem;
-  color: var(--highlight-color);
+  color: var(--accent);
 }
 
 .content ol li::marker {
   content: "🔶 ";
   font-size: 1rem;
-  color: var(--highlight-color);
+  color: var(--accent);
   font-weight: normal;
 }
 
@@ -291,20 +292,20 @@ main {
 
 .content .task-list-item-checkbox::after {
   content: "⬜"; /* Unchecked state */
-  color: var(--highlight-color);
+  color: var(--accent);
   font-size: 1rem;
 }
 
 .content .task-list-item-checkbox:checked {
   background-color: transparent;
-  border-color: var(--highlight-color);
+  border-color: var(--accent);
   box-shadow: none;
   color: var(--bg-primary-retro);
 }
 
 .content .task-list-item-checkbox:checked::after {
   content: "✅"; /* Checked state */
-  color: var(--highlight-color);
+  color: var(--accent);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -314,26 +315,27 @@ main {
 }
 
 .content blockquote {
-  background: var(--gray-4);
-  border-left: 4px solid var(--highlight-color);
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
   padding: 1rem 0.5rem;
   margin: 1rem 0.5rem;
-  color: var(--white-2);
+  color: var(--text-secondary);
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+              -5px -5px 10px var(--shadow-light);
   font-size: 1rem;
 }
 
 /* Links */
 .content a {
-  color: var(--highlight-color);
-  border-bottom: 2px solid var(--highlight-color);
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
   transition: color 0.3s, border-color 0.3s;
 }
 
 .content a:hover {
-  color: var(--white-2);
-  border-bottom-color: var(--white-2);
+  color: var(--text-secondary);
+  border-bottom-color: var(--text-secondary);
 }
 
 /* Horizontal Rule */

@@ -2,10 +2,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 2rem auto;
   max-width: 900px;
-  color: #333;
-  background: #fff;
+  color: var(--text-primary);
+  background: var(--bg);
   padding: 2rem;
   line-height: 1.6;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+              -8px -8px 16px var(--shadow-light);
 }
 
 h1, h2, h3 {
