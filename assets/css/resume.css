@@ -2,18 +2,21 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 2rem auto;
   max-width: 900px;
-  color: #333;
-  background: #fff;
+  color: var(--white-1);
+  background: var(--gray-3);
   padding: 2rem;
   line-height: 1.6;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
 }
 
 h1, h2, h3 {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--gray-4);
   padding-bottom: 0.25rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #111;
+  color: var(--white-1);
 }
 
 h1 {
@@ -39,18 +42,18 @@ strong {
   display: inline-block;
   min-width: 150px;
   font-weight: 600;
-  color: #000;
+  color: var(--white-1);
 }
 
 .subitem {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--white-2);
   margin-left: 1rem;
   display: block;
 }
 
 a {
-  color: #0366d6;
+  color: var(--highlight-color);
   text-decoration: none;
 }
 
@@ -63,6 +66,7 @@ a:hover {
   font-weight: 800;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: var(--white-1);
 }
 
 .resume-meta {

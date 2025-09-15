@@ -15,8 +15,7 @@ body {
 /* Section Titles */
 .landing-page .content-card h1 {
   font-size: 2rem;
-  color: var(--text-primary);
-  text-shadow: 0 0 12px var(--highlight-color), 0 0 8px var(--highlight-color);
+  color: var(--white-1);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -30,17 +29,16 @@ body {
 
 .landing-page .articles-card li {
   background: var(--gray-3);
-  border: 1px solid var(--text-primary);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  transition: transform 0.2s ease;
 }
 
 .landing-page .articles-card li:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
 .landing-page .articles-card h2 {
@@ -74,16 +72,15 @@ body {
 /* Project Section */
 .landing-page .project-card .project-content {
   background: var(--gray-3);
-  border: 1px solid var(--text-primary);
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  transition: transform 0.2s ease;
 }
 
 .landing-page .project-card .project-content:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
 .landing-page .project-card h2 {
@@ -135,20 +132,21 @@ body {
 .landing-page .articles-card .btn-more,
 .landing-page .project-card .btn-more {
   display: inline-block;
-  background: var(--highlight-color);
+  background: var(--gray-3);
   color: var(--white-1);
   text-decoration: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px var(--shadow-dark),
+    -6px -6px 12px var(--shadow-light);
   font-size: 1rem;
   font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .landing-page .articles-card .btn-more:hover,
 .landing-page .project-card .btn-more:hover {
-  background: var(--highlight-color-retro);
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
 /* Wave + Glow */

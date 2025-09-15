@@ -25,28 +25,23 @@ main {
 
 /* Article Section Styling */
 .article {
-  background: linear-gradient(
-    to bottom,
-    var(--gray-5),
-    var(--gray-4)
-  );
-  border: 2px solid var(--highlight-color);
+  background: var(--gray-3);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   margin-bottom: 2rem;
   animation: fadeIn 0.6s ease-in-out;
 }
 
 /* Article Title */
 .article-title {
-  color: var(--text-primary);
+  color: var(--white-1);
   font-size: 2.6rem;
   text-align: center;
   margin: 0 0 1.5rem;
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 14px var(--highlight-color);
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--text-secondary);
+  border-bottom: 2px solid var(--highlight-color);
 }
 
 /* Article Metadata */
@@ -152,8 +147,7 @@ main {
 .content h5,
 .content h6 {
   margin: 1.75rem 0;
-  color: var(--text-primary);
-  text-shadow: 0 0 8px var(--highlight-color);
+  color: var(--white-1);
 }
 
 .content ul,
@@ -184,18 +178,18 @@ main {
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  border: 2px solid var(--highlight-color);
-  background-color: var(--gray-4);
-  border-radius: 8px;
+  background-color: var(--gray-3);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   font-size: 1rem;
   text-align: left;
 }
 
 .content thead {
-  background-color: var(--gray-5);
-  color: var(--highlight-color);
+  background-color: var(--gray-3);
+  color: var(--white-1);
 }
 
 .content thead th {
@@ -203,7 +197,6 @@ main {
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
 }
 
 .content tbody tr {
@@ -211,11 +204,11 @@ main {
 }
 
 .content tbody tr:nth-child(even) {
-  background-color: var(--gray-3);
+  background-color: var(--gray-2);
 }
 
 .content tbody tr:hover {
-  background-color: var(--gray-5);
+  background-color: var(--gray-4);
 }
 
 .content td {
