@@ -33,6 +33,31 @@
   /* Background Colors */
   --bg-primary-retro: var(--gray-6);
   --bg-secondary-retro: var(--gray-3);
+
+    /* HR-specific shadows (stronger than general neumorphic shadows) */
+  --hr-shadow-light: #ffffff;   /* top-left inner highlight */
+  --hr-shadow-dark:  #9a9a9a;   /* bottom-right inner shadow */
+  --hr-bg:           var(--bg-primary-retro);
+
+  /* Easy knobs */
+  --hr-thickness: 10px;   /* overall height of the groove */
+  --hr-offset:    3px;    /* shadow offset */
+  --hr-blur:      8px;    /* shadow blur */
+  --hr-radius:    999px;  /* pill radius */
+  --hr-color-mix: 70%;    /* how much to mix shadow colors with bg */
+  --hr-border-opacity: 70%; /* how much to mix border colors with transparent */
+  --hr-inset-opacity: 25%;  /* how much to mix inset shadows with transparent */
+  --hr-softness:  1px;    /* softness of inset shadows */
+  --hr-strength:  1px;    /* strength of inset shadows */
+  --hr-rounding:  2px;    /* rounding of the groove edges */
+
+  /* Neumorphic elevation controls */
+  --elev-offset: 6px;   /* shadow distance */
+  --elev-blur:   14px;  /* shadow blur */
+  --elev-radius: 14px;  /* corner radius */
+
+  /* Pre/code surface color (slightly lighter than page for pop) */
+  --pre-bg: var(--gray-2);
 }
 
 /* Smooth in-page scrolling */
@@ -205,14 +230,98 @@ html, body {
   color: var(--highlight-color);
 }
 
-/* Horizontal Rule Styling */
+/* Neumorphic pressed-in HR */
 hr {
-  border: none;
-  height: 2px;
+  border: 0;
+  height: var(--hr-thickness);
   margin: 2rem 0;
-  background: linear-gradient(
-    to right,
-    var(--shadow-light),
-    var(--shadow-dark)
+  background: var(--hr-bg);
+  border-radius: var(--hr-radius);
+
+  /* Strong recessed feel */
+  box-shadow:
+    inset var(--hr-offset) var(--hr-offset) var(--hr-blur) var(--hr-shadow-dark),
+    inset calc(var(--hr-offset) * -1) calc(var(--hr-offset) * -1) var(--hr-blur) var(--hr-shadow-light);
+
+  /* Optional: subtle vertical contour inside the groove */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.05) 40%,
+    rgba(0,0,0,0.04) 60%,
+    rgba(0,0,0,0.10)
   );
+}
+
+/* Footer Card Styling */
+.footer-card {
+  padding: 1.5rem;
+  background-color: var(--gray-6);
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  max-width: 90vw;
+  margin: 2rem auto;
+}
+
+/* Footer Content */
+.footer-content {
+  margin: auto;
+}
+
+/* Footer Title Styling */
+.footer-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Footer Links */
+.footer-link {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-link:hover {
+  color: var(--highlight-color-retro);
+}
+
+/* Divider Styling */
+.footer-divider {
+  border: 0;
+  height: 3px;
+  margin: 1.75rem 0;
+  background: var(--hr-bg);
+  border-radius: var(--hr-radius);
+
+  box-shadow:
+    inset var(--hr-offset) var(--hr-offset) var(--hr-blur) var(--hr-shadow-dark),
+    inset calc(var(--hr-offset) * -1) calc(var(--hr-offset) * -1) var(--hr-blur) var(--hr-shadow-light);
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.05) 40%,
+    rgba(0,0,0,0.04) 60%,
+    rgba(0,0,0,0.10)
+  );
+}
+
+/* Remove the decorative badge to keep the groove clean */
+.footer-divider hr::after {
+  content: none;
+}
+
+/* Footer Text Styling */
+.footer-text {
+  margin: 0.5rem 0;
+}
+
+/* Footer Heart */
+.footer-heart {
+  color: var(--highlight-color);
+  font-size: 1.1rem;
 }

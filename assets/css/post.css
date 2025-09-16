@@ -157,21 +157,48 @@ main {
   margin-bottom: 1.75rem;
 }
 
+/* Raised neumorphic code block */
 .content pre {
-  background: var(--gray-3);
+  background: var(--pre-bg);
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: var(--elev-radius);
+
+  /* Raised (no inset) */
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light);
+
+  /* Subtle inner sheen to keep it crisp, optional */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.08) 40%,
+    rgba(0,0,0,0.03) 60%,
+    rgba(0,0,0,0.06)
+  );
 }
 
-.content code {
-  padding: 3px 5px;
-  color: var(--white-2);
-  background-color: var(--gray-3);
-  border-radius: 4px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.95rem;
+/* Code text tweaks (JetBrains Mono if available) */
+.content pre code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  color: var(--text-primary);
+  background: transparent;
+  display: block;
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+/* Optional hover: gentle extra lift (respects reduced motion) */
+@media (prefers-reduced-motion: no-preference) {
+  .content pre:hover {
+    box-shadow:
+      calc(var(--elev-offset) + 2px) calc(var(--elev-offset) + 2px) calc(var(--elev-blur) + 4px) var(--shadow-dark),
+      calc((var(--elev-offset) + 2px) * -1) calc((var(--elev-offset) + 2px) * -1) calc(var(--elev-blur) + 4px) var(--shadow-light);
+    transform: translateY(-1px);
+    transition: box-shadow 160ms ease, transform 160ms ease;
+  }
 }
 
 /* Tables */
@@ -179,18 +206,18 @@ main {
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  border: 2px solid var(--highlight-color);
-  background-color: var(--gray-4);
-  border-radius: 8px;
+  background-color: var(--gray-3);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
   font-size: 1rem;
   text-align: left;
 }
 
 .content thead {
-  background-color: var(--gray-5);
-  color: var(--highlight-color);
+  background-color: var(--gray-2);
+  color: var(--text-primary);
 }
 
 .content thead th {
@@ -198,7 +225,6 @@ main {
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
 }
 
 .content tbody tr {
@@ -206,17 +232,17 @@ main {
 }
 
 .content tbody tr:nth-child(even) {
-  background-color: var(--gray-3);
+  background-color: var(--gray-5);
 }
 
 .content tbody tr:hover {
-  background-color: var(--gray-5);
+  background-color: var(--gray-4);
 }
 
 .content td {
   padding: 0.9rem 1.2rem;
-  border-bottom: 1px solid var(--gray-5);
-  color: var(--white-2);
+  border-bottom: 1px solid var(--gray-4);
+  color: var(--text-primary);
 }
 
 /* Lists */
@@ -331,28 +357,30 @@ main {
   border-bottom-color: var(--white-2);
 }
 
-/* Horizontal Rule */
+/* Neumorphic pressed-in HR inside post content */
 .content hr {
   border: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    var(--gray-6),
-    var(--text-primary),
-    var(--gray-6)
+  height: 3px;
+  margin: 1.75rem 0;
+  background: var(--hr-bg);
+  border-radius: var(--hr-radius);
+
+  box-shadow:
+    inset var(--hr-offset) var(--hr-offset) var(--hr-blur) var(--hr-shadow-dark),
+    inset calc(var(--hr-offset) * -1) calc(var(--hr-offset) * -1) var(--hr-blur) var(--hr-shadow-light);
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.05) 40%,
+    rgba(0,0,0,0.04) 60%,
+    rgba(0,0,0,0.10)
   );
-  margin: 1.5rem 0;
-  position: relative;
 }
 
+/* Remove the decorative badge to keep the groove clean */
 .content hr::after {
-  content: "[====]";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--text-primary);
-  font-size: 0.8rem;
+  content: none;
 }
 
 /* Lightbox for Images */
