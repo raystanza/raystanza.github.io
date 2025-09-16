@@ -59,7 +59,7 @@ Laravel provides a unified API for different queue backends, such as:
 - **Beanstalkd**: A lightweight, fast queueing service.
 - **Others**: Laravel can integrate with any queue backend supported by the `illuminate/queue` package.
 
-Queues in Laravel are defined as `jobs`—PHP classes that encapsulate the logic for the deferred task. Workers then listen for new jobs and execute them asynchronously.
+Queues in Laravel are defined as `jobs`-PHP classes that encapsulate the logic for the deferred task. Workers then listen for new jobs and execute them asynchronously.
 
 ---
 

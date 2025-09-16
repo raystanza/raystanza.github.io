@@ -2744,8 +2744,8 @@ set +x
 
 Linux provides two main tools for scheduling tasks:
 
-- **`at`** — for one-time, scheduled tasks
-- **`cron`** — for recurring or periodic tasks
+- **`at`** - for one-time, scheduled tasks
+- **`cron`** - for recurring or periodic tasks
 
 ---
 

@@ -27,6 +27,7 @@ body {
   padding: 2rem;
   box-shadow: 9px 9px 16px var(--shadow-dark),
     -9px -9px 16px var(--shadow-light);
+  margin: 1.5rem 0;
 }
 
 /* Articles Section */
@@ -69,7 +70,7 @@ body {
 
 .landing-page .articles-card small {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--highlight-color);
 }
 
 .landing-page .articles-card p {
@@ -155,14 +156,15 @@ body {
 
 .landing-page .articles-card .btn-more:hover,
 .landing-page .project-card .btn-more:hover {
-  color: var(--highlight-color);
+  color: var(--text-primary);
+  background: var(--highlight-color-muted);
   transform: translateY(-2px);
 }
 
 /* Wave + Glow */
 .animated-heading {
   position: relative;
-  animation: wave 1s 1 ease-in-out, glow 2s infinite alternate ease-in-out;
+  animation: wave 1s 1 ease-in-out;
 }
 
 @keyframes wave {
@@ -180,15 +182,6 @@ body {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 16px var(--highlight-color), 0 0 12px var(--highlight-muted-retro);
-  }
-  100% {
-    text-shadow: 0 0 40px var(--highlight-color), 0 0 30px var(--highlight-muted-retro);
   }
 }
 

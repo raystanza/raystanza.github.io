@@ -476,7 +476,7 @@ pyenv shell 3.10.2
 pyenv shell --unset
 ```
 
-The hierarchical nature of these commands creates a flexible configuration system. Local settings override global ones, while shell settings temporarily override both. The multiple version syntax enables fallback chains—if a command isn't found in the first version, pyenv looks in subsequent versions.
+The hierarchical nature of these commands creates a flexible configuration system. Local settings override global ones, while shell settings temporarily override both. The multiple version syntax enables fallback chains-if a command isn't found in the first version, pyenv looks in subsequent versions.
 
 ### Installation Management
 
@@ -515,7 +515,7 @@ pyenv root
 pyenv doctor
 ```
 
-The `rehash` command is particularly crucial—it updates pyenv's shims to reflect newly installed Python packages with executable scripts. After installing packages with `pip`, running `pyenv rehash` ensures these executables are properly recognized in your path.
+The `rehash` command is particularly crucial-it updates pyenv's shims to reflect newly installed Python packages with executable scripts. After installing packages with `pip`, running `pyenv rehash` ensures these executables are properly recognized in your path.
 
 ### Virtual Environment Commands
 
@@ -614,7 +614,7 @@ for version in 3.8.12 3.9.7 3.10.2 3.11.5; do
 done
 ```
 
-This pattern facilitates comprehensive compatibility testing, ensuring your code works correctly across different Python versions—a crucial consideration for library maintainers and developers working in diverse environments.
+This pattern facilitates comprehensive compatibility testing, ensuring your code works correctly across different Python versions-a crucial consideration for library maintainers and developers working in diverse environments.
 
 #### Environment Initialization Hooks
 

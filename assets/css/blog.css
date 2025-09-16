@@ -108,9 +108,9 @@ img {
 }
 .articles .article .date {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-top: 0.5rem;
-  color: var(--white-1);
+  color: var(--highlight-color);
 }
 .articles .article .categories {
   display: flex;
@@ -120,8 +120,8 @@ img {
 }
 .articles .article .category {
   display: inline-block;
-  background: var(--gray-6);
-  color: var(--text-secondary);
+  background: var(--highlight-gray-6);
+  color: var(--text-primary);
   border-radius: 15px;
   font-size: 0.75rem;
   padding: 0.3rem 0.85rem;
@@ -132,7 +132,7 @@ img {
   transition: color 0.2s;
 }
 .articles .article .category:hover {
-  background: var(--highlight-muted-retro);
+  background: var(--highlight-color-muted);
 }
 .articles .article .excerpt {
   margin-top: 1rem;

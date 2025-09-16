@@ -86,7 +86,7 @@ Once installed, you’ll see the MetaMask fox icon in your toolbar or an app ico
    * Use a unique passphrase you’ll remember
 3. **Reveal & Backup Your Secret Recovery Phrase (12 words)**
 
-   * This *is* your wallet backup—no password resets without it
+   * This *is* your wallet backup-no password resets without it
    * **Never store digitally.** Write it on paper or use a metal seed backup
 
 ### Importing an Existing Wallet
@@ -128,7 +128,7 @@ Once unlocked, MetaMask shows you:
 
 1. Navigate to a dApp site (e.g., Uniswap, OpenSea)
 2. Click **“Connect Wallet”** and select MetaMask
-3. A pop-up will request your approval—review permissions carefully
+3. A pop-up will request your approval-review permissions carefully
 4. Sign transactions in MetaMask to trade, mint NFTs, or provide liquidity
 
 ---

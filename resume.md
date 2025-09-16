@@ -1,7 +1,7 @@
 ---
 title: "Resumé"
 layout: resume
-description: "Download the resumé of Jim Sines — Full-Stack Developer, System Administrator, and Technology Generalist."
+description: "Download the resumé of Jim Sines - Full-Stack Developer, System Administrator, and Technology Generalist."
 keywords: "Jim Sines, resumé, CV, full-stack developer, Linux, Laravel, Vue, Jekyll, infrastructure, Cloudflare"
 permalink: /resume/
 og_title: "Jim Sines – Resumé"

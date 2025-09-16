@@ -56,7 +56,7 @@ Every file or directory in Debian (and POSIX systems in general) is associated w
 | Group | `g`       | A team the owner belongs to     |
 | Other | `o`       | Everyone else                   |
 
-A *fourth* class — **`a`** for *all* — is simply a macro that means “`u`, `g`, **and** `o`.”
+A *fourth* class - **`a`** for *all* - is simply a macro that means “`u`, `g`, **and** `o`.”
 
 ---
 
@@ -109,9 +109,9 @@ Let’s decode `drwxrwxr-x`:
    * `l` symlink, `c` character device, etc.
 2. **Permission triads (chars 2‑10)**
 
-   * `rwx`  — *user* (`u`)
-   * `rwx`  — *group* (`g`)
-   * `r-x`  — *other* (`o`)
+   * `rwx`  - *user* (`u`)
+   * `rwx`  - *group* (`g`)
+   * `r-x`  - *other* (`o`)
 3. **Links (21)** – number of hard links or sub‑dirs
 4. **Owner (user1)** – user account name/UID
 5. **Group (user1)** – primary group/GID
@@ -216,7 +216,7 @@ All new files will inherit `devteam` as their group.
 
 ## 8. Permissions and File Types
 
-> "The most effective debugging tool is still careful thought, coupled with judiciously placed print statements." — Brian Kernighan"
+> "The most effective debugging tool is still careful thought, coupled with judiciously placed print statements." - Brian Kernighan"
 
 While the basic permission model applies to all file system objects, the interpretation of permissions varies by file type:
 
@@ -235,7 +235,7 @@ Understanding these differences is key to securing your system. For instance, de
 
 ## 9. Multi-User Environments
 
-> "The purpose of software engineering is to control complexity, not to create it." — Pamela Zave
+> "The purpose of software engineering is to control complexity, not to create it." - Pamela Zave
 
 In shared setups like servers or development teams, permissions need careful management to balance access and security:
 
@@ -332,12 +332,12 @@ Incorporate audits into your routine to catch issues early.
 Beyond the traditional user-group-other permission model, Debian supports advanced security frameworks that offer fine-grained control over system resources and program behavior. These tools are designed for environments requiring heightened security, such as enterprise servers, government systems, or setups handling sensitive data. While they are powerful, they are also complex and not enabled by default on Debian. For most users, standard permissions combined with Access Control Lists (ACLs) suffice, but understanding these advanced options can be a game-changer for specific high-security scenarios.
 
 * **SELinux (Security-Enhanced Linux):**
-  SELinux is a Mandatory Access Control (MAC) system developed by the NSA, integrated into the Linux kernel to enforce detailed security policies. Unlike discretionary access control (DAC), where users can modify permissions on their own files, SELinux uses security contexts—labels assigned to files, processes, and users—and a rule-based policy to dictate what actions are allowed. For example, SELinux can prevent a web server process from writing to arbitrary directories, even if it’s running as root, unless explicitly permitted by the policy. It’s widely used in environments like military or government systems where preventing unauthorized access or privilege escalation is paramount. On Debian, SELinux is available but requires manual installation (`apt install selinux-basics selinux-policy-default`) and significant configuration effort—think custom policy writing and troubleshooting with tools like `audit2allow`. Its complexity makes it overkill for casual users, but it’s invaluable for locking down critical systems.
+  SELinux is a Mandatory Access Control (MAC) system developed by the NSA, integrated into the Linux kernel to enforce detailed security policies. Unlike discretionary access control (DAC), where users can modify permissions on their own files, SELinux uses security contexts-labels assigned to files, processes, and users-and a rule-based policy to dictate what actions are allowed. For example, SELinux can prevent a web server process from writing to arbitrary directories, even if it’s running as root, unless explicitly permitted by the policy. It’s widely used in environments like military or government systems where preventing unauthorized access or privilege escalation is paramount. On Debian, SELinux is available but requires manual installation (`apt install selinux-basics selinux-policy-default`) and significant configuration effort-think custom policy writing and troubleshooting with tools like `audit2allow`. Its complexity makes it overkill for casual users, but it’s invaluable for locking down critical systems.
 
 * **AppArmor:**
-  AppArmor takes a different approach, focusing on restricting individual programs rather than system-wide policies. It’s a Linux security module that uses per-program profiles to define what resources an application can access—files, network connections, or system capabilities. For instance, you might configure an AppArmor profile to limit a web browser like Firefox to only read its configuration files and access the network, blocking it from writing to `/etc` or executing arbitrary binaries. Debian includes AppArmor by default, with some pre-configured profiles (e.g., for `cups` or `nginx`) available via `apt install apparmor-profiles`. It’s less resource-intensive than SELinux and easier to set up, making it ideal for securing specific applications like servers or daemons. Profiles are written in a straightforward syntax and managed with tools like `aa-genprof` and `aa-enforce`. While not as comprehensive as SELinux, AppArmor strikes a balance between security and usability.
+  AppArmor takes a different approach, focusing on restricting individual programs rather than system-wide policies. It’s a Linux security module that uses per-program profiles to define what resources an application can access-files, network connections, or system capabilities. For instance, you might configure an AppArmor profile to limit a web browser like Firefox to only read its configuration files and access the network, blocking it from writing to `/etc` or executing arbitrary binaries. Debian includes AppArmor by default, with some pre-configured profiles (e.g., for `cups` or `nginx`) available via `apt install apparmor-profiles`. It’s less resource-intensive than SELinux and easier to set up, making it ideal for securing specific applications like servers or daemons. Profiles are written in a straightforward syntax and managed with tools like `aa-genprof` and `aa-enforce`. While not as comprehensive as SELinux, AppArmor strikes a balance between security and usability.
 
-Both SELinux and AppArmor add significant security layers but demand time and expertise to implement effectively. They’re not essential for typical desktop or small-scale server use, where standard permissions and firewalls suffice. However, if you’re managing a system exposed to external threats or requiring strict compliance (e.g., PCI DSS, HIPAA), exploring these tools is worthwhile. Start with AppArmor for its simplicity, then graduate to SELinux if you need broader control. Be prepared for a learning curve—misconfigurations can lock you out of your own system!
+Both SELinux and AppArmor add significant security layers but demand time and expertise to implement effectively. They’re not essential for typical desktop or small-scale server use, where standard permissions and firewalls suffice. However, if you’re managing a system exposed to external threats or requiring strict compliance (e.g., PCI DSS, HIPAA), exploring these tools is worthwhile. Start with AppArmor for its simplicity, then graduate to SELinux if you need broader control. Be prepared for a learning curve-misconfigurations can lock you out of your own system!
 
 ---
 
@@ -355,7 +355,7 @@ Permission issues can be frustrating, but this expanded checklist will help you 
    Filesystem mount options can override permissions. Run `mount` or check `/etc/fstab` to see if flags like `noexec` (blocks execution), `nosuid` (disables setuid bits), or `nodev` (prevents device files) dzi are applied. Remount with `mount -o remount,exec /mountpoint` if appropriate.
 
 4. **Investigate ACLs:**
-   If standard permissions look correct but access fails, ACLs might be in play. Use `getfacl file` to inspect extended permissions—look for specific user or group rules overriding the base settings. Modify with `setfacl` (e.g., `setfacl -m u:user:rw file`).
+   If standard permissions look correct but access fails, ACLs might be in play. Use `getfacl file` to inspect extended permissions-look for specific user or group rules overriding the base settings. Modify with `setfacl` (e.g., `setfacl -m u:user:rw file`).
 
 5. **Check for Immutable Flags:**
    Files marked immutable can’t be changed, even by root. Use `lsattr -a file` to check for the `i` flag in the output (e.g., `----i--------`). Remove it with `chattr -i file` if necessary, then test access again.
@@ -394,9 +394,9 @@ This cheat sheet provides a handy reference for managing permissions, ownership,
 
 ## 16. In The End
 
-Congratulations—you’ve transformed from a bewildered onlooker to a confident guardian of your Debian file system! What once seemed like an arcane mix of letters and numbers (`rwxr-xr-x`, anyone?) is now a powerful tool in your hands. With a firm grasp of users, groups, permission bits, and advanced features like ACLs and security modules, you can keep your system secure, functional, and collaborative—whether it’s a personal machine or a bustling multi-user server.
+Congratulations-you’ve transformed from a bewildered onlooker to a confident guardian of your Debian file system! What once seemed like an arcane mix of letters and numbers (`rwxr-xr-x`, anyone?) is now a powerful tool in your hands. With a firm grasp of users, groups, permission bits, and advanced features like ACLs and security modules, you can keep your system secure, functional, and collaborative-whether it’s a personal machine or a bustling multi-user server.
 
-But don’t stop here. File permissions aren’t static—they evolve with your system’s needs. Regularly audit permissions using tools like `find` and `getfacl`, especially in shared environments or when handling sensitive data. A quarterly review can catch misconfigurations before they become vulnerabilities. Experiment in a sandbox—like a virtual machine or a test directory—to hone your skills without risking real data. And always double-check your changes (`ls -l`, `stat`) to avoid accidental security gaps.
+But don’t stop here. File permissions aren’t static-they evolve with your system’s needs. Regularly audit permissions using tools like `find` and `getfacl`, especially in shared environments or when handling sensitive data. A quarterly review can catch misconfigurations before they become vulnerabilities. Experiment in a sandbox-like a virtual machine or a test directory-to hone your skills without risking real data. And always double-check your changes (`ls -l`, `stat`) to avoid accidental security gaps.
 
 Permissions are both a shield and a scalpel: they protect your system and carve out precise access for users and processes. Keep learning, stay vigilant, and enjoy the control you now wield over your Debian domain. You’ve got this!
 
