@@ -4,7 +4,7 @@ title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sani
 date: 2024-12-26 07:00:00 -05:00
 
 description: >
-  Hilariously relatable guide to centering a <div> in CSS using flexbox, CSS Grid, and legacy techniques—so you never lose your sanity.
+  Hilariously relatable guide to centering a <div> in CSS using flexbox, CSS Grid, and legacy techniques-so you never lose your sanity.
 
 canonical_url: "https://raystanza.uk/posts/centering-a-div/"
 
@@ -42,7 +42,7 @@ twitter:
   creator: "@realcaptgeech"
 ---
 
-Ah, the age-old question: "How do I center a `<div>`?" Ask it in any developer community, and you'll likely summon a mob armed with pitchforks (read: Stack Overflow links). The truth is, centering a `<div>` is the software equivalent of assembling IKEA furniture—it seems simple in theory, but in practice, you'll need divine intervention, a PhD in CSS, and probably a good cry.
+Ah, the age-old question: "How do I center a `<div>`?" Ask it in any developer community, and you'll likely summon a mob armed with pitchforks (read: Stack Overflow links). The truth is, centering a `<div>` is the software equivalent of assembling IKEA furniture-it seems simple in theory, but in practice, you'll need divine intervention, a PhD in CSS, and probably a good cry.
 
 Let’s unravel the mystery together, with a wink and a smile.
 

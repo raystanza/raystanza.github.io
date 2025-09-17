@@ -24,7 +24,7 @@ og_type: "article"
 og_title: "Terraform on Debian: Multi-Cloud Setup & First Steps"
 og_author: "Jim Sines"
 og_description: >
-  Learn how to install Terraform on Debian-based distros and deploy to AWS, Linode, GCP, Azure — all from one config.
+  Learn how to install Terraform on Debian-based distros and deploy to AWS, Linode, GCP, Azure - all from one config.
 
 robots: "index, follow"
 
@@ -49,7 +49,7 @@ This guide uses AWS, Cloudflare, and Linode to demonstrate a minimal yet realist
 
 ## 1 Why Terraform (and Why You Care)
 
-If you’ve wrangled cloud resources by hand—or with a mess of proprietary scripts—you already know that *click-ops* doesn’t scale. **Terraform** turns infrastructure into declarative code that can be version-controlled, peer-reviewed, and repeated ad infinitum. In other words, it’s how *professionals* avoid 3 a.m. PagerDuty calls **across multiple providers at once**.
+If you’ve wrangled cloud resources by hand-or with a mess of proprietary scripts-you already know that *click-ops* doesn’t scale. **Terraform** turns infrastructure into declarative code that can be version-controlled, peer-reviewed, and repeated ad infinitum. In other words, it’s how *professionals* avoid 3 a.m. PagerDuty calls **across multiple providers at once**.
 
 This guide covers:
 
@@ -142,7 +142,7 @@ sudo apt-mark hold terraform     # lock it down
 
 ## 6 Your First *Multi-Provider* Project
 
-> The following walks through deploying **an S3 bucket (AWS)**, **a DNS `A` record (Cloudflare)**, and **a 1-GB Nanode virtual machine (Linode)**—all from the same directory.
+> The following walks through deploying **an S3 bucket (AWS)**, **a DNS `A` record (Cloudflare)**, and **a 1-GB Nanode virtual machine (Linode)**-all from the same directory.
 
 ### 6.1 Scaffold a Working Directory
 
@@ -333,7 +333,7 @@ Run `terraform apply` in the `dev` workspace to create a bucket prefixed with `d
 ## 7 State Management 101
 
 - **Local state** lives in `terraform.tfstate`; guard with `chmod 600`.
-- **Remote state**—move it to S3 & DynamoDB *or* Linode Object Storage & Postgres, or Terraform Cloud.
+- **Remote state**-move it to S3 & DynamoDB *or* Linode Object Storage & Postgres, or Terraform Cloud.
 
 Example S3 backend:
 
@@ -480,7 +480,7 @@ Run `terraform plan` to confirm alignment.
 
 - **Terraform Cloud / HCP** for remote runs & secrets vaulting.
 - **Vault** for credentials (coming in the next article!).
-- **Terraform Modules** to DRY your infra across AWS, Cloudflare, Linode—and beyond.
+- **Terraform Modules** to DRY your infra across AWS, Cloudflare, Linode-and beyond.
 
 > **Pro tip**: Commit code **and** backend configs to Git, but **never** the state file itself.
 

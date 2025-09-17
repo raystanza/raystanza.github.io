@@ -189,7 +189,7 @@ For more information check the [AWS Solutions Library](https://aws.amazon.com/so
 
 ---
 
-By mapping each LAMP component to its AWS equivalent—and supplementing with security, scalability, and observability services—you can build a cloud-native architecture that’s more resilient, easier to manage, and ready to grow with your traffic.
+By mapping each LAMP component to its AWS equivalent-and supplementing with security, scalability, and observability services-you can build a cloud-native architecture that’s more resilient, easier to manage, and ready to grow with your traffic.
 
 ## Links
 

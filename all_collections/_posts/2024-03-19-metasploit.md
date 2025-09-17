@@ -60,7 +60,7 @@ Understanding Metasploit’s building blocks will help you navigate the framewor
 ### Module Types
 
 * **Exploit:** Code that triggers a vulnerability (e.g., `exploit/windows/smb/ms17_010_eternalblue`).
-* **Payload:** Code delivered by an exploit (e.g., `windows/x64/meterpreter/reverse_tcp`). Meterpreter is the gold standard payload—lightweight, extensible, and scriptable.
+* **Payload:** Code delivered by an exploit (e.g., `windows/x64/meterpreter/reverse_tcp`). Meterpreter is the gold standard payload-lightweight, extensible, and scriptable.
 * **Auxiliary:** Non-exploit tools (scanners, sniffers, fuzzers). Example: `auxiliary/scanner/ssh/ssh_version`.
 * **Post:** Actions to run on a compromised host (gather credentials, escalate privileges, pivot). Example: `post/windows/gather/credentials/mimikatz`.
 
@@ -112,13 +112,13 @@ msfconsole
 
 You’ll see a banner and the `msf >` prompt. Key starter commands:
 
-* `search name:<keyword>` — find modules by name or description.
-* `info <module>` — view options, targets, and references for a module.
-* `use <module>` — select a module for configuration.
-* `set <option> <value>` — configure parameters (e.g., `set RHOSTS 10.0.0.5`).
-* `show options` — list required and optional settings.
-* `run` or `exploit` — execute the configured module.
-* `sessions -l` — list active Meterpreter or shell sessions.
+* `search name:<keyword>` - find modules by name or description.
+* `info <module>` - view options, targets, and references for a module.
+* `use <module>` - select a module for configuration.
+* `set <option> <value>` - configure parameters (e.g., `set RHOSTS 10.0.0.5`).
+* `show options` - list required and optional settings.
+* `run` or `exploit` - execute the configured module.
+* `sessions -l` - list active Meterpreter or shell sessions.
 
 ---
 

@@ -1,7 +1,7 @@
 /* General Layout */
 html,
 body {
-  color: var(--white-2);
+  color: var(--white-1);
   background-color: var(--gray-6);
   line-height: 1.7;
 }
@@ -16,9 +16,18 @@ body {
 .landing-page .content-card h1 {
   font-size: 2rem;
   color: var(--text-primary);
-  text-shadow: 0 0 12px var(--highlight-color), 0 0 8px var(--highlight-color);
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+/* Neumorphic card wrapper */
+.content-card {
+  background: var(--gray-6);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
+  margin: 1.5rem 0;
 }
 
 /* Articles Section */
@@ -29,12 +38,12 @@ body {
 }
 
 .landing-page .articles-card li {
-  background: var(--gray-3);
-  border: 1px solid var(--text-primary);
+  background: var(--gray-6);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -56,13 +65,12 @@ body {
 }
 
 .landing-page .articles-card h2 a:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0px 0px 8px var(--highlight-muted-retro);
+  color: var(--highlight-color);
 }
 
 .landing-page .articles-card small {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--highlight-color);
 }
 
 .landing-page .articles-card p {
@@ -73,11 +81,11 @@ body {
 
 /* Project Section */
 .landing-page .project-card .project-content {
-  background: var(--gray-3);
-  border: 1px solid var(--text-primary);
+  background: var(--gray-6);
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -99,8 +107,7 @@ body {
 }
 
 .landing-page .project-card h2 a:hover {
-  color: var(--highlight-color-retro);
-  text-shadow: 0px 0px 8px var(--highlight-muted-retro);
+  color: var(--highlight-color);
 }
 
 .landing-page .project-card p {
@@ -135,26 +142,29 @@ body {
 .landing-page .articles-card .btn-more,
 .landing-page .project-card .btn-more {
   display: inline-block;
-  background: var(--highlight-color);
-  color: var(--white-1);
+  background: var(--gray-6);
+  color: var(--text-primary);
   text-decoration: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
   font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-light);
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .landing-page .articles-card .btn-more:hover,
 .landing-page .project-card .btn-more:hover {
-  background: var(--highlight-color-retro);
-  transform: scale(1.05);
+  color: var(--text-primary);
+  background: var(--highlight-color-muted);
+  transform: translateY(-2px);
 }
 
 /* Wave + Glow */
 .animated-heading {
   position: relative;
-  animation: wave 1s 1 ease-in-out, glow 2s infinite alternate ease-in-out;
+  animation: wave 1s 1 ease-in-out;
 }
 
 @keyframes wave {
@@ -172,15 +182,6 @@ body {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 16px var(--highlight-color), 0 0 12px var(--highlight-muted-retro);
-  }
-  100% {
-    text-shadow: 0 0 40px var(--highlight-color), 0 0 30px var(--highlight-muted-retro);
   }
 }
 
