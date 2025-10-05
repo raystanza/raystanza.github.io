@@ -1,17 +1,20 @@
 - name: C#
   description: Object-oriented language used in limited project scopes and early experimentation with .NET-based applications. Familiar with core syntax, control structures, and general usage patterns, though not actively used in production environments.
 
+- name: PHP
+  description: Server-side language used extensively with Laravel and procedural PHP applications. Proficient in MVC patterns, templating, route controllers, service containers, and queue-based job systems.
+
+- name: Rust
+  description: Systems programming language used for performance-critical components and learning purposes. Experience with ownership model, concurrency, and building CLI tools, though not yet applied in large-scale production systems.
+
+- name: JavaScript (ES6+)
+  description: Primary scripting language for client-side interactivity. Applied in Vue.js and native browser contexts for reactive UI behavior, DOM manipulation, and asynchronous operations using Promises and Fetch API.
+
 - name: HTML5
   description: Core markup language for structuring web content and UI components. Extensive experience using semantic elements, accessibility-first patterns, and responsive structure across full-stack and static applications.
 
 - name: CSS3
   description: Styling language used to craft responsive layouts and theming systems with utility-first approaches (Tailwind CSS) and custom design systems. Proficient in flex/grid models, custom properties, and transition effects.
-
-- name: JavaScript (ES6+)
-  description: Primary scripting language for client-side interactivity. Applied in Vue.js and native browser contexts for reactive UI behavior, DOM manipulation, and asynchronous operations using Promises and Fetch API.
-
-- name: PHP
-  description: Server-side language used extensively with Laravel and procedural PHP applications. Proficient in MVC patterns, templating, route controllers, service containers, and queue-based job systems.
 
 - name: Python
   description: Versatile general-purpose language used for scripting, Flask-based APIs, WebSocket handling, and small-scale automation tools. Employed in real-time chat apps and internal monitoring dashboards.
@@ -21,3 +24,6 @@
 
 - name: Bash
   description: Shell scripting language used to automate server administration, development tooling, deployment routines, and CLI interfaces. Scripts are modular, portable, and designed for long-term maintainability.
+
+- name: PowerShell
+  description: Scripting language for Windows-based automation tasks, particularly in mixed OS environments. Used for system configuration, file management, and integrating with Windows services in homelab setups.

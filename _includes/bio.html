@@ -50,7 +50,7 @@
   <!-- ▸ SKILLS & TOOLS -->
   <h3 class="section-heading">Skills &amp; Tools</h3>
 
-  {% assign groups = "languages,languages;backend,backend tools;frontend,frontend tools;stacks,stacks" | split: ";" %}
+  {% assign groups = "oses,operating systems;languages,languages;backend,backend tools;frontend,frontend tools;stacks,stacks" | split: ";" %}
   {% for g in groups %}
     {% assign parts = g | split: "," %}
     {% assign slug = parts[0] %}

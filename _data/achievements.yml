@@ -46,8 +46,11 @@
 - title: Advanced Git Workflows
   description: I use Git tags, hooks, and branches to stay organized. I wrote a script called `generate_changelog.sh` that creates structured changelogs based on version tags.
 
+- title: Rust Exploration & CLI Tools
+  description: I'm learning Rust and have built a few small CLI tools with it. It's been a great way to understand systems programming concepts like ownership, lifetimes, and concurrency.
+
 - title: MkDocs-Powered Dev Documentation
-  description: I used MkDocs (with the Material theme) to document internal projects like Whiskers and Wheels - with setup guides, styling references, and deployment steps all in one place.
+  description: I used MkDocs (with the Material theme) to document internal projects like Whiskers and Wheels. Complete with setup guides, styling references, and deployment steps all in one place.
 
 - title: Home Lab & Local Networking
   description: My homelab is made up of Ubuntu servers running apps, games, and tools for my family and my projects. I manage local DNS, IP assignments, and routing myself. It's my playground and my proving ground.
@@ -59,4 +62,4 @@
   description: I set up GitHub Actions to automatically build and deploy my Jekyll site when I push to `master`. It includes steps for building, checking, and publishing - no manual work needed.
 
 - title: Self-Taught Journey
-  description: I've been in IT for over 20 years, and I've taught myself full-stack web development while working full time and raising two teenage boys. I do this because I love it - and I believe in always learning, building, and improving.
+  description: I've been in IT for over 25 years, and I've taught myself full-stack web development while working full time and raising two teenage boys. I do this because I love it - and I believe in always learning, building, and improving.

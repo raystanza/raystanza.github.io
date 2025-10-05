@@ -22,12 +22,7 @@ body {
 
 /* Neumorphic card wrapper */
 .content-card {
-  background: var(--gray-6);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 9px 9px 16px var(--shadow-dark),
-    -9px -9px 16px var(--shadow-light);
-  margin: 1.5rem 0;
+  padding-bottom: 2rem;
 }
 
 /* Articles Section */
