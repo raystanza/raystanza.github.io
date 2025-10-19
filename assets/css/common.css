@@ -316,12 +316,13 @@ hr {
 
 /* Share Section */
 .share-section {
-  margin: 2.5rem 0;
-  padding: 1.5rem 1.75rem;
+  margin: 1rem auto;
+  padding: 1rem;
   background: var(--gray-6);
   border-radius: 12px;
   box-shadow: 8px 8px 16px var(--shadow-dark),
     -8px -8px 16px var(--shadow-light);
+  max-width: 95vw;
 }
 
 .share-title {

@@ -26,10 +26,8 @@ main {
 /* Article Section Styling */
 .article {
   background: var(--gray-6);
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 12px;
-  box-shadow: 8px 8px 16px var(--shadow-dark),
-    -8px -8px 16px var(--shadow-light);
   margin-bottom: 2rem;
   animation: fadeIn 0.6s ease-in-out;
 }

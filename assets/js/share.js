@@ -7,31 +7,26 @@
     const buttons = document.querySelectorAll(".share-button--copy");
     buttons.forEach((button) => {
       const url = button.getAttribute("data-share-url");
-      if (!url) {
-        return;
-      }
-
-      const originalText = button.textContent.trim();
-      const originalLabel = button.getAttribute("aria-label") || originalText;
+      if (!url) return;
+      const originalHTML = button.innerHTML;
+      const originalLabel = button.getAttribute("aria-label") || "Copy link";
       let resetTimer = null;
 
       const reset = () => {
-        button.textContent = originalText;
+        button.innerHTML = originalHTML;
         button.setAttribute("aria-label", originalLabel);
         button.classList.remove("share-button--copied");
         button.removeAttribute("aria-live");
       };
 
       const setFeedback = (message, { isSuccess = true } = {}) => {
-        if (resetTimer) {
-          window.clearTimeout(resetTimer);
-        }
+        if (resetTimer) window.clearTimeout(resetTimer);
         button.textContent = message;
         button.setAttribute("aria-label", message);
         if (isSuccess) {
           button.classList.add("share-button--copied");
           button.setAttribute("aria-live", "polite");
-          resetTimer = window.setTimeout(reset, restoreAfter);
+          resetTimer = window.setTimeout(reset, 2500);
         } else {
           button.classList.remove("share-button--copied");
           button.setAttribute("aria-live", "assertive");

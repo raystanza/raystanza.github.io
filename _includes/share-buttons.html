@@ -39,7 +39,7 @@
         rel="noopener noreferrer"
         aria-label="Share this {{ share_type }} on Facebook"
       >
-        📘 Facebook
+        <img src="{{ site.baseurl }}/assets/icons/facebook.png" alt="Facebook logo" width="24" height="24" />
       </a>
     </li>
     <li class="share-buttons__item">
@@ -60,7 +60,7 @@
         data-share-title="{{ page.title | escape }}"
         data-share-text="{{ share_summary | strip_html | strip_newlines | truncate: 180 | escape }}"
       >
-        Share
+        <img src="{{ site.baseurl }}/assets/icons/share.png" alt="Share image" width="24" height="24" />
       </button>
     </li>
     <li class="share-buttons__item">
@@ -70,7 +70,7 @@
         data-share-url="{{ canonical_url }}"
         aria-label="Copy a link to this {{ share_type }}"
       >
-        🔗 Copy link
+        <img src="{{ site.baseurl }}/assets/icons/copy-link.png" alt="Copy-Link image" width="24" height="24" />
       </button>
     </li>
   </ul>
