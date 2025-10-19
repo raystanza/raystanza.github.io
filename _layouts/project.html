@@ -38,8 +38,6 @@
         </div>
         {% endif %}
 
-        {% include share-buttons.html %}
-
         <!-- Project Image -->
         {% if page.image %}
           <figure class="project-image">
@@ -52,7 +50,8 @@
             {% endif %}
           </figure>
         {% endif %}
-
+        <!-- Share Buttons -->
+        {% include share-buttons.html %}
         <!-- Project Description -->
         <p class="project-description">{{ page.description }}</p>
 
