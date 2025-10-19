@@ -1,20 +1,10 @@
-*,
-*::before,
-*::after {
-  font-family: inherit;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  -webkit-user-drag: none;
-  -webkit-tap-highlight-color: transparent;
-}
+
 
 /* General Layout */
 html,
 body {
-  color: var(--white-2);
+  color: var(--white-1);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
   line-height: 1.7;
 }
 
@@ -30,7 +20,6 @@ main {
   font-size: 2rem;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px var(--highlight-color), 0 0 8px var(--highlight-color);
   text-align: center;
 }
 
@@ -46,47 +35,30 @@ main {
 
 .projects-section li {
   margin-bottom: 1.5rem;
-  background: var(--gray-4);
-  border: 1px solid var(--text-primary);
+  background: var(--gray-6);
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+.projects-section li:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-light);
 }
 
-.projects-section li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(
-    to right,
-    var(--highlight-color-retro),
-    var(--gray-4),
-    var(--gray-4),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6),
-    var(--gray-6)
-  );
-}
 
 .projects-section a {
   color: var(--text-primary);
   font-size: 1.3rem;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 0 4px var(--text-secondary);
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s;
 }
-
 .projects-section a:hover,
 .projects-section a:focus {
-  color: var(--highlight-color-retro);
-  text-shadow: 0 0 8px var(--highlight-color-retro), 0 0 12px var(--highlight-muted-retro);
+  color: var(--highlight-color);
   outline: none;
 }
 
@@ -95,48 +67,20 @@ main {
 }
 
 .projects-section p {
-  color: var(--white-2);
+  color: var(--white-1);
   font-size: 1rem;
   margin-top: 0.5rem;
 }
 
 /* Project Article Container */
 .project-content {
-  background: linear-gradient(
-    to bottom,
-    var(--gray-5),
-    var(--gray-4)
-  );
-  border: 2px solid var(--highlight-color);
+  background: var(--gray-6);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   margin: auto;
   animation: fadeIn 0.6s ease-in-out;
-}
-
-.project-content hr {
-  border: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    var(--gray-6),
-    var(--text-primary),
-    var(--gray-6)
-  );
-  margin: 1.5rem 0;
-  text-align: center;
-  position: relative;
-}
-
-.project-content hr::after {
-  content: "[====]";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--text-primary);
-  font-size: 0.8rem;
 }
 
 .project-title {
@@ -153,26 +97,38 @@ main {
 .project-metadata {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: .5rem;
   flex-wrap: wrap;
   margin: 1.5rem 0;
   padding: 1rem;
   background: var(--gray-6);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light);
 }
 
+/* Keep the calendar/date content aligned nicely even with an emoji */
 .project-date {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
   font-weight: bold;
   color: var(--highlight-color);
   font-size: 1.1rem;
+  line-height: 1.25;
 }
 
+/* Chip row */
 .project-categories {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: .4rem;
   list-style: none;
-  margin: 0.5rem 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -181,14 +137,15 @@ main {
   border-radius: 8px;
   padding: 0.3rem 0.6rem;
   font-size: 0.75rem;
+  line-height: 1;
   color: var(--white-1);
   transition: background 0.3s, color 0.3s;
   text-transform: uppercase;
 }
 
 .project-category:hover {
-  background: var(--highlight-color);
-  color: var(--bg-primary-retro);
+  background: var(--highlight-color-muted);
+  color: var(--text-primary);
 }
 
 .category-link {
@@ -196,11 +153,17 @@ main {
   text-decoration: none;
 }
 
+/* Responsive: stack on narrow screens but keep clean alignment */
+@media (max-width: 640px) {
+  .project-metadata {
+    flex-direction: column;
+    align-items: flex-start;    /* left-align when stacked */
+  }
+}
 
 /* Project Description */
 .project-description {
   font-size: 1.4rem;
-  text-align: justify;
   margin: 1.5rem 0;
   color: var(--white-1);
   line-height: 1.8;
@@ -228,22 +191,25 @@ main {
   text-align: center;
 }
 
+/* Back button beside the title */
+.back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back-button:hover {
+  color: var(--text-primary);
+}
+
 /* Project Main Content */
 .project-main-content {
   margin-top: 2rem;
   line-height: 1.8;
   font-size: 1.1rem;
   color: var(--white-2);
-}
-
-.project-main-content a {
-  color: var(--highlight-color);
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-
-.project-main-content a:hover {
-  color: var(--highlight-muted-retro);
 }
 
 /* Container for the “Back To Top” link */
@@ -285,7 +251,6 @@ main {
 .project-main-content p {
   margin: 0 0 1.75rem;
   font-size: 1.2rem;
-  text-align: justify;
 }
 
 .project-main-content h1,
@@ -296,7 +261,7 @@ main {
 .project-main-content h6 {
   margin: 1.75rem 0;
   color: var(--text-primary);
-  text-shadow: 0 0 8px var(--highlight-color);
+  text-shadow: 0 0 8px var(--highlight-color-muted);
 }
 
 .project-main-content ul,
@@ -305,19 +270,41 @@ main {
   margin-bottom: 1.75rem;
 }
 
+/* Raised neumorphic code block */
 .project-main-content pre {
-  background: var(--gray-3);
+  background: var(--pre-bg);
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: var(--elev-radius);
+
+  /* Fallback first (works everywhere) */
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light);
+
+  /* Prefer drop-shadow for perfect corners */
+  /* increases clarity without corner artifacts */
 }
 
-.project-main-content code {
-  padding: 3px 5px;
-  color: var(--white-2);
-  background-color: var(--gray-3);
-  border-radius: 4px;
+@supports (filter: drop-shadow(0 0 1px #000)) {
+  .project-main-content pre {
+    box-shadow: none; /* swap out */
+    /* two opposing shadows to simulate the raised card */
+    filter:
+      drop-shadow(var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark))
+      drop-shadow(calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light));
+  }
+}
+
+/* Code text tweaks (JetBrains Mono if available) */
+.project-main-content pre code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  color: var(--text-primary);
+  background: transparent;
+  display: block;
+  line-height: 1.5;
+  tab-size: 2;
 }
 
 /* Tables */
@@ -325,18 +312,29 @@ main {
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  border: 2px solid var(--highlight-color);
-  background-color: var(--gray-4);
-  border-radius: 8px;
+  background-color: var(--gray-3);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light);
   font-size: 1rem;
   text-align: left;
 }
 
+@supports (filter: drop-shadow(0 0 1px #000)) {
+  .project-main-content table {
+    box-shadow: none; /* swap out */
+    /* two opposing shadows to simulate the raised card */
+    filter:
+      drop-shadow(var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark))
+      drop-shadow(calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light));
+  }
+}
+
 .project-main-content thead {
-  background-color: var(--gray-5);
-  color: var(--highlight-color);
+  background-color: var(--gray-2);
+  color: var(--text-primary);
 }
 
 .project-main-content thead th {
@@ -344,7 +342,6 @@ main {
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
 }
 
 .project-main-content tbody tr {
@@ -352,17 +349,17 @@ main {
 }
 
 .project-main-content tbody tr:nth-child(even) {
-  background-color: var(--gray-3);
+  background-color: var(--gray-5);
 }
 
 .project-main-content tbody tr:hover {
-  background-color: var(--gray-5);
+  background-color: var(--gray-4);
 }
 
 .project-main-content td {
   padding: 0.9rem 1.2rem;
-  border-bottom: 1px solid var(--gray-5);
-  color: var(--white-2);
+  border-bottom: 1px solid var(--gray-4);
+  color: var(--text-primary);
 }
 
 /* Lists */
@@ -468,37 +465,40 @@ main {
 /* Links */
 .project-main-content a {
   color: var(--highlight-color);
-  border-bottom: 2px solid var(--highlight-color);
   transition: color 0.3s, border-color 0.3s;
+  text-decoration: none;
 }
 
 .project-main-content a:hover {
   color: var(--white-2);
-  border-bottom-color: var(--white-2);
 }
 
-/* Horizontal Rule */
+/* Neumorphic pressed-in HR inside project content blocks */
+.project-content hr,
 .project-main-content hr {
   border: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    var(--gray-6),
-    var(--text-primary),
-    var(--gray-6)
+  height: 3px;
+  margin: 1.75rem 0;
+  background: var(--hr-bg);
+  border-radius: var(--hr-radius);
+
+  box-shadow:
+    inset var(--hr-offset) var(--hr-offset) var(--hr-blur) var(--hr-shadow-dark),
+    inset calc(var(--hr-offset) * -1) calc(var(--hr-offset) * -1) var(--hr-blur) var(--hr-shadow-light);
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.05) 40%,
+    rgba(0,0,0,0.04) 60%,
+    rgba(0,0,0,0.10)
   );
-  margin: 1.5rem 0;
-  position: relative;
 }
 
+/* Remove the decorative badge */
+.project-content hr::after,
 .project-main-content hr::after {
-  content: "[====]";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--text-primary);
-  font-size: 0.8rem;
+  content: none;
 }
 
 /* Lightbox for Images */

@@ -10,6 +10,9 @@
 - name: Linode VPS
   description: Self-managed, Linux-based cloud instances deployed for hosting production-grade services with direct control over system-level configuration, package management, and firewalling via UFW and iptables.
 
+- name: Cargo (Rust)
+  description: Rust's package manager and build system used to manage dependencies, compile source code, and publish libraries. Familiar with `Cargo.toml` configuration, workspaces, and common commands.
+
 - name: Flask (Python)
   description: Micro web framework used to expose RESTful endpoints and WebSocket interfaces. Applied in service layers requiring lightweight routing logic, socket handling, and WSGI compatibility.
 

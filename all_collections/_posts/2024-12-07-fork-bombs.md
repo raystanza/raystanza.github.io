@@ -4,7 +4,7 @@ title: "Fork-Bombs Explained: Minimal Code with Maximum Impact"
 date: 2024-12-07 07:00:00 -05:00
 
 description: >
-  Discover the fascinating (and dangerous) world of fork-bombs—simple yet powerful recursive scripts that exploit system resources. See how they’re written in Bash,
+  Discover the fascinating (and dangerous) world of fork-bombs-simple yet powerful recursive scripts that exploit system resources. See how they’re written in Bash,
   PowerShell, Python, and more.
 
 canonical_url: "https://raystanza.uk/posts/fork-bombs/"
@@ -197,4 +197,4 @@ Conduct reviews to identify malicious or poorly written recursive logic.
 
 ---
 
-"*Fork-bombs*", despite their simplicity, demonstrate how minimal code can exploit system vulnerabilities. From Bash's cryptic one-liner to Python's functional elegance, these examples highlight the power and danger of recursive process creation. Understanding fork-bombs isn't just about their destructive potential — it's about learning to secure systems against misuse.
+"*Fork-bombs*", despite their simplicity, demonstrate how minimal code can exploit system vulnerabilities. From Bash's cryptic one-liner to Python's functional elegance, these examples highlight the power and danger of recursive process creation. Understanding fork-bombs isn't just about their destructive potential - it's about learning to secure systems against misuse.

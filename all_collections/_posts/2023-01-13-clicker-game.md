@@ -4,7 +4,7 @@ title: "ClickeR 'Game'"
 date: 2023-01-13 07:00:00 -05:00
 
 description: >
-  A quirky, emoji-generating clicker web app where you click “Click Me!” to spawn random emojis, build nonsensical paragraphs, and listen as their descriptions are read aloud—your ultimate annoyance machine.
+  A quirky, emoji-generating clicker web app where you click “Click Me!” to spawn random emojis, build nonsensical paragraphs, and listen as their descriptions are read aloud-your ultimate annoyance machine.
 
 canonical_url: "https://raystanza.uk/posts/clicker-game/"
 
@@ -28,7 +28,7 @@ image_caption: "Generating random emojis and their spoken descriptions for fun"
 og_type: "article"
 og_title: "ClickeR 'Game': An Emoji Generating Annoyance Machine"
 og_description: >
-  Discover the ClickeR 'Game' — a playful clicker web app that spawns random emojis, weaves them into nonsense paragraphs, and reads them aloud for pure fun and annoyance.
+  Discover the ClickeR 'Game' - a playful clicker web app that spawns random emojis, weaves them into nonsense paragraphs, and reads them aloud for pure fun and annoyance.
 
 robots: "index, follow"
 

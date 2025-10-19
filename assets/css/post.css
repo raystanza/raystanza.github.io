@@ -1,7 +1,6 @@
 *,
 *::before,
 *::after {
-  font-family: inherit;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -12,9 +11,8 @@
 /* General Layout */
 html,
 body {
-  color: var(--white-2);
+  color: var(--white-1);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
   line-height: 1.7;
 }
 
@@ -27,15 +25,11 @@ main {
 
 /* Article Section Styling */
 .article {
-  background: linear-gradient(
-    to bottom,
-    var(--gray-5),
-    var(--gray-4)
-  );
-  border: 2px solid var(--highlight-color);
+  background: var(--gray-6);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   margin-bottom: 2rem;
   animation: fadeIn 0.6s ease-in-out;
 }
@@ -46,7 +40,6 @@ main {
   font-size: 2.6rem;
   text-align: center;
   margin: 0 0 1.5rem;
-  text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 14px var(--highlight-color);
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--text-secondary);
 }
@@ -122,19 +115,20 @@ main {
 }
 
 .categories .category {
-  background: var(--gray-3);
+  background: var(--gray-6);
   border-radius: 8px;
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
-  color: var(--white-1);
+  color: var(--text-secondary);
   text-transform: uppercase;
-  transition: background 0.3s, color 0.3s;
   cursor: pointer;
+  box-shadow: 4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-light);
+  transition: color 0.3s;
 }
 
 .categories .category:hover {
-  background: var(--highlight-color);
-  color: var(--bg-primary-retro);
+  color: var(--highlight-color);
 }
 
 /* Markdown Content Styling */
@@ -145,7 +139,6 @@ main {
 .content p {
   margin: 0 0 1.75rem;
   font-size: 1.2rem;
-  text-align: justify;
 }
 
 .content h1,
@@ -156,7 +149,6 @@ main {
 .content h6 {
   margin: 1.75rem 0;
   color: var(--text-primary);
-  text-shadow: 0 0 8px var(--highlight-color);
 }
 
 .content ul,
@@ -165,19 +157,41 @@ main {
   margin-bottom: 1.75rem;
 }
 
+/* Raised neumorphic code block */
 .content pre {
-  background: var(--gray-3);
+  background: var(--pre-bg);
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: var(--elev-radius);
+
+  /* Fallback first (works everywhere) */
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light);
+
+  /* Prefer drop-shadow for perfect corners */
+  /* increases clarity without corner artifacts */
 }
 
-.content code {
-  padding: 3px 5px;
-  color: var(--white-2);
-  background-color: var(--gray-3);
-  border-radius: 4px;
+@supports (filter: drop-shadow(0 0 1px #000)) {
+  .content pre {
+    box-shadow: none; /* swap out */
+    /* two opposing shadows to simulate the raised card */
+    filter:
+      drop-shadow(var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark))
+      drop-shadow(calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light));
+  }
+}
+
+/* Code text tweaks (JetBrains Mono if available) */
+.content pre code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  color: var(--text-primary);
+  background: transparent;
+  display: block;
+  line-height: 1.5;
+  tab-size: 2;
 }
 
 /* Tables */
@@ -185,18 +199,29 @@ main {
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  border: 2px solid var(--highlight-color);
-  background-color: var(--gray-4);
-  border-radius: 8px;
+  background-color: var(--gray-3);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light);
   font-size: 1rem;
   text-align: left;
 }
 
+@supports (filter: drop-shadow(0 0 1px #000)) {
+  .content table {
+    box-shadow: none; /* swap out */
+    /* two opposing shadows to simulate the raised card */
+    filter:
+      drop-shadow(var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark))
+      drop-shadow(calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light));
+  }
+}
+
 .content thead {
-  background-color: var(--gray-5);
-  color: var(--highlight-color);
+  background-color: var(--gray-2);
+  color: var(--text-primary);
 }
 
 .content thead th {
@@ -204,7 +229,6 @@ main {
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
 }
 
 .content tbody tr {
@@ -212,17 +236,17 @@ main {
 }
 
 .content tbody tr:nth-child(even) {
-  background-color: var(--gray-3);
+  background-color: var(--gray-5);
 }
 
 .content tbody tr:hover {
-  background-color: var(--gray-5);
+  background-color: var(--gray-4);
 }
 
 .content td {
   padding: 0.9rem 1.2rem;
-  border-bottom: 1px solid var(--gray-5);
-  color: var(--white-2);
+  border-bottom: 1px solid var(--gray-4);
+  color: var(--text-primary);
 }
 
 /* Lists */
@@ -337,28 +361,30 @@ main {
   border-bottom-color: var(--white-2);
 }
 
-/* Horizontal Rule */
+/* Neumorphic pressed-in HR inside post content */
 .content hr {
   border: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    var(--gray-6),
-    var(--text-primary),
-    var(--gray-6)
+  height: 3px;
+  margin: 1.75rem 0;
+  background: var(--hr-bg);
+  border-radius: var(--hr-radius);
+
+  box-shadow:
+    inset var(--hr-offset) var(--hr-offset) var(--hr-blur) var(--hr-shadow-dark),
+    inset calc(var(--hr-offset) * -1) calc(var(--hr-offset) * -1) var(--hr-blur) var(--hr-shadow-light);
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.05) 40%,
+    rgba(0,0,0,0.04) 60%,
+    rgba(0,0,0,0.10)
   );
-  margin: 1.5rem 0;
-  position: relative;
 }
 
+/* Remove the decorative badge to keep the groove clean */
 .content hr::after {
-  content: "[====]";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--text-primary);
-  font-size: 0.8rem;
+  content: none;
 }
 
 /* Lightbox for Images */

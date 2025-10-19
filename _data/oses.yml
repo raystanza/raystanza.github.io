@@ -1,0 +1,5 @@
+- name: Debian Linux
+  description: Stable and secure Linux distribution used for server environments and personal workstations. Experienced with package management (APT), systemd services, and network configuration.
+
+- name: Windows 10/11
+  description: Well-known desktop operating system for development and productivity tasks. Familiar with PowerShell scripting, Windows Subsystem for Linux (WSL), and system administration.

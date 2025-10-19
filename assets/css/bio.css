@@ -1,7 +1,6 @@
 *,
 *::before,
 *::after {
-  font-family: inherit;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -11,11 +10,11 @@
 
 html,
 body {
-  color: var(--white-2);
+  color: var(--white-1);
   background-color: var(--gray-6);
-  font-family: "JetBrains Mono", monospace;
-  line-height: 1.7;
+  line-height: 1;
 }
+
 main {
   margin: 0 auto;
   max-width: 95vw;
@@ -26,8 +25,6 @@ main {
   font-size: 2rem;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px var(--highlight-color),
-               0 0 8px var(--highlight-color);
   text-align: center;
 }
 
@@ -35,12 +32,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   padding: 2.5rem 1.5rem;
-  background: var(--gray-3);
+  background: var(--gray-6);
   color: var(--white-1);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
 }
 
 .bio-profile { text-align: center; }
@@ -59,13 +57,13 @@ main {
   margin-top: 1rem;
   font-size: 1.6rem;
   color: var(--text-primary);
-  text-shadow: 0 0 6px var(--highlight-color);
+  text-shadow: 0 0 6px var(--highlight-color-muted);
 }
 .author-quote {
   margin-top: .5rem;
   font-size: 1rem;
   color: var(--text-muted);
-  text-shadow: 0 0 6px var(--highlight-color);
+  text-shadow: 0 0 6px var(--highlight-color-muted);
   font-style: italic;
 }
 
@@ -81,7 +79,7 @@ main {
   0% { 
     opacity:0;
     transform:translateY(-30px) scale(.9);
-    color:var(--highlight-muted-retro);
+    color:var(--highlight-color-retro-muted);
   }
   50% {
     opacity:1;
@@ -131,25 +129,91 @@ main {
   padding:.6rem 1.2rem;
   border-radius:6px;
   font-weight:600;
-  box-shadow:0 2px 6px rgba(0,0,0,.35);
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
 }
 
-.section-heading{
-  position:relative;
-  text-align:center;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  display:inline-block;
-  margin:3rem auto 1.25rem;
-  padding:.45rem 1.6rem;
-  font-size:1.55rem;
-  color:var(--highlight-color);
-  background:rgba(0,0,0,.25);
-  border:2px solid var(--highlight-color);
-  border-radius:9999px;
-  box-shadow:0 0 10px rgba(0,0,0,.4), 0 0 8px var(--highlight-color);
-  text-shadow:none;
+/* Neumorphic raised section heading pill */
+.section-heading {
+  /* Typography/layout: keep your current choices */
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin: 3rem auto 1.25rem;
+  padding: .45rem 1.6rem;
+  font-size: 1.55rem;
+
+  /* Accent selection:
+     prefer new indigo; fall back to old highlight if needed */
+  --accent: var(--highlight-color);
+  --accent-muted: var(--highlight-color-muted);
+
+  /* Surface + shape */
+  color: var(--accent);
+  background: var(--bg-primary-retro);
+  border: 0;
+  border-radius: 9999px;
+
+  /* Raised, convex look (no inset) */
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light),
+    /* soft accent halo instead of a hard border */
+    0 0 0 2px color-mix(in srgb, var(--accent-muted) 18%, transparent);
+
+  /* Slight surface sheen for depth */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.08) 40%,
+    rgba(0,0,0,0.03) 60%,
+    rgba(0,0,0,0.06)
+  );
+
+  /* Better text clarity on light pill */
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
+
+/* Hover = a little more lift (keeps it subtle) */
+@media (prefers-reduced-motion: no-preference) {
+  .section-heading:hover {
+    transform: translateY(-1px);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+    box-shadow:
+      calc(var(--elev-offset) + 2px) calc(var(--elev-offset) + 2px) calc(var(--elev-blur) + 4px) var(--shadow-dark),
+      calc((var(--elev-offset) + 2px) * -1) calc((var(--elev-offset) + 2px) * -1) calc(var(--elev-blur) + 4px) var(--shadow-light),
+      0 0 0 3px color-mix(in srgb, var(--accent-muted) 22%, transparent);
+  }
+}
+
+/* Active/pressed = invert to a soft inset for tactile click */
+.section-heading:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 2px 2px 6px color-mix(in srgb, var(--shadow-dark) 90%, transparent),
+    inset -2px -2px 6px color-mix(in srgb, var(--shadow-light) 90%, transparent),
+    0 0 0 2px color-mix(in srgb, var(--accent-muted) 18%, transparent);
+}
+
+/* Keyboard focus: clear, accessible ring using your accent */
+.section-heading:focus-visible {
+  outline: none;
+  box-shadow:
+    var(--elev-offset) var(--elev-offset) var(--elev-blur) var(--shadow-dark),
+    calc(var(--elev-offset) * -1) calc(var(--elev-offset) * -1) var(--elev-blur) var(--shadow-light),
+    0 0 0 4px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* High-contrast/Windows forced-colors: ensure visible focus */
+@media (forced-colors: active) {
+  .section-heading:focus-visible {
+    outline: 2px solid CanvasText;
+    outline-offset: 2px;
+  }
+}
+
 
 .timeline{
   list-style:none;
@@ -202,8 +266,8 @@ main {
 }
 
 .chip-heading{ 
-  font-size:1.1rem; 
-  margin:.75rem 0 .5rem; 
+  font-size:1.5rem; 
+  margin:.75rem .5rem; 
   color:var(--text-primary);
 }
 .chip-list{
@@ -212,7 +276,7 @@ main {
   flex-wrap:wrap;
   gap:.6rem;
   padding:0;
-  margin-bottom:1.2rem;
+  margin-bottom:0.75rem;
 }
 .chip-tooltip{
   opacity:0;
@@ -235,17 +299,26 @@ main {
 }
 .chip{
   position:relative;
-  padding:.4rem .9rem;
-  border:1px solid var(--highlight-color);
+  background: var(--gray-3);
+  color: var(--text-primary);
+  border:1px solid var(--gray-6);
   border-radius:20px;
   font-size:.9rem;
   overflow:visible;
   cursor:default;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
 }
 .chip:hover .chip-tooltip,
 .chip:focus .chip-tooltip{
   visibility:visible;
   opacity:1;
+}
+.chip:hover {
+  background: var(--highlight-color-muted);
+  border:1px solid var(--highlight-color-muted);
 }
 
 .achievements-grid{
@@ -258,8 +331,9 @@ main {
 .card{
   background:var(--gray-6);
   padding:1.5rem;
-  border-radius:8px;
-  box-shadow:0 2px 10px rgba(0,0,0,.35);
+  border-radius:12px;
+  box-shadow:8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
   line-height:1.55;
 }
 .card h4{

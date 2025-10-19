@@ -1,11 +1,12 @@
 /* syntax */
 
 .highlight .hll {
-  background-color: #333333;
+  background-color: #ffffcc;
 }
 
 .highlight {
-  color: #ffffff;
+  background: inherit;
+  color: #333333;
 }
 
 .highlight * {

@@ -4,7 +4,7 @@ title: "The Great Centering Saga: How to Center a <div> Without Losing Your Sani
 date: 2024-12-26 07:00:00 -05:00
 
 description: >
-  Hilariously relatable guide to centering a <div> in CSS using flexbox, CSS Grid, and legacy techniques—so you never lose your sanity.
+  Hilariously relatable guide to centering a <div> in CSS using flexbox, CSS Grid, and legacy techniques-so you never lose your sanity.
 
 canonical_url: "https://raystanza.uk/posts/centering-a-div/"
 
@@ -42,7 +42,7 @@ twitter:
   creator: "@realcaptgeech"
 ---
 
-Ah, the age-old question: "How do I center a `<div>`?" Ask it in any developer community, and you'll likely summon a mob armed with pitchforks (read: Stack Overflow links). The truth is, centering a `<div>` is the software equivalent of assembling IKEA furniture—it seems simple in theory, but in practice, you'll need divine intervention, a PhD in CSS, and probably a good cry.
+Ah, the age-old question: "How do I center a `<div>`?" Ask it in any developer community, and you'll likely summon a mob armed with pitchforks (read: Stack Overflow links). The truth is, centering a `<div>` is the software equivalent of assembling IKEA furniture-it seems simple in theory, but in practice, you'll need divine intervention, a PhD in CSS, and probably a good cry.
 
 Let’s unravel the mystery together, with a wink and a smile.
 
@@ -87,7 +87,7 @@ There! The `<div>` now sits in the middle. But now you’re stuck explaining to 
 }
 ```
 
-Congratulations! You’ve now made your `<div>` look like a weirdly stretched label. It’s centered… sort of. You squint, you tinker, and then realize you just invented a new way to make users hate you.
+Congratulations! You’ve now made your `<div>` look like a weirdly stretched label. It’s centered... sort of. You squint, you tinker, and then realize you just invented a new way to make users hate you.
 
 ### The Right Way™
 
@@ -106,7 +106,7 @@ Behold! Flexbox, the magical incantation that makes vertical and horizontal cent
 
 ## Centering in the Wild: A Horror Story
 
-Imagine this: you’ve perfectly centered your `<div>`. It’s pixel-perfect in Chrome. You proudly open Firefox, and… oh no. Your `<div>` is off-center. You debug furiously, only to discover that your CSS relies on a browser quirk. You rewrite your code with more cross-browser hacks than you’d like to admit.
+Imagine this: you’ve perfectly centered your `<div>`. It’s pixel-perfect in Chrome. You proudly open Firefox, and...oh no. Your `<div>` is off-center. You debug furiously, only to discover that your CSS relies on a browser quirk. You rewrite your code with more cross-browser hacks than you’d like to admit.
 
 And then your boss asks, “Does this work on IE11?”
 
