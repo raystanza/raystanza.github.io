@@ -37,8 +37,6 @@ main {
   background: var(--gray-6);
   color: var(--white-1);
   border-radius: 12px;
-  box-shadow: 8px 8px 16px var(--shadow-dark),
-    -8px -8px 16px var(--shadow-light);
 }
 
 .bio-profile { text-align: center; }

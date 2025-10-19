@@ -18,11 +18,11 @@
           <h2 id="article-title" class="article-title">{{ page.title }}</h2>
           <small class="date">{{ page.date | date: "%B %d, %Y" }}</small>
         </header>
-
+        <!-- Article Image -->
         {% if page.image %}
           <figure class="article-image">
-            <img 
-              src="{{ page.image | relative_url }}" 
+            <img
+              src="{{ page.image | relative_url }}"
               alt="{{ page.image_alt | default: page.title }}" 
             />
             {% if page.image_caption %}
@@ -30,7 +30,8 @@
             {% endif %}
           </figure>
         {% endif %}
-
+        <!-- Share Buttons -->
+        {% include share-buttons.html %}
         <!-- Article Content -->
         <section class="content" aria-label="Post Content">
           {{ content }}

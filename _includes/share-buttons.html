@@ -1,0 +1,77 @@
+{% assign canonical_url = page.url | absolute_url %}
+{% assign share_summary = page.excerpt | default: page.description | default: page.title %}
+{% assign share_type = "page" %}
+{% if page.collection == "posts" %}
+  {% assign share_type = "post" %}
+{% elsif page.collection == "projects" %}
+  {% assign share_type = "project" %}
+{% endif %}
+<section class="share-section" aria-label="Share this {{ share_type }}">
+  <h2 class="share-title">Share this {{ share_type }}</h2>
+  <ul class="share-buttons" role="list">
+    <li class="share-buttons__item">
+      <a
+        class="share-button share-button--twitter"
+        href="https://twitter.com/intent/tweet?url={{ canonical_url | url_encode }}&text={{ page.title | url_encode }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share this {{ share_type }} on X"
+      >
+        <img src="{{ site.baseurl }}/assets/icons/x.png" alt="X logo" width="24" height="24" />
+      </a>
+    </li>
+    <li class="share-buttons__item">
+      <a
+        class="share-button share-button--linkedin"
+        href="https://www.linkedin.com/sharing/share-offsite/?url={{ canonical_url | url_encode }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share this {{ share_type }} on LinkedIn"
+      >
+        <img src="{{ site.baseurl }}/assets/icons/linkedin.png" alt="LinkedIn logo" width="24" height="24" />
+      </a>
+    </li>
+    <li class="share-buttons__item">
+      <a
+        class="share-button share-button--facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u={{ canonical_url | url_encode }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share this {{ share_type }} on Facebook"
+      >
+        <img src="{{ site.baseurl }}/assets/icons/facebook.png" alt="Facebook logo" width="24" height="24" />
+      </a>
+    </li>
+    <li class="share-buttons__item">
+      <a
+        class="share-button share-button--email"
+        href="mailto:?subject={{ page.title | url_encode }}&body={{ canonical_url | url_encode }}"
+        aria-label="Share this {{ share_type }} via email"
+      >
+        <img src="{{ site.baseurl }}/assets/icons/email.png" alt="Email image" width="24" height="24" />
+      </a>
+    </li>
+    <li class="share-buttons__item">
+      <button
+        class="share-button share-button--native"
+        type="button"
+        hidden
+        data-share-url="{{ canonical_url }}"
+        data-share-title="{{ page.title | escape }}"
+        data-share-text="{{ share_summary | strip_html | strip_newlines | truncate: 180 | escape }}"
+      >
+        <img src="{{ site.baseurl }}/assets/icons/share.png" alt="Share image" width="24" height="24" />
+      </button>
+    </li>
+    <li class="share-buttons__item">
+      <button
+        class="share-button share-button--copy"
+        type="button"
+        data-share-url="{{ canonical_url }}"
+        aria-label="Copy a link to this {{ share_type }}"
+      >
+        <img src="{{ site.baseurl }}/assets/icons/copy-link.png" alt="Copy-Link image" width="24" height="24" />
+      </button>
+    </li>
+  </ul>
+</section>
