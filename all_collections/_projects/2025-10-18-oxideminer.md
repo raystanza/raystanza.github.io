@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "OxideMiner"
-date: 2025-02-14 07:00:00 -04:00
+date: 2025-10-18 07:00:00 -04:00
 
 description: >
   A next-generation RandomX CPU miner engineered in Rust for transparent, high-performance Monero mining.
