@@ -19,10 +19,12 @@
           <small class="date">{{ page.date | date: "%B %d, %Y" }}</small>
         </header>
 
+        {% include share-buttons.html %}
+
         {% if page.image %}
           <figure class="article-image">
-            <img 
-              src="{{ page.image | relative_url }}" 
+            <img
+              src="{{ page.image | relative_url }}"
               alt="{{ page.image_alt | default: page.title }}" 
             />
             {% if page.image_caption %}

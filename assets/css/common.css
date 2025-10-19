@@ -313,3 +313,91 @@ hr {
   color: var(--highlight-color);
   font-size: 1.1rem;
 }
+
+/* Share Section */
+.share-section {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem;
+  background: var(--gray-6);
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+}
+
+.share-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.share-buttons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.share-buttons__item {
+  margin: 0;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: var(--gray-6);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease,
+    background 0.3s ease;
+  box-shadow: 4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-light);
+}
+
+.share-button:hover,
+.share-button:focus {
+  transform: translateY(-2px);
+  color: var(--highlight-color);
+  outline: none;
+}
+
+.share-button:focus-visible {
+  outline: 2px solid var(--highlight-color);
+  outline-offset: 2px;
+}
+
+.share-button[hidden] {
+  display: none;
+}
+
+.share-button--copy.share-button--copied,
+.share-button--copy[aria-live="polite"] {
+  color: var(--text-inverted);
+  background: var(--success-color);
+}
+
+.share-button--copy.share-button--copied:hover,
+.share-button--copy.share-button--copied:focus {
+  color: var(--text-inverted);
+}
+
+@media (max-width: 600px) {
+  .share-section {
+    padding: 1.25rem;
+  }
+
+  .share-button {
+    flex: 1 1 calc(50% - 1rem);
+    justify-content: center;
+  }
+}
