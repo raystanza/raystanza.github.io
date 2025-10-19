@@ -15,9 +15,9 @@
         href="https://twitter.com/intent/tweet?url={{ canonical_url | url_encode }}&text={{ page.title | url_encode }}"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Share this {{ share_type }} on X (Twitter)"
+        aria-label="Share this {{ share_type }} on X"
       >
-        🐦 X (Twitter)
+        <img src="{{ site.baseurl }}/assets/icons/x.png" alt="X logo" width="24" height="24" />
       </a>
     </li>
     <li class="share-buttons__item">
@@ -28,7 +28,7 @@
         rel="noopener noreferrer"
         aria-label="Share this {{ share_type }} on LinkedIn"
       >
-        💼 LinkedIn
+        <img src="{{ site.baseurl }}/assets/icons/linkedin.png" alt="LinkedIn logo" width="24" height="24" />
       </a>
     </li>
     <li class="share-buttons__item">
@@ -48,7 +48,7 @@
         href="mailto:?subject={{ page.title | url_encode }}&body={{ canonical_url | url_encode }}"
         aria-label="Share this {{ share_type }} via email"
       >
-        ✉️ Email
+        <img src="{{ site.baseurl }}/assets/icons/email.png" alt="Email image" width="24" height="24" />
       </a>
     </li>
     <li class="share-buttons__item">
@@ -60,7 +60,7 @@
         data-share-title="{{ page.title | escape }}"
         data-share-text="{{ share_summary | strip_html | strip_newlines | truncate: 180 | escape }}"
       >
-        📱 Share...
+        Share
       </button>
     </li>
     <li class="share-buttons__item">

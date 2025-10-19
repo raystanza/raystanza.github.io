@@ -22,7 +22,7 @@ tags:
   - observability
   - dashboard
 
-image: "/images/projects/oxideminer/oxideminer-og.png"
+image: "assets/images/projects/oxideminer/oxideminer-og.png"
 image_alt: "OxideMiner logo over a dark dashboard background"
 image_caption: "OxideMiner pairs Rust performance with an auditable mining stack."
 
