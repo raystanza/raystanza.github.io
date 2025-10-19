@@ -12,6 +12,13 @@ body {
   padding: 2rem 0;
 }
 
+.main-content {
+  margin-top: 0.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--white-2);
+}
+
 /* Section Titles */
 .landing-page .content-card h1 {
   font-size: 2rem;

@@ -9,7 +9,8 @@ og_description: "Access PGP public keys and other files to support RayStanza pro
 og_image: "/assets/icons/bio.png"
 og_type: "website"
 og_author: "Jim Sines"
-intro: "Cryptographic resources and downloadable assets to help you collaborate securely with RayStanza."
+intro: "Cryptographic resources and downloadable assets."
 ---
 
-The files below are published so collaborators can easily retrieve trusted materials without searching through source repositories. Each download is accompanied by metadata to help you confirm authenticity.
+The files below are published so collaborators can easily retrieve trusted materials from Jim Sines [@raystanza](https://github.com/raystanza) without searching through source repositories.  PGP Keys are also available via [OpenPGP Keyserver](https://keys.openpgp.org/search?q=raystanza%40raystanza.uk)
+Each download is accompanied by metadata to help you confirm authenticity.

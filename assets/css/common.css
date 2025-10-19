@@ -69,6 +69,20 @@ html, body {
   color: var(--text-primary);
 }
 
+/* Main Content Styling */
+main {
+  margin: 0 auto;
+  max-width: 95vw;
+  padding: 2rem 0;
+}
+
+.main-content {
+  margin-top: 0.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--white-2);
+}
+
 /* Header Styling */
 .site-header {
   background: var(--gray-6);

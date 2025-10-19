@@ -37,7 +37,7 @@ twitter:
   creator: "@realcaptgeech"
 ---
 **OxideMiner** is a modern, Rust-native RandomX CPU miner that balances maximum hashrate with operational transparency.
-Its workspace is split into clean crates—`oxide-core` for the mining engine and `oxide-miner` for orchestration—keeping every byte auditable and reproducible.
+Its workspace is split into clean crates (`oxide-core` for the mining engine and `oxide-miner` for orchestration) keeping every byte auditable and reproducible.
 
 [View the repository →](https://github.com/raystanza/OxideMiner)
 
@@ -51,7 +51,7 @@ Its workspace is split into clean crates—`oxide-core` for the mining engine an
 - **Auto-tuned intelligence** – Detects CPU topology, cache sizes, and NUMA layout at startup to choose optimal thread counts and batch sizes.
 - **TLS-ready stratum client** – Securely connects to pools with optional certificate pinning, custom CA bundles, and SOCKS5 proxy support.
 - **Embedded observability** – Ships with a Prometheus-compatible `/metrics` endpoint, structured logs, and an optional HTTP dashboard.
-- **Honest dev fee** – A fixed, transparent 1% developer fee logged in both metrics and the dashboard—no hidden miners or opaque binaries.
+- **Honest dev fee** – A fixed, transparent 1% developer fee logged in both metrics and the dashboard. No hidden merge-miners or opaque binaries.
 
 ---
 
