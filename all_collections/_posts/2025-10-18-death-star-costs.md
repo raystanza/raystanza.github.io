@@ -188,6 +188,7 @@ The second number is not a contradiction. It is a recognition that once you mobi
 ## Operating Costs: The Daily Burn
 
 **Total daily cost**: **~$7.7 octillion**
+
 **Annualized**: **~$2.8 nonillion**
 
 ### Breakdown
