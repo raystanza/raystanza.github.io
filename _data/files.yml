@@ -1,0 +1,13 @@
+- name: "Primary PGP Public Key"
+  type: "PGP Key"
+  description: "Use this key to verify communications and releases signed by RayStanza."
+  file: "/assets/keys/main-public-20251012.asc"
+  fingerprint: "FDA0 6CAE 264D AC0D 29B0  3F51 95ED EDFD CB4D D826"
+  updated: "October 12, 2025"
+
+- name: "OxideMiner Release Signing Public Key"
+  type: "PGP Key"
+  description: "Use this key to verify release builds of OxideMiner."
+  file: "/assets/keys/release-subkey-ci-public-20251012.asc"
+  fingerprint: "867D F09D E634 44C2 DDD8 238E D757 8DEC 9517 D1B9"
+  updated: "October 12, 2025"

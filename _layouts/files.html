@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <main>
+      {% include header.html %}
+
+      <section class="files-section" aria-label="Downloadable resources">
+        <div class="files-container">
+          <header class="files-header">
+            <h1 class="files-title">{{ page.title }}</h1>
+            {% if page.intro %}
+              <p class="files-subtitle">{{ page.intro }}</p>
+            {% endif %}
+          </header>
+
+          {% if content %}
+            <div class="files-content">
+              {{ content }}
+            </div>
+          {% endif %}
+
+          {% assign resources = site.data.files %}
+          {% if resources and resources != empty %}
+            <div class="files-grid">
+              {% for resource in resources %}
+                <article class="file-card">
+                  <header class="file-card__header">
+                    <h2 class="file-card__title">{{ resource.name }}</h2>
+                    {% if resource.type %}
+                      <span class="file-card__tag">{{ resource.type }}</span>
+                    {% endif %}
+                  </header>
+
+                  {% if resource.description %}
+                    <p class="file-card__description">{{ resource.description }}</p>
+                  {% endif %}
+
+                  {% if resource.fingerprint or resource.updated %}
+                    <dl class="file-card__meta">
+                      {% if resource.fingerprint %}
+                        <div class="file-card__meta-row">
+                          <dt>Fingerprint</dt>
+                          <dd><code>{{ resource.fingerprint }}</code></dd>
+                        </div>
+                      {% endif %}
+                      {% if resource.updated %}
+                        <div class="file-card__meta-row">
+                          <dt>Updated</dt>
+                          <dd>{{ resource.updated }}</dd>
+                        </div>
+                      {% endif %}
+                    </dl>
+                  {% endif %}
+
+                  <div class="file-card__actions">
+                    <a class="file-card__link" href="{{ site.baseurl }}{{ resource.file }}" download>
+                      Download
+                    </a>
+                    <a class="file-card__link file-card__link--secondary" href="{{ site.baseurl }}{{ resource.file }}" target="_blank" rel="noopener">
+                      View online
+                    </a>
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="files-empty">No files are available at this time. Please check back later.</p>
+          {% endif %}
+        </div>
+      </section>
+
+      {% include footer.html %}
+    </main>
+  </body>
+</html>
