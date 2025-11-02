@@ -4,7 +4,7 @@ title: "The Finer Points of Rust That Actually Matter"
 date: 2025-10-04 08:30:00 -04:00
 
 description: >
- A high-level, brutally practical tour of Rust aimed at senior C and C# engineers. Covers ownership and borrowing, traits and generics, enums/ADTs, error handling, concurrency and async (`Send`/`Sync`, pinning, executors), FFI strategy, performance tuning, and real-world architecture patterns...plus a few war stories.
+  A high-level, brutally practical tour of Rust aimed at senior C and C# engineers. Covers ownership and borrowing, traits and generics, enums/ADTs, error handling, concurrency and async (`Send`/`Sync`, pinning, executors), FFI strategy, performance tuning, and real-world architecture patterns...plus a few war stories.
 
 canonical_url: "https://raystanza.uk/posts/finer-points-of-rust/"
 
