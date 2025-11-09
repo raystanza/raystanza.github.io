@@ -434,10 +434,6 @@ main {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  main {
-    padding: 1.5rem;
-  }
-
   .article-title {
     font-size: 2.2rem;
   }

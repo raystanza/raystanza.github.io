@@ -3,7 +3,7 @@
 }
 
 .files-container {
-  max-width: 90vw;
+  max-width: 95w;
   margin: 0 auto;
 }
 
@@ -13,8 +13,10 @@
 }
 
 .files-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .files-subtitle {
@@ -25,7 +27,7 @@
 }
 
 .files-content {
-  max-width: 90vw;
+  max-width: 95vw;
   margin: 0 auto 2.5rem;
   font-size: 1rem;
   line-height: 1.6;
@@ -35,9 +37,9 @@
 .files-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: -moz-repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-columns: -webkit-repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: -moz-repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: -webkit-repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: auto;
 }
 
