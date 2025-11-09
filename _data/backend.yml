@@ -1,83 +1,137 @@
 - name: Laravel
-  description: PHP-based web application framework employed to architect modular, service-oriented systems leveraging queue workers, job dispatchers, and Eloquent ORM for structured data modeling and API development.
-
+  description: PHP-based web application framework employed to architect modular,
+    service-oriented systems leveraging queue workers, job dispatchers, and Eloquent
+    ORM for structured data modeling and API development.
 - name: MySQL Server
-  description: ACID-compliant RDBMS utilized for high-availability data persistence and relational integrity across transactional applications. Proficient in schema optimization, replication strategies, and query performance tuning.
-
+  description: ACID-compliant RDBMS utilized for high-availability data persistence
+    and relational integrity across transactional applications. Proficient in schema
+    optimization, replication strategies, and query performance tuning.
 - name: Apache HTTP Server
-  description: Enterprise-grade web server configured for multi-tenant hosting environments via name-based virtual hosts, .htaccess rewrites, reverse proxying, and custom MPM tuning.
-
+  description: Enterprise-grade web server configured for multi-tenant hosting environments
+    via name-based virtual hosts, .htaccess rewrites, reverse proxying, and custom
+    MPM tuning.
 - name: Linode VPS
-  description: Self-managed, Linux-based cloud instances deployed for hosting production-grade services with direct control over system-level configuration, package management, and firewalling via UFW and iptables.
-
+  description: Self-managed, Linux-based cloud instances deployed for hosting production-grade
+    services with direct control over system-level configuration, package management,
+    and firewalling via UFW and iptables.
 - name: Cargo (Rust)
-  description: Rust's package manager and build system used to manage dependencies, compile source code, and publish libraries. Familiar with `Cargo.toml` configuration, workspaces, and common commands.
-
+  description: Rust's package manager and build system used to manage dependencies,
+    compile source code, and publish libraries. Familiar with `Cargo.toml` configuration,
+    workspaces, and common commands.
 - name: Flask (Python)
-  description: Micro web framework used to expose RESTful endpoints and WebSocket interfaces. Applied in service layers requiring lightweight routing logic, socket handling, and WSGI compatibility.
-
+  description: Micro web framework used to expose RESTful endpoints and WebSocket
+    interfaces. Applied in service layers requiring lightweight routing logic, socket
+    handling, and WSGI compatibility.
 - name: Flask-SocketIO
-  description: Asynchronous bidirectional communication library employed for real-time data streaming over WebSocket protocols with message event handling, fallback transport negotiation, and concurrency support via `eventlet`.
-
+  description: Asynchronous bidirectional communication library employed for real-time
+    data streaming over WebSocket protocols with message event handling, fallback
+    transport negotiation, and concurrency support via `eventlet`.
 - name: Certbot (Let's Encrypt)
-  description: Automated certificate authority client used to provision and renew domain-validated TLS certificates with Apache and DNS-01 challenge integrations for wildcard and proxied domains.
-
+  description: Automated certificate authority client used to provision and renew
+    domain-validated TLS certificates with Apache and DNS-01 challenge integrations
+    for wildcard and proxied domains.
 - name: UFW (Uncomplicated Firewall)
-  description: Host-based firewall front-end to `iptables` configured to enforce ingress/egress controls at the OS level. Rulesets include rate-limiting, port whitelisting, and traffic segmentation.
-
+  description: Host-based firewall front-end to `iptables` configured to enforce ingress/egress
+    controls at the OS level. Rulesets include rate-limiting, port whitelisting, and
+    traffic segmentation.
 - name: Cron
-  description: Time-based job scheduler utilized for executing recurring automation tasks including system maintenance, DNS updates, application backups, and monitoring scripts.
-
+  description: Time-based job scheduler utilized for executing recurring automation
+    tasks including system maintenance, DNS updates, application backups, and monitoring
+    scripts.
 - name: ERP Systems (Aureus ERP)
-  description: Customized modular ERP system via role-based access control, plugin extension, and backend permission mapping. Applied change management best practices in production-like environments.
-
+  description: Customized modular ERP system via role-based access control, plugin
+    extension, and backend permission mapping. Applied change management best practices
+    in production-like environments.
 - name: GitHub Actions
-  description: CI/CD automation platform orchestrated to perform build, lint, and deployment workflows for static and dynamic projects. YAML-based pipelines trigger based on Git event hooks with environment-specific configurations.
-
+  description: CI/CD automation platform orchestrated to perform build, lint, and
+    deployment workflows for static and dynamic projects. YAML-based pipelines trigger
+    based on Git event hooks with environment-specific configurations.
 - name: Systemd
-  description: Init system and service manager used for defining, enabling, and supervising long-lived user-space services. Authored custom `.service` units for Flask applications and Laravel queue workers with robust restart policies.
-
+  description: Init system and service manager used for defining, enabling, and supervising
+    long-lived user-space services. Authored custom `.service` units for Flask applications
+    and Laravel queue workers with robust restart policies.
 - name: Bash
-  description: Shell scripting used to develop administrative tools, interface wrappers, and automation pipelines. Emphasis on portability, defensive coding, and modular composition for maintainable toolchains.
-
+  description: Shell scripting used to develop administrative tools, interface wrappers,
+    and automation pipelines. Emphasis on portability, defensive coding, and modular
+    composition for maintainable toolchains.
 - name: SQLite
-  description: Embedded SQL database deployed in low-resource environments and development phases where RDBMS abstraction is required without persistent daemon overhead.
-
+  description: Embedded SQL database deployed in low-resource environments and development
+    phases where RDBMS abstraction is required without persistent daemon overhead.
 - name: PHP CLI
-  description: Command-line interface for executing application lifecycle commands including database migrations, cache management, scheduled job execution, and deployment scripting.
-
+  description: Command-line interface for executing application lifecycle commands
+    including database migrations, cache management, scheduled job execution, and
+    deployment scripting.
 - name: Apache Virtual Hosts
-  description: Managed isolated domain configurations through `sites-available` and `sites-enabled` paradigms, with granular control over document roots, SSL policies, and logging directives.
-
+  description: Managed isolated domain configurations through `sites-available` and
+    `sites-enabled` paradigms, with granular control over document roots, SSL policies,
+    and logging directives.
 - name: SSH & SCP
-  description: Secure shell protocols employed for encrypted remote access, port tunneling, and file transfer operations across trusted and firewalled infrastructure.
-
+  description: Secure shell protocols employed for encrypted remote access, port tunneling,
+    and file transfer operations across trusted and firewalled infrastructure.
 - name: Inertia.js (Server Layer)
-  description: Utilized as a server-side adapter enabling single-page app behavior in full-stack Laravel applications without exposing a REST API or breaking page state continuity.
-
+  description: Utilized as a server-side adapter enabling single-page app behavior
+    in full-stack Laravel applications without exposing a REST API or breaking page
+    state continuity.
 - name: Git
-  description: Distributed version control system used with conventional commits, release tagging, protected branches, and changelog generation scripts tailored for multi-stage release workflows.
-
+  description: Distributed version control system used with conventional commits,
+    release tagging, protected branches, and changelog generation scripts tailored
+    for multi-stage release workflows.
 - name: Redis
-  description: In-memory data structure store used for caching, session management, and pub/sub messaging patterns. Configured with persistence options and replication for high availability.
-
+  description: In-memory data structure store used for caching, session management,
+    and pub/sub messaging patterns. Configured with persistence options and replication
+    for high availability.
 - name: Cloudflare DNS & Proxy
-  description: Globally distributed DNS with reverse proxy functionality to mask origin IPs, control caching, and route encrypted traffic with SSL termination at the edge.
-
+  description: Globally distributed DNS with reverse proxy functionality to mask origin
+    IPs, control caching, and route encrypted traffic with SSL termination at the
+    edge.
 - name: Cloudflare Access
-  description: Identity-aware proxy used to secure internal tools and admin panels without a VPN. Integrated with GitHub and email-based authentication for private project access.
-
+  description: Identity-aware proxy used to secure internal tools and admin panels
+    without a VPN. Integrated with GitHub and email-based authentication for private
+    project access.
 - name: Cloudflare Pages
-  description: Serverless JAMstack deployment platform used for static documentation and client-facing sites. Integrated with GitHub repos and supports automatic cache invalidation.
-
+  description: Serverless JAMstack deployment platform used for static documentation
+    and client-facing sites. Integrated with GitHub repos and supports automatic cache
+    invalidation.
 - name: Cloudflare Workers
-  description: Lightweight JavaScript functions deployed at the edge. Considered for use in future latency-sensitive routing and content transformation pipelines.
-
+  description: Lightweight JavaScript functions deployed at the edge. Considered for
+    use in future latency-sensitive routing and content transformation pipelines.
 - name: Cloudflare WAF & Security Rules
-  description: Web Application Firewall ruleset applied for DDoS mitigation, bot protection, and rate limiting of public endpoints.
-
+  description: Web Application Firewall ruleset applied for DDoS mitigation, bot protection,
+    and rate limiting of public endpoints.
 - name: Cloudflare SSL & Cert Management
-  description: Flexible SSL configuration including Origin CA certificates, full strict mode, and automatic certificate rotation via DNS validation or HTTP challenge.
-
+  description: Flexible SSL configuration including Origin CA certificates, full strict
+    mode, and automatic certificate rotation via DNS validation or HTTP challenge.
 - name: Cloudflare Analytics
-  description: Real-time traffic analytics and logging for monitoring site performance, security events, and user engagement metrics. Integrated with third-party observability tools.
+  description: Real-time traffic analytics and logging for monitoring site performance,
+    security events, and user engagement metrics. Integrated with third-party observability
+    tools.
+- name: Actix Web (Rust)
+  description: High-performance Rust web framework used to build JWT-secured REST
+    APIs with middleware for CORS, rate-limits, and error handling.
+- name: SQLx (Any, MySQL, SQLite)
+  description: Async, compile-time checked SQL with pooled connections and driver-agnostic
+    Any layer; used with MySQL and SQLite in staged environments.
+- name: OpenAPI / Swagger (Utoipa + Swagger UI)
+  description: Derive-based OpenAPI generation with first-class Swagger UI integration
+    for live API docs and contract-driven development.
+- name: Tokio Runtime
+  description: Async runtime powering Actix/SQLx workloads with careful tuning of
+    worker threads and back-pressure for predictable latency.
+- name: JWT Authentication
+  description: Access/refresh token pairs with rotating secrets and claims, implemented
+    across Rust and Laravel services.
+- name: Tracing & Structured Logs
+  description: Contextual request tracing and JSON logs to support observability tooling
+    and production debugging.
+- name: OpenSSL Toolchain (Rust)
+  description: Resolved platform OpenSSL linkage on Debian/Ubuntu for rust-openssl,
+    documenting pkg-config vars and system package prerequisites.
+- name: Postfix + Dovecot (Mail Ops)
+  description: Automated domain onboarding, DKIM, and queue/backup scripts to simplify
+    reliable self-hosted email infrastructure.
+- name: SendGrid (Transactional Email)
+  description: Integrated API-driven transactional messaging for Laravel-based properties
+    with environment isolation.
+- name: Webmin & phpMyAdmin (Ops UI)
+  description: Admin UIs constrained to hardened subdomains for targeted maintenance
+    on low-resource VPS nodes.
