@@ -1,6 +1,6 @@
 /* Neumorphic card wrapper */
 .content-card {
-  padding-bottom: 2rem;
+  padding-bottom: var(--space-lg);
 }
 
 /* Section Titles */
@@ -8,7 +8,7 @@
   font-size: 2rem;
   color: var(--text-primary);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
 }
 
 /* Articles Section */
@@ -20,9 +20,9 @@
 
 .articles-card li {
   background: var(--gray-6);
-  padding: 1.5rem;
+  padding: var(--space-md);
   border-radius: 12px;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
   box-shadow: 8px 8px 16px var(--shadow-dark),
     -8px -8px 16px var(--shadow-light);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -36,7 +36,7 @@
 .articles-card h2 {
   font-size: 1.5rem;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2xs);
 }
 
 .articles-card h2 a {
@@ -55,7 +55,7 @@
 }
 
 .articles-card p {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
   font-size: 1rem;
   color: var(--white-1);
 }
@@ -63,7 +63,7 @@
 /* Project Section */
 .project-card .project-content {
   background: var(--gray-6);
-  padding: 1.5rem;
+  padding: var(--space-md);
   border-radius: 12px;
   box-shadow: 8px 8px 16px var(--shadow-dark),
     -8px -8px 16px var(--shadow-light);
@@ -78,7 +78,7 @@
 .project-card h2 {
   font-size: 1.6rem;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2xs);
 }
 
 .project-card h2 a {
@@ -92,7 +92,7 @@
 }
 
 .project-card p {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
   font-size: 1rem;
   color: var(--white-1);
 }
@@ -112,7 +112,7 @@
 .articles-card .more-link,
 .project-card .more-link {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: var(--space-md);
 }
 
 .articles-card .btn-more,
@@ -121,7 +121,7 @@
   background: var(--gray-6);
   color: var(--text-primary);
   text-decoration: none;
-  padding: 0.8rem 1.5rem;
+  padding: var(--space-xs) var(--space-md);
   border-radius: 12px;
   font-size: 1rem;
   font-weight: bold;

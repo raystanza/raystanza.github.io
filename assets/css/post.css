@@ -19,16 +19,16 @@ body {
 /* Main Content Styling */
 main {
   margin: 0 auto;
-  max-width: 95vw;
-  padding: 2rem 0;
+  width: var(--container-width);
+  padding: var(--space-xl) var(--space-md) var(--space-2xl);
 }
 
 /* Article Section Styling */
 .article {
   background: var(--gray-6);
-  padding: 0.5rem;
+  padding: var(--space-2xs);
   border-radius: 12px;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
   animation: fadeIn 0.6s ease-in-out;
 }
 
@@ -37,8 +37,8 @@ main {
   color: var(--text-primary);
   font-size: 2.6rem;
   text-align: center;
-  margin: 0 0 1.5rem;
-  padding-bottom: 1rem;
+  margin: 0 0 var(--space-md);
+  padding-bottom: var(--space-sm);
   border-bottom: 2px solid var(--text-secondary);
 }
 
@@ -48,12 +48,12 @@ main {
   font-size: 1.1rem;
   color: var(--highlight-color);
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 /* Article Image & Caption */
 .article-image {
-  margin: 2rem 0;
+  margin: var(--space-lg) 0;
   text-align: center;
 }
 
@@ -65,7 +65,7 @@ main {
 }
 
 .image-caption {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
   font-size: 1rem;
   color: var(--white-2);
   font-style: italic;
@@ -75,7 +75,7 @@ main {
 /* Back button beside the title */
 .back-button {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
   color: var(--highlight-color);
   font-size: 1.1rem;
   text-decoration: none;
@@ -88,7 +88,7 @@ main {
 /* Container for the “Back To Top” link */
 .back-to-top-container {
   text-align: right;
-  margin-top: 2rem;
+  margin-top: var(--space-lg);
 }
 
 /* The “Back To Top” link itself */
@@ -107,7 +107,7 @@ main {
 .categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: var(--space-2xs);
   margin: 0;
   padding: 0;
 }
@@ -115,7 +115,7 @@ main {
 .categories .category {
   background: var(--gray-6);
   border-radius: 8px;
-  padding: 0.4rem 0.8rem;
+  padding: var(--space-2xs) var(--space-sm);
   font-size: 0.85rem;
   color: var(--text-secondary);
   text-transform: uppercase;
@@ -135,7 +135,7 @@ main {
 }
 
 .content p {
-  margin: 0 0 1.75rem;
+  margin: 0 0 var(--space-xl);
   font-size: 1.2rem;
 }
 
@@ -145,21 +145,21 @@ main {
 .content h4,
 .content h5,
 .content h6 {
-  margin: 1.75rem 0;
+  margin: var(--space-xl) 0;
   color: var(--text-primary);
 }
 
 .content ul,
 .content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.75rem;
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 /* Raised neumorphic code block */
 .content pre {
   background: var(--pre-bg);
-  padding: 1rem 2rem;
-  margin-bottom: 1.75rem;
+  padding: var(--space-sm) var(--space-lg);
+  margin-bottom: var(--space-xl);
   overflow-x: auto;
   border-radius: var(--elev-radius);
 
@@ -195,7 +195,7 @@ main {
 /* Tables */
 .content table {
   width: 100%;
-  margin: 2rem 0;
+  margin: var(--space-lg) 0;
   border-collapse: collapse;
   background-color: var(--gray-3);
   border-radius: 12px;
@@ -223,7 +223,7 @@ main {
 }
 
 .content thead th {
-  padding: 1rem;
+  padding: var(--space-sm);
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
@@ -242,7 +242,7 @@ main {
 }
 
 .content td {
-  padding: 0.9rem 1.2rem;
+  padding: var(--space-xs) var(--space-sm);
   border-bottom: 1px solid var(--gray-4);
   color: var(--text-primary);
 }
@@ -250,13 +250,13 @@ main {
 /* Lists */
 .content ul,
 .content ol {
-  margin: 1.5rem 0 1.75rem 2rem;
-  padding-left: 1rem;
+  margin: var(--space-md) 0 var(--space-xl) var(--space-lg);
+  padding-left: var(--space-sm);
   line-height: 1.8;
 }
 
 .content li {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-xs);
   font-size: 1.1rem;
   color: var(--white-2);
 }
@@ -277,15 +277,15 @@ main {
 
 /* Task Lists */
 .content ul.task-list {
-  margin-left: 2rem;
+  margin-left: var(--space-lg);
   padding-left: 0;
   list-style: none;
 }
 
 .content .task-list-item {
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1rem;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
   font-size: 1.1rem;
   color: var(--white-2);
 }
@@ -339,8 +339,8 @@ main {
 .content blockquote {
   background: var(--gray-4);
   border-left: 4px solid var(--highlight-color);
-  padding: 1rem 0.5rem;
-  margin: 1rem 0.5rem;
+  padding: var(--space-sm) var(--space-2xs);
+  margin: var(--space-sm) var(--space-2xs);
   color: var(--white-2);
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -363,7 +363,7 @@ main {
 .content hr {
   border: 0;
   height: 3px;
-  margin: 1.75rem 0;
+  margin: var(--space-xl) 0;
   background: var(--hr-bg);
   border-radius: var(--hr-radius);
 
@@ -389,7 +389,7 @@ main {
 .content img {
   cursor: zoom-in;
   max-width: 100%;
-  margin: 1rem 0;
+  margin: var(--space-sm) 0;
 }
 
 #lightbox {
