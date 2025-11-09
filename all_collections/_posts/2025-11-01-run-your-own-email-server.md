@@ -632,7 +632,7 @@ If you send **very low volume** (hundreds/month), this is competitive with paid 
 
 * Data locality: your messages rest on disks you control.
 * Minimal data exhaust: no vendor-level tracking or analytics injected into your messages.
-* Auditability: full logs—with the responsibility to safeguard them.
+* Auditability: full logs; with the responsibility to safeguard them.
 
 **Responsibilities:**
 

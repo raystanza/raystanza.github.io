@@ -36,7 +36,7 @@ og_description: >
 robots: "index, follow"
 
 twitter:
-  card:    "summary_large_image"
+  card: "summary_large_image"
   creator: "@realcaptgeech"
 ---
 Laravel, one of the most popular PHP frameworks, is known for its elegant syntax and robust features. Among its many capabilities, **queue workers** stand out as a powerful tool for managing asynchronous tasks. Laravel queue workers handle the execution of jobs in a queue, enabling developers to offload resource-intensive or time-consuming tasks, improve application performance, and ensure a seamless user experience.

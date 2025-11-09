@@ -32,7 +32,7 @@ og_description: >
 robots: "index, follow"
 
 twitter:
-  card:    "summary_large_image"
+  card: "summary_large_image"
   creator: "@realcaptgeech"
 ---
 
