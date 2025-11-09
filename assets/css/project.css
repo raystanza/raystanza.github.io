@@ -2,7 +2,7 @@
 .projects-title {
   font-size: 2rem;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
   text-align: center;
 }
 
@@ -17,9 +17,9 @@
 }
 
 .projects-section li {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
   background: var(--gray-6);
-  padding: 1.5rem;
+  padding: var(--space-md);
   border-radius: 12px;
   box-shadow: 8px 8px 16px var(--shadow-dark),
     -8px -8px 16px var(--shadow-light);
@@ -52,13 +52,13 @@
 .projects-section p {
   color: var(--white-1);
   font-size: 1rem;
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
 }
 
 /* Project Article Container */
 .project-content {
   background: var(--gray-6);
-  padding: 0.5rem;
+  padding: var(--space-2xs);
   border-radius: 12px;
   margin: auto;
   animation: fadeIn 0.6s ease-in-out;
@@ -68,9 +68,9 @@
   color: var(--text-primary);
   font-size: 2.6rem;
   text-align: center;
-  margin: 0 0 1.5rem;
+  margin: 0 0 var(--space-md);
   text-shadow: 0 0 8px var(--bg-primary-retro), 0 0 14px var(--highlight-color);
-  padding-bottom: 1rem;
+  padding-bottom: var(--space-sm);
   border-bottom: 2px solid var(--text-secondary);
 }
 
@@ -79,11 +79,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1rem;
-  row-gap: .5rem;
+  column-gap: var(--space-sm);
+  row-gap: var(--space-2xs);
   flex-wrap: wrap;
-  margin: 1.5rem 0;
-  padding: 1rem;
+  margin: var(--space-md) 0;
+  padding: var(--space-sm);
   background: var(--gray-6);
   border-radius: 8px;
   box-shadow:
@@ -95,7 +95,7 @@
 .project-date {
   display: flex;
   align-items: center;
-  gap: .4rem;
+  gap: var(--space-2xs);
   font-weight: bold;
   color: var(--highlight-color);
   font-size: 1.1rem;
@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: .4rem;
+  gap: var(--space-2xs);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -116,7 +116,7 @@
 .project-category {
   background: var(--gray-3);
   border-radius: 8px;
-  padding: 0.3rem 0.6rem;
+  padding: var(--space-3xs) var(--space-2xs);
   font-size: 0.75rem;
   line-height: 1;
   color: var(--white-1);
@@ -145,15 +145,15 @@
 /* Project Description */
 .project-description {
   font-size: 1.4rem;
-  margin: 1.5rem 0;
+  margin: var(--space-md) 0;
   color: var(--white-1);
   line-height: 1.8;
-  padding: 1rem;
+  padding: var(--space-sm);
 }
 
 /* Project Image & Caption */
 .project-image {
-  margin: 2rem 0;
+  margin: var(--space-lg) 0;
   text-align: center;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .image-caption {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
   font-size: 1rem;
   color: var(--white-2);
   font-style: italic;
@@ -175,7 +175,7 @@
 /* Back button beside the title */
 .back-button {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
   color: var(--highlight-color);
   font-size: 1.1rem;
   text-decoration: none;
@@ -187,7 +187,7 @@
 
 /* Project Main Content */
 .project-main-content {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
   line-height: 1.8;
   font-size: 1.1rem;
   color: var(--white-2);
@@ -196,7 +196,7 @@
 /* Container for the “Back To Top” link */
 .back-to-top-container {
   text-align: right;
-  margin-top: 2rem;
+  margin-top: var(--space-lg);
 }
 
 /* The “Back To Top” link itself */
@@ -230,7 +230,7 @@
 }
 
 .project-main-content p {
-  margin: 0 0 1.75rem;
+  margin: 0 0 var(--space-xl);
   font-size: 1.2rem;
 }
 
@@ -240,22 +240,22 @@
 .project-main-content h4,
 .project-main-content h5,
 .project-main-content h6 {
-  margin: 1.75rem 0;
+  margin: var(--space-xl) 0;
   color: var(--text-primary);
   text-shadow: 0 0 8px var(--highlight-color-muted);
 }
 
 .project-main-content ul,
 .project-main-content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.75rem;
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 /* Raised neumorphic code block */
 .project-main-content pre {
   background: var(--pre-bg);
-  padding: 1rem 2rem;
-  margin-bottom: 1.75rem;
+  padding: var(--space-sm) var(--space-lg);
+  margin-bottom: var(--space-xl);
   overflow-x: auto;
   border-radius: var(--elev-radius);
 
@@ -291,7 +291,7 @@
 /* Tables */
 .project-main-content table {
   width: 100%;
-  margin: 2rem 0;
+  margin: var(--space-lg) 0;
   border-collapse: collapse;
   background-color: var(--gray-3);
   border-radius: 12px;
@@ -319,7 +319,7 @@
 }
 
 .project-main-content thead th {
-  padding: 1rem;
+  padding: var(--space-sm);
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid var(--highlight-color);
@@ -338,7 +338,7 @@
 }
 
 .project-main-content td {
-  padding: 0.9rem 1.2rem;
+  padding: var(--space-xs) var(--space-sm);
   border-bottom: 1px solid var(--gray-4);
   color: var(--text-primary);
 }
@@ -346,13 +346,13 @@
 /* Lists */
 .project-main-content ul,
 .project-main-content ol {
-  margin: 1.5rem 0 1.75rem 2rem;
-  padding-left: 1rem;
+  margin: var(--space-md) 0 var(--space-xl) var(--space-lg);
+  padding-left: var(--space-sm);
   line-height: 1.8;
 }
 
 .project-main-content li {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-xs);
   font-size: 1.1rem;
   color: var(--white-2);
 }
@@ -373,15 +373,15 @@
 
 /* Task Lists */
 .project-main-content ul.task-list {
-  margin-left: 2rem;
+  margin-left: var(--space-lg);
   padding-left: 0;
   list-style: none;
 }
 
 .project-main-content .task-list-item {
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1rem;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
   font-size: 1.1rem;
   color: var(--white-2);
 }
@@ -435,8 +435,8 @@
 .project-main-content blockquote {
   background: var(--gray-4);
   border-left: 4px solid var(--highlight-color);
-  padding: 1rem 0.5rem;
-  margin: 1rem 0.5rem;
+  padding: var(--space-sm) var(--space-2xs);
+  margin: var(--space-sm) var(--space-2xs);
   color: var(--white-2);
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -459,7 +459,7 @@
 .project-main-content hr {
   border: 0;
   height: 3px;
-  margin: 1.75rem 0;
+  margin: var(--space-xl) 0;
   background: var(--hr-bg);
   border-radius: var(--hr-radius);
 
@@ -486,7 +486,7 @@
 .project-main-content img {
   cursor: zoom-in;
   max-width: 100%;
-  margin: 1rem 0;
+  margin: var(--space-sm) 0;
 }
 
 #lightbox {
@@ -529,9 +529,9 @@
   .project-description {
     font-size: 1.2rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: var(--space-sm) 0;
     color: var(--white-1);
     line-height: 1.5;
-    padding: 1rem;
+    padding: var(--space-sm);
   }
 }
