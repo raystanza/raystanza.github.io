@@ -12,14 +12,15 @@ Gemfile.lock
 # System-specific and editor settings
 .vs
 .vscode
-.DS_Store  # macOS metadata file
-Thumbs.db  # Windows metadata file
+.vscode/settings.json
+.DS_Store
+Thumbs.db
 
 # Logs and temporary files
 *.log
 *.tmp
 *.bak
-*.swp  # Vim swap files
+*.swp
 
 # Backup or temporary files
 *.bak

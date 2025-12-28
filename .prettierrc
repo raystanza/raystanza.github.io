@@ -1,37 +1,37 @@
 {
-    "printWidth": 80,
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "bracketSpacing": true,
-    "arrowParens": "always",
-    "proseWrap": "always",
-    "overrides": [
-      {
-        "files": "*.md",
-        "options": {
-          "parser": "markdown"
-        }
-      },
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "html"
-        }
-      },
-      {
-        "files": "*.css",
-        "options": {
-          "parser": "css"
-        }
-      },
-      {
-        "files": "*.js",
-        "options": {
-          "parser": "babel"
-        }
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "proseWrap": "preserve",
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown"
       }
-    ]
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel"
+      }
+    }
+  ]
 }
