@@ -104,10 +104,6 @@
   description: 'Shipped a faithful recreation of classic Windows Notepad with modern
     touches: custom icons, encoding dialogs, portable single-file packaging, and release
     automation through GitHub Actions with CodeQL scanning and GPG-signed releases.'
-- title: VAM Duplicate Finder (vdf_c) - High-throughput C# CLI
-  description: Built a multi-threaded SHA-256 deduplication tool capable of scanning
-    large file trees with structured reports, robust logging, and CI-driven packaging
-    for Windows and Linux targets.
 - title: Hardened Release Engineering
   description: Implemented end-to-end CI/CD pipelines with GitHub Actions spanning
     matrix builds, artifact checksums, CodeQL, GPG signing with subkeys/YubiKey, and
@@ -120,7 +116,7 @@
 - title: GPG + YubiKey Operational Playbook
   description: 'Authored in-depth guidance and automation for secure key management:
     offline master keys, signing/encryption subkeys, revocation certificates, hardware
-    token storage (YubiKey 5 NFC/5C NFC), and loopback pinentry for headless systems.'
+    token storage (YubiKey), and loopback pinentry for headless systems.'
 - title: Linux Server Operations on Linode (Ubuntu 22.04/24.04)
   description: Provisioned and maintained Apache and MySQL on separate VPS nodes with
     UFW hardening, certbot/Let's Encrypt, phpMyAdmin/Webmin on isolated subdomains,

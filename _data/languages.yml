@@ -1,15 +1,20 @@
+- name: C/C++
+  description: Foundational systems programming languages used for low-level application
+    development, performance optimization, and understanding memory management concepts.
+    Experience includes building command-line tools and learning core language features
+    such as pointers, data structures, and object-oriented programming principles.
 - name: C#
   description: Object-oriented language used in limited project scopes and early experimentation
     with .NET-based applications. Familiar with core syntax, control structures, and
     general usage patterns, though not actively used in production environments.
-- name: PHP
-  description: Server-side language used extensively with Laravel and procedural PHP
-    applications. Proficient in MVC patterns, templating, route controllers, service
-    containers, and queue-based job systems.
 - name: Rust
   description: Systems programming language used for performance-critical components
     and learning purposes. Experience with ownership model, concurrency, and building
     CLI tools, though not yet applied in large-scale production systems.
+- name: PHP
+  description: Server-side language used extensively with Laravel and procedural PHP
+    applications. Proficient in MVC patterns, templating, route controllers, service
+    containers, and queue-based job systems.
 - name: JavaScript (ES6+)
   description: Primary scripting language for client-side interactivity. Applied in
     Vue.js and native browser contexts for reactive UI behavior, DOM manipulation,

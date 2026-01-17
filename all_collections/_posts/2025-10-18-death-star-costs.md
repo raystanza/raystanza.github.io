@@ -57,7 +57,7 @@ twitter:
   creator: "@realcaptgeech"
 ---
 
-## Executive Snapshot
+## We begin at the begining
 
 ### **Geometry and scale**
 
