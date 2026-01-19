@@ -47,7 +47,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 *Postfix + Dovecot + OpenDKIM on Debian/Ubuntu, with a focus on transactional mail, and a frank look at the potholes you’ll hit along the way.*
 

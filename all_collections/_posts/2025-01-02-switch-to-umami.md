@@ -33,7 +33,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 
 If you’ve ever run a website-or ten-you’ve probably used Google Analytics. It’s the 800-pound gorilla of web analytics, and for a while, I used it too. Back then, it felt like the logical choice: it’s free, powerful, and gives you more data than you know what to do with.

@@ -34,7 +34,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 Imagine trying to flip a simple light switch, but instead of just, you know, flipping it, you decide to turn it into the most ridiculous, Rube Goldberg-esque contraption ever conceived. We're talking a million times more complicated than it needs to be-a true symphony of unnecessary steps. What I've got here is a wild, conceptual blueprint for just such a contraption, one that mashes up mechanical gears, digital gizmos, biological reactions, and even cosmic alignments. The goal remains the same...flip that light switch. But the path to getting there? Pure, unadulterated absurdity.
 

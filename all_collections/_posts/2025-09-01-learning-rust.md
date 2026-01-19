@@ -34,7 +34,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 So, you’ve decided to learn Rust.
 First of all, congratulations...or condolences, depending on how many hours you’ve already spent staring at compiler errors while whispering *“why won’t you just let me have a mutable reference?”*

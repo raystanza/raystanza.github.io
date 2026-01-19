@@ -33,7 +33,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 ## What Is Metasploit?
 

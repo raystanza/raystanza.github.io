@@ -54,7 +54,7 @@ robots: 'index, follow'
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 
 ## We begin at the begining

@@ -37,7 +37,7 @@ robots: 'index, follow'
 
 twitter:
   card: 'summary_large_image'
-  creator: '@realcaptgeech'
+  creator: '@raystanza'
 ---
 
 **OxideMiner** is a Rust-native RandomX CPU miner for Monero (XMR) with a bias toward things I care about as an operator: predictable behavior, clear logs, and enough observability that you do not have to guess what it is doing at 3 AM.

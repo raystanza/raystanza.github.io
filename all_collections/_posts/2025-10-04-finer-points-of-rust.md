@@ -44,7 +44,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 If you’ve been shipping serious systems in C or C# for a decade (or three), you’ve already seen several waves of “this time it’s different” languages come and go. Most of them promised memory safety, better concurrency, and *performance*, as if the last two weren’t usually fighting in the parking lot. Rust is different in a way that’s both boring and profound: it makes a lot of the bugs you already know about unrepresentable, and it does it with compile-time constraints that are strict.
 

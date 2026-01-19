@@ -39,7 +39,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 
 Ah, the age-old question: "How do I center a `<div>`?" Ask it in any developer community, and you'll likely summon a mob armed with pitchforks (read: Stack Overflow links). The truth is, centering a `<div>` is the software equivalent of assembling IKEA furniture-it seems simple in theory, but in practice, you'll need divine intervention, a PhD in CSS, and probably a good cry.

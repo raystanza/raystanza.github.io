@@ -39,7 +39,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 In this article, we're diving into the process of setting up a full-stack project using a powerful combination of technologies: Next.js, tRPC, Prisma, and PostgreSQL. This stack enables developers to build scalable, type-safe applications with ease. We'll walk through each step, from initializing the project to configuring each technology, providing example code and commands to guide you through the setup.
 

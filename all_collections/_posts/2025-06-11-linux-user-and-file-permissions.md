@@ -33,7 +33,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 
 > *"Unix was not designed to stop you from doing stupid things, because that would also stop you from doing clever things."* ― *Doug Gwyn*

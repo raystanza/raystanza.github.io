@@ -30,7 +30,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 
 > **TL;DR** Add the HashiCorp apt repo, install Terraform, then declare infrastructure across **AWS**, **Cloudflare**, and **Linode** from one codebase.

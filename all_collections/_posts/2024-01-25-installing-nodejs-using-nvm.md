@@ -34,7 +34,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 Node.js, a runtime environment for executing JavaScript code server-side, is an essential tool in modern web development. In this tutorial, we'll focus on installing Node.js on a Linux system using Node Version Manager (NVM). NVM is a handy tool that allows you to install multiple versions of Node.js and switch between them with ease.
 

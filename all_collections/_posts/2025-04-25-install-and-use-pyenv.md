@@ -38,7 +38,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 If you've spent any time in Python development, you've likely encountered the notorious "dependency hell" or struggled with conflicting Python versions across projects. Enter **pyenv**, a robust tool that quietly revolutionizes how developers manage Python installations and virtual environments. This comprehensive guide will walk you through implementing pyenv on Debian-based Linux systems, empowering you with precise control over your Python development environments.
 

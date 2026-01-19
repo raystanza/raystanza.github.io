@@ -33,7 +33,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 Using Vim, the highly configurable text editor, is akin to learning a new language for many. Its efficiency and power come at the cost of a steep learning curve, but once mastered, it can significantly speed up your workflow. This article aims to demystify Vim for beginners, providing a guide to get started with this versatile editor.
 

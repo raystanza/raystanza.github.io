@@ -34,7 +34,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 PostgreSQL, commonly known as Postgres, is an open-source, powerful, and advanced relational database management system (RDBMS). It's widely used for its reliability, robustness, and performance, especially in handling complex data types and large volumes of data. This guide will walk you through the steps to install PostgreSQL on various operating systems, ensuring you have a solid foundation for developing database-driven applications.
 

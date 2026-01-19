@@ -6,7 +6,7 @@ description: >- # ignore newlines until "baseurl:"
   This is a playground where an alternate 'Me' lives.
 baseurl: "" # e.g. /docs
 url: "https://raystanza.uk"
-twitter_username: realcaptgeech
+twitter_username: raystanza
 github_username: raystanza
 
 author: _data/author.yml
@@ -57,7 +57,7 @@ seo:
   description: "A personal blog and portfolio by Jim Sines."
   url: "https://raystanza.uk"
   image: "/assets/icons/og-image.png"
-  twitter: "@realcaptgeech"
+  twitter: "@raystanza"
 
 # Excluded items
 exclude:

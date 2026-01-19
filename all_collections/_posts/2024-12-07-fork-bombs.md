@@ -38,7 +38,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 A **fork-bomb** is a type of Denial of Service (DoS) attack where a process continuously spawns itself, quickly consuming system resources like CPU and memory. Fork-bombs exploit a system's multitasking capabilities to overload it, rendering it unresponsive. While commonly associated with malicious behavior, fork-bombs are often used for educational purposes to demonstrate system vulnerabilities.
 

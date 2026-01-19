@@ -36,7 +36,7 @@ robots: "index, follow"
 
 twitter:
   card: "summary_large_image"
-  creator: "@realcaptgeech"
+  creator: "@raystanza"
 ---
 
 > “Back in vo-tech we’d fire up Command & Conquer: Red Alert between labs. I am chasing that nostalgia to this day.”
