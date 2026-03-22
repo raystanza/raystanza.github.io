@@ -13,6 +13,7 @@ const validThemePreferences = new Set(Object.keys(themeLabels));
 const storageKey = "raystanza-theme";
 const root = document.documentElement;
 const themeDropdown = document.querySelector("[data-theme-dropdown]");
+const mobileNav = document.querySelector("[data-site-nav-mobile]");
 const themeOptions = Array.from(document.querySelectorAll("[data-theme-option]"));
 const currentThemeNodes = document.querySelectorAll("[data-theme-current]");
 const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -47,6 +48,10 @@ function persistThemePreference(preference) {
   }
 }
 
+function closeDisclosure(disclosure) {
+  disclosure?.removeAttribute("open");
+}
+
 function updateThemeUi(preference) {
   const label = themeLabels[preference] || themeLabels.light;
 
@@ -79,19 +84,36 @@ function applyThemePreference(preference, { persist = true } = {}) {
 themeOptions.forEach((option) => {
   option.addEventListener("click", () => {
     applyThemePreference(option.dataset.themeOption);
-    themeDropdown?.removeAttribute("open");
+    closeDisclosure(themeDropdown);
   });
+});
+
+themeDropdown?.addEventListener("toggle", () => {
+  if (themeDropdown.open) {
+    closeDisclosure(mobileNav);
+  }
+});
+
+mobileNav?.addEventListener("toggle", () => {
+  if (mobileNav.open) {
+    closeDisclosure(themeDropdown);
+  }
 });
 
 document.addEventListener("click", (event) => {
   if (themeDropdown?.open && !themeDropdown.contains(event.target)) {
-    themeDropdown.removeAttribute("open");
+    closeDisclosure(themeDropdown);
+  }
+
+  if (mobileNav?.open && !mobileNav.contains(event.target)) {
+    closeDisclosure(mobileNav);
   }
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && themeDropdown?.open) {
-    themeDropdown.removeAttribute("open");
+  if (event.key === "Escape") {
+    closeDisclosure(themeDropdown);
+    closeDisclosure(mobileNav);
   }
 });
 
