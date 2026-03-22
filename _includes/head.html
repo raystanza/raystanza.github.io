@@ -12,6 +12,37 @@
   <!-- Font Imports -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
 
+  <script>
+    (() => {
+      const storageKey = "raystanza-theme";
+      const fallbackTheme = "light";
+      const validThemes = new Set([
+        "system",
+        "light",
+        "dark",
+        "nebula",
+        "win95",
+        "system7",
+        "vintage",
+        "pine",
+      ]);
+
+      try {
+        const storedTheme = localStorage.getItem(storageKey);
+        const themePreference = validThemes.has(storedTheme) ? storedTheme : fallbackTheme;
+        const resolvedTheme = themePreference === "system"
+          ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          : themePreference;
+
+        document.documentElement.dataset.themePreference = themePreference;
+        document.documentElement.dataset.theme = resolvedTheme;
+      } catch (error) {
+        document.documentElement.dataset.themePreference = fallbackTheme;
+        document.documentElement.dataset.theme = fallbackTheme;
+      }
+    })();
+  </script>
+
   <!-- CSS Links -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/common.css" />
   {% if page.layout == "post" %}
@@ -33,8 +64,10 @@
   {% elsif page.layout == "errors" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/errors.css" />
   {% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/themes.css" />
 
   <!-- JavaScript Links -->
+  <script defer src="{{ site.baseurl }}/assets/js/theme.js"></script>
   {% if page.layout == "blog" or page.layout == "post" %}
     <script src="{{ site.baseurl }}/assets/js/categories.js"></script>
   {% endif %}

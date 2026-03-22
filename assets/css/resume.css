@@ -42,18 +42,18 @@ strong {
   display: inline-block;
   min-width: 150px;
   font-weight: 600;
-  color: #000;
+  color: var(--text-primary);
 }
 
 .subitem {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-secondary);
   margin-left: var(--space-sm);
   display: block;
 }
 
 a {
-  color: #0366d6;
+  color: var(--highlight-color-retro);
   text-decoration: none;
 }
 
@@ -89,13 +89,13 @@ a:hover {
 .resume-list li {
   margin-bottom: var(--space-md);
   padding-left: var(--space-sm);
-  border-left: 3px solid #eee;
+  border-left: 3px solid var(--gray-4);
 }
 
 .item-header {
   font-weight: bold;
   font-size: 1.05rem;
-  color: #111;
+  color: var(--white-1);
   margin-bottom: var(--space-3xs);
 }
 

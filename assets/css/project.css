@@ -126,7 +126,7 @@
 
 .project-category:hover {
   background: var(--highlight-color-muted);
-  color: var(--text-primary);
+  color: var(--accent-muted-contrast);
 }
 
 .category-link {
@@ -161,7 +161,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px var(--image-shadow);
 }
 
 .image-caption {
@@ -439,7 +439,7 @@
   margin: var(--space-sm) var(--space-2xs);
   color: var(--white-2);
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px var(--ambient-shadow);
   font-size: 1rem;
 }
 
@@ -469,10 +469,10 @@
 
   background-image: linear-gradient(
     to bottom,
-    rgba(255,255,255,0.35),
-    rgba(255,255,255,0.05) 40%,
-    rgba(0,0,0,0.04) 60%,
-    rgba(0,0,0,0.10)
+    var(--surface-gloss-top),
+    var(--surface-gloss-mid) 40%,
+    var(--surface-gloss-low) 60%,
+    var(--surface-gloss-deep)
   );
 }
 
@@ -496,7 +496,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--lightbox-backdrop);
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -513,8 +513,8 @@
   max-width: 90%;
   max-height: 80%;
   padding: 4px;
-  background-color: black;
-  border: 2px solid white;
+  background-color: var(--lightbox-frame-bg);
+  border: 2px solid var(--lightbox-frame-border);
 }
 
 /* Media Queries */

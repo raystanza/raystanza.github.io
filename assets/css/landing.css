@@ -30,7 +30,7 @@
 
 .articles-card li:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px var(--ambient-shadow);
 }
 
 .articles-card h2 {
@@ -72,7 +72,7 @@
 
 .project-card .project-content:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px var(--ambient-shadow);
 }
 
 .project-card h2 {
@@ -132,7 +132,7 @@
 
 .articles-card .btn-more:hover,
 .project-card .btn-more:hover {
-  color: var(--text-primary);
+  color: var(--accent-muted-contrast);
   background: var(--highlight-color-muted);
   transform: translateY(-2px);
 }

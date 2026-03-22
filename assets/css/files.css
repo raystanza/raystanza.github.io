@@ -70,7 +70,7 @@
 .file-card__tag {
   align-self: center;
   background: var(--highlight-color-muted);
-  color: var(--text-primary);
+  color: var(--accent-muted-contrast);
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -125,13 +125,13 @@
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 10px var(--ambient-shadow);
 }
 
 .file-card__link:hover,
 .file-card__link:focus {
   transform: translateY(-1px);
-  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px 16px var(--ambient-shadow-strong);
 }
 
 .file-card__link--secondary {

@@ -1,15 +1,12 @@
 <header class="site-header" role="banner">
   <div class="header-container">
-
-    <!-- Site Title -->
     <div class="title-wrapper">
       <a class="site-title" href="{{ site.baseurl }}/">
         {{ site.title }}
       </a>
     </div>
-    
-    <!-- Navigation Menu -->
-    <nav>
+
+    <nav class="site-nav" aria-label="Primary">
       <ul class="nav-menu">
         <li>
           <a href="{{ site.baseurl }}/blog" class="nav-link">
@@ -33,5 +30,126 @@
         </li>
       </ul>
     </nav>
+
+    <div class="header-tools">
+      <details class="theme-dropdown" data-theme-dropdown>
+        <summary class="theme-dropdown__toggle" aria-label="Select a theme">
+          <span class="theme-dropdown__dots" aria-hidden="true">
+            <span class="theme-dropdown__dot"></span>
+            <span class="theme-dropdown__dot"></span>
+            <span class="theme-dropdown__dot"></span>
+          </span>
+          <span class="theme-dropdown__label">Theme</span>
+          <span class="theme-dropdown__current" data-theme-current>Light</span>
+          <span class="theme-dropdown__caret" aria-hidden="true"></span>
+        </summary>
+
+        <div class="theme-dropdown__menu">
+          <button type="button" class="theme-dropdown__option" data-theme-option="system" aria-pressed="false" style="--swatch-a: #f3f4f6; --swatch-b: #1f2937; --swatch-c: #348505;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">System</span>
+              <span class="theme-dropdown__meta">Follow your OS preference</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="light" aria-pressed="false" style="--swatch-a: #ffffff; --swatch-b: #e0e0e0; --swatch-c: #348505;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">Light</span>
+              <span class="theme-dropdown__meta">Current neutral neumorphic default</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="dark" aria-pressed="false" style="--swatch-a: #202730; --swatch-b: #2d3742; --swatch-c: #69d3a1;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">Dark</span>
+              <span class="theme-dropdown__meta">Low-glare charcoal with green accents</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="nebula" aria-pressed="false" style="--swatch-a: #0c1118; --swatch-b: #38475f; --swatch-c: #8cc8ff;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">Nebula</span>
+              <span class="theme-dropdown__meta">BlackBerry-style graphite with luminous blues</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="win95" aria-pressed="false" style="--swatch-a: #008080; --swatch-b: #d4d0c8; --swatch-c: #0a246a;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">Win95</span>
+              <span class="theme-dropdown__meta">Windows 95 desktop chrome with beveled controls</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="system7" aria-pressed="false" style="--swatch-a: #c1c5bf; --swatch-b: #fbfbf8; --swatch-c: #1c5eb6;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">System 7</span>
+              <span class="theme-dropdown__meta">Classic Macintosh platinum with striped title bars</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="vintage" aria-pressed="false" style="--swatch-a: #f8efe0; --swatch-b: #dfcaa9; --swatch-c: #8b5a2b;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">Vintage</span>
+              <span class="theme-dropdown__meta">Parchment editorial with antique reading contrast</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="theme-dropdown__option" data-theme-option="pine" aria-pressed="false" style="--swatch-a: #09110b; --swatch-b: #223528; --swatch-c: #8bcf95;">
+            <span class="theme-dropdown__swatches" aria-hidden="true">
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+              <span class="theme-dropdown__swatch"></span>
+            </span>
+            <span class="theme-dropdown__copy">
+              <span class="theme-dropdown__name">Pine</span>
+              <span class="theme-dropdown__meta">Forest terminal hybrid with restrained green glow</span>
+            </span>
+            <span class="theme-dropdown__state" aria-hidden="true"></span>
+          </button>
+        </div>
+      </details>
+    </div>
   </div>
 </header>
