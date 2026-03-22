@@ -390,8 +390,8 @@
 
 /* Custom Emoji Checkboxes with Green Border */
 .project-main-content .task-list-item-checkbox {
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   position: absolute;
   left: 0;
   top: 0.2rem;

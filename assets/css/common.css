@@ -619,6 +619,7 @@ main.main-content > * + * {
   color: var(--text-primary);
   border: 1px solid color-mix(in srgb, var(--shadow-dark) 16%, transparent);
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   box-shadow:
     4px 4px 8px var(--shadow-dark),
