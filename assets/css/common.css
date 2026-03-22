@@ -620,10 +620,13 @@ main.main-content > * + * {
 
 .site-nav-mobile {
   display: none;
+  width: 100%;
+  max-width: 100%;
 }
 
 .site-nav-mobile__toggle {
   width: 100%;
+  max-width: 100%;
   justify-content: flex-start;
 }
 
@@ -650,19 +653,27 @@ main.main-content > * + * {
   left: 0;
   right: auto;
   width: min(24rem, calc(100vw - 2rem));
+  max-width: 100%;
 }
 
 .nav-link--panel {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  justify-content: stretch;
   justify-items: start;
   gap: 0.18rem;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 0.82rem 0.92rem;
   border: 1px solid transparent;
   border-radius: 0.95rem;
   background: var(--gray-6);
   text-transform: none;
   text-align: left;
+  white-space: normal;
+  box-sizing: border-box;
   box-shadow:
     4px 4px 10px var(--shadow-dark),
     -4px -4px 10px var(--shadow-light);
@@ -708,10 +719,12 @@ main.main-content > * + * {
   display: flex;
   justify-content: flex-end;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .theme-dropdown {
   position: relative;
+  max-width: 100%;
 }
 
 .theme-dropdown[open] {
@@ -736,6 +749,9 @@ main.main-content > * + * {
     4px 4px 8px var(--shadow-dark),
     -4px -4px 8px var(--shadow-light);
   transition: transform 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .theme-dropdown__toggle::-webkit-details-marker {
@@ -785,6 +801,9 @@ main.main-content > * + * {
   color: var(--text-primary);
   font-size: 0.95rem;
   font-weight: 700;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .theme-dropdown__caret {
@@ -815,6 +834,8 @@ main.main-content > * + * {
     -8px -8px 18px var(--shadow-light);
   display: grid;
   gap: 0.42rem;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .theme-dropdown__option {
@@ -835,6 +856,8 @@ main.main-content > * + * {
     -4px -4px 10px var(--shadow-light);
   transition: transform 0.18s ease, color 0.18s ease, border-color 0.18s ease,
     background 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .theme-dropdown__option:hover,
@@ -934,6 +957,7 @@ main.main-content > * + * {
 
   .site-nav {
     width: 100%;
+    min-width: 0;
   }
 
   .nav-menu--desktop {
@@ -990,6 +1014,12 @@ main.main-content > * + * {
 
   .header-tools .theme-dropdown,
   .header-tools .theme-dropdown__toggle {
+    width: 100%;
+  }
+
+  .header-tools .theme-dropdown__menu {
+    left: 0;
+    right: 0;
     width: 100%;
   }
 
