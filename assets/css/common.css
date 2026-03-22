@@ -488,7 +488,7 @@ main {
 
 main.main-content {
   width: var(--container-width);
-  padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  padding: var(--space-xs);
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
@@ -511,6 +511,9 @@ main.main-content > * + * {
   padding: var(--space-sm) 0;
   margin: 0;
   border-radius: 12px;
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
   box-shadow: 8px 8px 16px var(--shadow-dark),
     -8px -8px 16px var(--shadow-light);
   border: none;
@@ -689,6 +692,7 @@ main.main-content > * + * {
   position: absolute;
   top: calc(100% + var(--space-xs));
   right: 0;
+  z-index: 40;
   width: min(21rem, calc(100vw - 1rem));
   padding: var(--space-xs);
   border-radius: 1.15rem;

@@ -1,6 +1,7 @@
 /* Neumorphic card wrapper */
 .content-card {
-  padding-bottom: var(--space-lg);
+  padding: var(--space-sm) var(--space-xs);
+  margin-bottom: var(--space-md);
 }
 
 /* Section Titles */
