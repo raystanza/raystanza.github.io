@@ -9,8 +9,13 @@
       <!-- Articles Section -->
       <section class="articles" aria-label="Blog Articles">
         <h1 class="articles-title">Articles</h1>
-        
-        {% for post in site.posts %}
+
+        {% assign blog_posts = site.posts %}
+        {% if paginator and paginator.posts %}
+          {% assign blog_posts = paginator.posts %}
+        {% endif %}
+
+        {% for post in blog_posts %}
         <article class="article" role="article">
           <h2 class="article-title">
             <a href="{{ site.baseurl }}{{ post.url }}" class="article-link">{{ post.title }}</a>
@@ -29,8 +34,48 @@
           <p class="excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
           {% endif %}
         </article>
+        {% unless forloop.last %}
         <hr class="article-divider">
+        {% endunless %}
         {% endfor %}
+
+        {% if paginator and paginator.total_pages > 1 %}
+        <nav class="pagination" aria-label="Blog Pagination">
+          <p class="pagination__summary">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+
+          <div class="pagination__controls">
+            {% if paginator.previous_page %}
+              {% if paginator.previous_page == 1 %}
+                <a href="{{ site.baseurl }}/blog/" class="nav-link pagination__link pagination__link--edge">Newer Posts</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/blog/page/{{ paginator.previous_page }}/" class="nav-link pagination__link pagination__link--edge">Newer Posts</a>
+              {% endif %}
+            {% else %}
+              <span class="nav-link pagination__link pagination__link--edge pagination__link--disabled" aria-disabled="true">Newer Posts</span>
+            {% endif %}
+
+            <div class="pagination__pages" aria-label="Page Numbers">
+              {% for page_number in (1..paginator.total_pages) %}
+                {% if page_number == 1 %}
+                  {% assign page_url = site.baseurl | append: "/blog/" %}
+                {% else %}
+                  {% assign page_url = site.baseurl | append: "/blog/page/" | append: page_number | append: "/" %}
+                {% endif %}
+
+                <a href="{{ page_url }}" class="nav-link pagination__link{% if page_number == paginator.page %} nav-link--active pagination__link--current{% endif %}" {% if page_number == paginator.page %}aria-current="page"{% endif %}>
+                  {{ page_number }}
+                </a>
+              {% endfor %}
+            </div>
+
+            {% if paginator.next_page %}
+              <a href="{{ site.baseurl }}/blog/page/{{ paginator.next_page }}/" class="nav-link pagination__link pagination__link--edge">Older Posts</a>
+            {% else %}
+              <span class="nav-link pagination__link pagination__link--edge pagination__link--disabled" aria-disabled="true">Older Posts</span>
+            {% endif %}
+          </div>
+        </nav>
+        {% endif %}
       </section>
 
       <!-- Footer -->

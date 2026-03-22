@@ -25,6 +25,10 @@ plugins:
   - jekyll-github-metadata
   - jemoji
   - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/blog/page/:num/"
 
 collections_dir: all_collections
 collections:
