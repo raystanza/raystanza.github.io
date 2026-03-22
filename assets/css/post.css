@@ -75,6 +75,7 @@ main {
 /* Back button beside the title */
 .back-button {
   display: inline-block;
+  padding: var(--space-xs);
   margin-bottom: var(--space-sm);
   color: var(--highlight-color);
   font-size: 1.1rem;
@@ -94,6 +95,7 @@ main {
 /* The “Back To Top” link itself */
 .back-to-top {
   display: inline-block;
+  padding: var(--space-xs);
   font-size: 1rem;
   color: var(--highlight-color);
   text-decoration: none;
