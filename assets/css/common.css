@@ -1273,6 +1273,23 @@ hr {
   color: var(--text-inverted);
 }
 
+/* KaTeX */
+.katex {
+  font-size: 1.05em;
+}
+
+.katex-display {
+  margin: var(--space-lg) 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: var(--space-2xs);
+  -webkit-overflow-scrolling: touch;
+}
+
+.katex-display > .katex {
+  padding: 0 var(--space-2xs);
+}
+
 @media (max-width: 600px) {
   .share-section {
     padding: var(--space-sm);

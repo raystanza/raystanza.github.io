@@ -13,6 +13,15 @@ RayStanza.uk is a personal project created and maintained by Jim Sines. The site
 - **Custom Theming and Dynamic Content**: Uses Jekyll's powerful templating to create engaging, up-to-date content with a unique, custom theme.
 - **Automated Dependency Management**: GitHub Dependabot helps keep site dependencies secure and up-to-date.
 
+## Writing Math
+
+Enable KaTeX on any post, page, or project by setting `katex: true` in its front matter.
+
+- Display math: `$$ ... $$` or `\[ ... \]`
+- Inline math: `\( ... \)`
+
+Single-dollar inline math is intentionally disabled to avoid false positives with currency and normal prose.
+
 ## Contact
 
 If you find inspiration in my work, have questions about my development process, or wish to collaborate on custom web development projects, feel free to reach out.
