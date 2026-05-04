@@ -1,0 +1,240 @@
+/* ============================================================
+   Progress Bars Throughout History - Player chrome & shared
+   keyframes. Per-bar visuals live inside each bar module.
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 48px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.header .subtitle {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.stage { text-align: center; }
+
+.ui-name {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  color: #fff;
+  min-height: 32px;
+}
+
+.canvas-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.canvas {
+  width: 900px;
+  height: 550px;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7),
+              0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.year {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #777;
+  letter-spacing: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  margin-top: 28px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  background: #1a1a1a;
+  color: #ddd;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  transition: all 0.15s;
+  min-width: 40px;
+}
+
+.controls button:hover {
+  background: #252525;
+  border-color: #444;
+  color: #fff;
+}
+
+.controls button:active { transform: translateY(1px); }
+.controls button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.timeline {
+  width: 220px;
+  height: 4px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.timeline-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4af, #fa4);
+  transition: width 0.05s linear;
+  width: 0%;
+}
+
+.counter {
+  color: #888;
+  font-variant-numeric: tabular-nums;
+  min-width: 60px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footnote {
+  margin-top: 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   CRT / phosphor effect (opt-in via .crt class on canvas)
+   ============================================================ */
+
+.crt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 0.18) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
+.crt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  pointer-events: none;
+  z-index: 99;
+}
+
+/* ============================================================
+   Shared @keyframes (prefixed pbh- to avoid collisions)
+   Bars opt in by setting `animation: pbh-NAME ...`.
+   ============================================================ */
+
+@keyframes pbh-blink            { 50% { opacity: 0; } }
+@keyframes pbh-blink-bg         { 50% { background: transparent; } }
+
+/* CLI / spinner helpers */
+@keyframes pbh-spin             { to { transform: rotate(360deg); } }
+
+/* Aqua-style diagonal stripe march */
+@keyframes pbh-aqua-stripe {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 28px 0, 0 0; }
+}
+
+/* XP Luna shimmer */
+@keyframes pbh-xp-shine {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Vista Aero light sweep */
+@keyframes pbh-vista-pulse {
+  0%, 100% { transform: translateX(-100%); opacity: 0.4; }
+  50%      { transform: translateX(100%);  opacity: 1; }
+}
+
+/* Indeterminate Material-style sweep */
+@keyframes pbh-mat-indet {
+  0%   { left: -35%; right: 100%; }
+  60%  { left: 100%; right: -90%; }
+  100% { left: 100%; right: -90%; }
+}
+
+/* Aurora background drift (AI / modern bars) */
+@keyframes pbh-aurora {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20px, -10px) scale(1.05); }
+}
+
+/* Conic-gradient color wheel rotation */
+@keyframes pbh-ai-shift {
+  to { background-position: 200% 0; }
+}
+
+/* Linen / brushed metal texture drift */
+@keyframes pbh-linen-drift {
+  to { background-position: 100% 0; }
+}
+
+/* Dot-pulse (loading dots) */
+@keyframes pbh-dot-pulse {
+  0%, 60%, 100% { opacity: 0.3; transform: scale(0.85); }
+  30%           { opacity: 1;   transform: scale(1); }
+}
+
+/* Marquee / barber pole */
+@keyframes pbh-marquee {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+
+/* visionOS-style soft float */
+@keyframes pbh-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
