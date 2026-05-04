@@ -24,7 +24,7 @@ tags:
   - operating systems
   - design history
 
-image: 'assets\images\projects\progress-bars-throughout-history\progress-bars-throughout-history-og.png'
+image: '/assets/images/projects/progress-bars-throughout-history/progress-bars-throughout-history-og.png'
 image_alt: 'A timeline of progress bars evolving from green terminal blocks to modern glassy interface panels'
 image_caption: 'From phosphor blocks to frosted glass: fifty-five years of waiting politely.'
 
