@@ -10,12 +10,11 @@ og_image: "/assets/icons/og-image.png"
 og_type: "website"
 og_author: "Jim Sines"
 ---
-
-**Effective Date:** May 10, 2026
-**Last Updated:** May 10, 2026
-**App Name:** Vectry
-**Developer:** Jim Sines, an individual sole proprietor doing business under the personal alias "raystanza"
-**Contact Email:** [vectry-privacy@raystanza.uk](mailto:vectry-privacy@raystanza.uk)
+**Effective Date:** May 10, 2026  
+**Last Updated:** May 10, 2026  
+**App Name:** Vectry  
+**Developer:** Jim Sines, an individual sole proprietor doing business under the personal alias "raystanza"  
+**Contact Email:** [vectry-privacy@raystanza.uk](mailto:vectry-privacy@raystanza.uk)  
 **Privacy Policy URL:** [https://raystanza.uk/vectry-privacy-policy](https://raystanza.uk/vectry-privacy-policy)
 
 > **PLEASE READ THIS POLICY CAREFULLY.** This document is both the Privacy Policy for Vectry and the binding legal agreement between you and the Developer. It contains provisions that materially affect your legal rights, including a **mandatory binding arbitration agreement, a class action waiver, a limitation of liability, an indemnification obligation, a Pennsylvania choice-of-law clause, and a one-year limitations period for claims** (Sections 19–25). By installing or using Vectry, you agree to these terms.
@@ -403,6 +402,6 @@ Your continued use of Vectry after a change becomes effective constitutes your a
 
 For privacy questions, requests, or notices required by this Policy (including arbitration opt-out notices and privacy-rights requests), contact:
 
-**Jim Sines / raystanza** — individual sole proprietor; not a business entity
-**Email:** [vectry-privacy@raystanza.uk](mailto:vectry-privacy@raystanza.uk)
-**Privacy Policy URL:** [https://raystanza.uk/vectry-privacy-policy](https://raystanza.uk/vectry-privacy-policy)
+**Jim Sines / raystanza** — individual sole proprietor; not a business entity  
+**Email:** [vectry-privacy@raystanza.uk](mailto:vectry-privacy@raystanza.uk)  
+**Privacy Policy URL:** [https://raystanza.uk/vectry-privacy-policy](https://raystanza.uk/vectry-privacy-policy)  
