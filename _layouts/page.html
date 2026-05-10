@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <main class="main-content" role="main">
+
+      {% include header.html %}
+
+      <article class="article" role="article" aria-labelledby="page-title">
+        <header class="article-header">
+          <h1 id="page-title" class="article-title">{{ page.title }}</h1>
+        </header>
+        <section class="content">
+          {{ content }}
+        </section>
+        <div class="back-to-top-container">
+          <a href="#top" class="back-to-top" aria-label="Back to top">
+            &#8593; Back To Top
+          </a>
+        </div>
+      </article>
+
+      <footer role="contentinfo">
+        {% include footer.html %}
+      </footer>
+
+    </main>
+  </body>
+</html>
